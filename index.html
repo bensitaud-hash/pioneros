@@ -150,25 +150,22 @@
 <!--Navbar-->
     <nav id="main-nav" class="bg-nav backdrop-blur-sm w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center md:mx-auto pt-1 pb-2 md:mr-12">
+            <div class="flex justify-start h-12 items-center">
+                <div class="flex-shrink-0 flex-grow flex items-center pt-1 pb-2">
                     <div class="shield-logo">
                         <img src="images/Logo_pioneros_inline.svg" alt="Pioneros Automotriz" class="h-12 w-auto object-contain" />
                     </div>
                 </div>
-                <div class="flex items-center md:space-x-8">
+                <div class="flex items-center md:ml-12 lg:ml-24">
                     <div class="hidden md:block">
-                        <div class="flex items-center space-x-8">
+                        <div class="flex items-center space-x-8 lg:space-x-12">
                             <a href="#" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Inicio</a>
                             <a href="#services" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Servicios</a>
                             <a href="#about" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Quiénes somos</a>
                             <a href="#team" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">El equipo</a>
                             <a href="#contact" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Contacto</a>
                             <a href="blog.html" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Blog</a>
-                            <a href="#" onclick="openBookingModal();return false;" class="ml-8 copper-bg text-dark px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-copper-500 duration-300 transform hover:scale-110 hover:shadow-copper-500/20">Reservar Ahora</a>
-                            <div class="total-logo ml-6 hidden lg:flex items-center self-center">
-                                <img src="images/Totalenergy.svg" alt="Total Energies Quartz Auto Services" class="h-16 w-auto object-contain" />
-                            </div>
+                            <a href="#" onclick="openBookingModal();return false;" class="ml-4 copper-bg text-dark px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-110 hover:bg-transparent border-2 border-transparent hover:border-copper hover:text-copper hover:shadow-lg">Reservar Ahora</a>
                         </div>
                     </div>
                 </div>
@@ -187,10 +184,7 @@
                     <a href="#team" class="nav-link block px-2 py-1 text-2xl  font-medium text-dark hover:text-copper-500">El equipo</a>
                     <a href="#contact" class="nav-link block px-2 py-1 text-2xl  font-medium text-dark hover:text-copper-500">Contacto</a>
                     <a href="blog.html" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">Blog</a>
-                    <a href="#" onclick="openBookingModal();return false;" class="block w-full text-center copper-bg text-dark px-4 py-2 rounded-full text-2xl font-medium hover:bg-opacity-90 transition-all duration-300 transform hover:scale-110 hover:shadow-copper-500/20">Reservar Ahora</a>
-                    <div class="mt-4 total-logo flex items-center justify-center">
-                        <img src="images/Totalenergy.svg" alt="Total Energies Quartz Auto Services" class="h-16 w-auto object-contain" />
-                    </div>
+                    <a href="#" onclick="openBookingModal();return false;" class="block w-full text-center copper-bg text-dark px-4 py-2 rounded-full text-2xl font-medium transition-all duration-300 transform hover:scale-110 hover:bg-transparent hover:border-copper hover:text-copper hover:shadow-lg">Reservar Ahora</a>
                 </div>
             </div>
             </div>
@@ -198,7 +192,7 @@
 
     <div id="nav-spacer" class="hidden"></div>
 
-<!--Hero Section with VantaBG-->
+<!--Hero Section-->
     <div id="hero-section" class="hero-bg pt-20">
         <!-- Copper accent line -->
         <div class="hero-accent-line" aria-hidden="true"></div>
@@ -207,22 +201,30 @@
             <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
                 <div class="mt-10 sm:mt-12 lg:mt-0" data-aos="fade-right">
                     <!-- Premium badge -->
+                                    <div class="mb-4 flex items-center">
+                        <img src="images/Totalenergy.svg" 
+                            alt="Total Energies Partner" 
+                            class="h-14 w-auto object-contain opacity-90 drop-shadow-md">
+                    </div>
+
                     <div class="inline-flex items-center gap-2 border border-copper-400 text-copper-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 hero-badge">
                         <span class="hero-badge-dot"></span>
-                        Total Quartz Official Partner &middot; Chicureo
+                        Official Partner &middot; Chicureo
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold hero-heading leading-tight">
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold hero-heading leading-tight">
                         El estándar que tu auto <span class="copper-text">merece</span>
                     </h1>
                     <p class="mt-5 text-lg hero-copy max-w-lg">
-                        En <span class="copper-text">Pioneros</span>, tratamos cada vehículo con la precisión de un experto y el cuidado de un dueño. Descubre un servicio técnico de nivel superior en <span class="copper-text">Chicureo</span>, ahora con cambio de aceite Total Quartz.
+                        En <span class="copper-text">Pioneros</span>, tratamos cada vehículo con la precisión de un experto y el cuidado de un dueño. Descubre un servicio técnico de nivel superior en <span class="copper-text">Chicureo</span>.
                     </p>
                     <div class="mt-8 flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4 sm:items-start">
-                        <a href="#services" class="bg-transparent border-2 copper-border text-white px-8 py-3 rounded-full text-sm font-medium w-full sm:w-auto hover:bg-copper hover:text-white transform hover:scale-110 transition-all duration-300 hover:shadow-copper-500/30">
+                        <a href="#services" 
+                        class="bg-copper text-white border-2 border-transparent px-8 py-3 rounded-full text-sm font-medium inline-block text-center w-full sm:w-auto transition-all duration-300 transform hover:scale-110 hover:bg-transparent hover:border-copper hover:text-copper hover:shadow-lg">
                             Nuestros Servicios
                         </a>
-                        <a href="#team" class="copper-bg text-white border-2 border-transparent px-8 py-3 rounded-full text-sm font-medium w-full sm:w-auto hover:bg-opacity-70 transform hover:scale-110 transition-all duration-300 hover:shadow-white/20">
-                            Saber más
+                        <a href="#team" class="bg-transparent border-2 copper-border text-white px-8 py-3 rounded-full text-sm font-medium w-full sm:w-auto hover:bg-copper hover:text-white transform hover:scale-110 transition-all duration-300 hover:shadow-copper-500/30">
+                            Nuestro Equipo
                         </a>
                     </div>
                 </div>
@@ -381,7 +383,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="mb-12 lg:mb-0" data-aos="fade-right">
-                    <img src="images/Thumbup.jpg" alt="Clientes satisfechos" class="rounded-lg shadow-xl">
+                    <img src="images/Thumbup.webp" alt="Clientes satisfechos" class="rounded-lg shadow-xl">
                 </div>
                 <div data-aos="fade-left">
                     <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Nosotros</h2>
