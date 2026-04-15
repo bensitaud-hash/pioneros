@@ -1,3 +1,7 @@
+/* ============================================================
+   Pioneros Automotriz — Full Production Styles
+   ============================================================ */
+
 /* Base Styles */
 body {
   font-family: Figtree, sans-serif;
@@ -21,6 +25,8 @@ body {
 
 .hero-heading {
   color: #ffffff !important;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  will-change: filter; /* This tells the browser to prepare for a shadow filter */
 }
 
 .hero-copy {
@@ -215,8 +221,8 @@ h2[id] {
   background: linear-gradient(
     108deg,
     rgba(8, 14, 22, 0.78) 0%,
-    rgba(8, 14, 22, 0.5) 42%,
-    rgba(8, 14, 22, 0.05) 100%
+    rgba(8, 14, 22, 0.3) 42%,
+    rgba(8, 14, 22, 0) 100%
   );
   z-index: 1;
 }
@@ -413,7 +419,7 @@ h2[id] {
 .location-gradient h5.text-white,
 .location-gradient h6.text-white,
 .location-gradient p.text-white {
-  color: #e70000 !important;
+  color: #bf8e50 !important; /* Now set to Copper */
 }
 
 .bg-deep .text-white,
@@ -423,6 +429,12 @@ h2[id] {
 .location-gradient .text-white,
 .faq-toggle.text-white {
   color: #ffffff !important;
+}
+
+/* Add this to your styles.css */
+ul li a.text-gray-300:hover {
+  color: #bf8e50 !important;
+  transition: color 0.3s ease;
 }
 
 /* Only apply fill override to SVGs that explicitly use fill (e.g. WhatsApp), not stroke-based feather icons */
