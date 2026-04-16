@@ -34,13 +34,12 @@ mobileMenuButton.addEventListener("click", () => {
 });
 
 // Sticky Navigation Bar on Scroll
-const topPhoneBar = document.getElementById("notification-bar");
 const mainNav = document.getElementById("main-nav");
 const navSpacer = document.getElementById("nav-spacer");
-const topBarHeight = topPhoneBar.offsetHeight;
+const initialNavTop = mainNav.offsetTop;
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > topBarHeight) {
+    if (window.scrollY > initialNavTop) {
         mainNav.classList.add("sticky-nav", "shadow-lg");
         navSpacer.classList.remove("hidden");
         navSpacer.style.height = mainNav.offsetHeight + "px";

@@ -3,10 +3,15 @@
    ============================================================ */
 
 /* Base Styles */
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Figtree, sans-serif;
   background-color: #f7f4ef;
   color: #1f1e1a;
+  overflow-x: hidden;
 }
 
 .copper-text {
