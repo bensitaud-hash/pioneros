@@ -266,9 +266,14 @@
                         <p class="mt-4 text-gray-400">
                             Cambio rápido con Total Quartz para máxima protección del motor, limpieza avanzada y rendimiento confiable en solo 45 minutos.
                         </p>
-                        <a href="#" onclick="openBookingModal('Cambio de Aceite y Filtros (45 min)');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
-                            Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-                        </a>
+                        <div class="mt-6 flex items-center gap-4">
+                            <a href="#" onclick="openBookingModal('Cambio de Aceite y Filtros (45 min)');return false;" class="inline-flex items-center copper-text text-sm font-medium">
+                                Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                            </a>
+                            <a href="https://evp-api-totalenergies-dam-prod-cdn.wedia-group.com/api/media/play.html?PlayerUid=y60338b14d0a1d&MediaUid=0d03a451-3aa8-484c-a455-49aaa23a43d1" target="_blank" rel="noopener" class="inline-flex items-center text-gray-400 hover:text-white text-sm transition-colors duration-200">
+                                <i data-feather="file-text" class="mr-1 w-4 h-4"></i> Ficha técnica Total Quartz
+                            </a>
+                        </div>
                             
                     </div>
                 </div>
@@ -691,12 +696,31 @@
                     </button>
                     <div id="faq-content-new-3" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <p class="p-6 pt-2 text-gray-400">
-                            Solo necesita <span class="copper-text">reservar una hora</span> (online o por teléfono). Para un servicio de <span class="copper-text">Mantenimiento Preventivo (Pauta)</span> o <span class="copper-text">Cambio de Aceite</span>, nuestro objetivo es entregarte tu vehículo el <span class="copper-text">mismo día</span>. Para reparaciones mayores o diagnósticos complejos, te mantendremos informado con actualizaciones periódicas sobre el tiempo estimado. Tu coordinadora de servicio te indicará todo lo que necesita al agendar.
+                            Solo necesita <span class="copper-text">reservar una hora</span> (online o por teléfono). Tu coordinadora de servicio te indicará todo lo que necesita al agendar.<br>- Para un servicio de <span class="copper-text">Cambio de Aceite</span>, el servicio toma tan solo <span class="copper-text">45 minutos</span>. <br>- Para <span class="copper-text">las mantenciones</span>, nuestro objetivo es entregarte tu vehículo el <span class="copper-text">mismo día</span>. <br>- Para reparaciones mayores o diagnósticos complejos, te mantendremos informado con actualizaciones periódicas sobre el tiempo estimado.
                         </p>
                     </div>
                 </div>
 
                 <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="600">
+                    <button 
+                        class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
+                        aria-expanded="false" 
+                        aria-controls="faq-content-new-4"
+                    >
+                        <span>¿Qué aceite utilizan en el <span class="copper-text">Cambio de Aceite</span> y por qué es <span class="copper-text">Total Quartz</span>?</span>
+                        <i data-feather="chevron-down" class="faq-icon transition-transform duration-300"></i>
+                    </button>
+                    <div id="faq-content-new-4" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <p class="p-6 pt-2 text-gray-400">
+                            Trabajamos exclusivamente con aceite <span class="copper-text">Total Energies Quartz</span>, una de las marcas líderes en lubricantes de alto rendimiento a nivel mundial. Quartz ofrece fórmulas sintéticas y semi-sintéticas que protegen el motor en condiciones extremas, reducen el desgaste y prolongan la vida útil del vehículo. Es el mismo aceite recomendado por fabricantes de autos de alta gama.<br>
+                            <a href="https://evp-api-totalenergies-dam-prod-cdn.wedia-group.com/api/media/play.html?PlayerUid=y60338b14d0a1d&MediaUid=0d03a451-3aa8-484c-a455-49aaa23a43d1" target="_blank" rel="noopener" class="inline-flex items-center gap-1 copper-text font-medium hover:text-white transition-colors duration-200 mt-2">
+                                <i data-feather="file-text" class="w-4 h-4"></i> Ficha técnica Total Quartz
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="700">
                     <button 
                         class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
                         aria-expanded="false" 
@@ -956,13 +980,13 @@
                 <div>
                     <h3 class="text-dark font-bold text-lg">Servicios</h3>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Cambio de Aceite y Filtros (45 min)</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Mantención Premium</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Mantención Standard</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Instalación G.P.S.</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Instalación Láminas de Seguridad</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Revisión de Frenos</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Accesorios</a></li>
+                        <li><a href="#" onclick="openBookingModal('Cambio de Aceite y Filtros (45 min)');return false;" class="text-gray-300 hover:text-white text-sm">Cambio de Aceite y Filtros (45 min)</a></li>
+                        <li><a href="#" onclick="openBookingModal('Mantención Premium');return false;" class="text-gray-300 hover:text-white text-sm">Mantención Premium</a></li>
+                        <li><a href="#" onclick="openBookingModal('Mantención Standard');return false;" class="text-gray-300 hover:text-white text-sm">Mantención Standard</a></li>
+                        <li><a href="#" onclick="openBookingModal('Instalación G.P.S.');return false;" class="text-gray-300 hover:text-white text-sm">Instalación G.P.S.</a></li>
+                        <li><a href="#" onclick="openBookingModal('Instalación Láminas de Seguridad');return false;" class="text-gray-300 hover:text-white text-sm">Instalación Láminas de Seguridad</a></li>
+                        <li><a href="#" onclick="openBookingModal('Servicio de Frenos');return false;" class="text-gray-300 hover:text-white text-sm">Servicio de Frenos</a></li>
+                        <li><a href="#" onclick="openBookingModal('Accesorios');return false;" class="text-gray-300 hover:text-white text-sm">Accesorios</a></li>
                     </ul>
                 </div>
 
@@ -976,6 +1000,7 @@
                         <li><a href="#faq" class="text-gray-300 hover:text-white text-sm">Preguntas Frecuentes</a></li>
                         <li><a href="blog.html" class="text-gray-300 hover:text-white text-sm">Blog</a></li>
                         <li><a href="https://totalenergies.cl/lubricantes-automotrices/quartz-aceite-de-motor" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white text-sm">Total Energies Quartz</a></li>
+                        <li><a href="https://evp-api-totalenergies-dam-prod-cdn.wedia-group.com/api/media/play.html?PlayerUid=y60338b14d0a1d&MediaUid=0d03a451-3aa8-484c-a455-49aaa23a43d1" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white text-sm">Ficha técnica Total Quartz</a></li>
                         <li><a href="privacidad.html" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white text-sm">Política de Privacidad</a></li>
                     </ul>
                 </div>
