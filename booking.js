@@ -102,11 +102,14 @@ const bookingState = {
 // ============================================================
 // MODAL OPEN / CLOSE
 // ============================================================
-function openBookingModal() {
+function openBookingModal(service) {
     resetBooking();
     document.getElementById("booking-modal").classList.remove("hidden");
     document.body.style.overflow = "hidden";
     setMinDate();
+    if (service) {
+        document.getElementById("bk-service").value = service;
+    }
 }
 
 function closeBookingModal() {
