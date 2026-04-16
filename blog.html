@@ -21,7 +21,6 @@
       content="https://www.pioneros.cl/images/Hero_car.webp"
     />
     <meta property="og:site_name" content="Pioneros Automotriz" />
-
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap"
@@ -53,34 +52,12 @@
               },
               "copper-text": "#bf8e50",
             },
-            fontFamily: {
-              sans: ["Figtree", "sans-serif"],
-            },
+            fontFamily: { sans: ["Figtree", "sans-serif"] },
           },
         },
       };
     </script>
-
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .article-card {
-        transition:
-          transform 0.25s ease,
-          box-shadow 0.25s ease;
-      }
-      .article-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 30px -6px rgba(191, 142, 80, 0.18);
-      }
-      .category-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: #bf8e50;
-        display: inline-block;
-        margin-right: 6px;
-      }
-    </style>
   </head>
   <body class="overflow-x-hidden bg-surface text-dark">
     <!-- Navbar -->
@@ -88,7 +65,7 @@
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between"
       >
-        <a href="index.html" class="flex items-center ">
+        <a href="index.html" class="flex items-center">
           <img
             src="images/Logo_pioneros_inline.svg"
             alt="Pioneros Automotriz"
@@ -121,91 +98,162 @@
               }, 500);
             "
             class="copper-bg text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+            >Reservar Hora</a
           >
-            Reservar Hora
-          </a>
         </div>
       </div>
     </nav>
 
-    <!-- Blog Header -->
-    <section class="bg-card py-16 text-center">
-      <p class="text-sm copper-text uppercase tracking-[0.3em] font-semibold">
-        Consejos &amp; Guías
-      </p>
-      <h1
-        class="mt-3 text-4xl md:text-5xl font-extrabold text-dark leading-tight"
-      >
-        Nuestro Blog
-      </h1>
-      <p class="mt-4 text-gray-400 max-w-xl mx-auto text-base leading-relaxed">
-        Artículos, guías y consejos de nuestros técnicos expertos para mantener
-        tu auto en las mejores condiciones.
-      </p>
+    <!-- Blog Header - Dark Editorial -->
+    <section class="blog-page-hero py-20 text-center relative overflow-hidden">
+      <div class="hero-accent-line"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="inline-flex items-center gap-3 mb-4">
+          <span
+            class="block h-px w-8"
+            style="background: rgba(191, 142, 80, 0.55)"
+          ></span>
+          <span
+            class="text-xs uppercase tracking-[0.4em] font-bold"
+            style="color: #bf8e50"
+            >Pioneros Automotriz</span
+          >
+          <span
+            class="block h-px w-8"
+            style="background: rgba(191, 142, 80, 0.55)"
+          ></span>
+        </div>
+        <h1
+          class="text-5xl sm:text-6xl font-extrabold text-white leading-none tracking-tight"
+        >
+          Nuestro Blog
+        </h1>
+        <p
+          class="mt-5 text-sm leading-relaxed max-w-sm mx-auto"
+          style="color: rgba(255, 255, 255, 0.42)"
+        >
+          Artículos, guías y consejos de nuestros técnicos expertos para
+          mantener tu auto en las mejores condiciones.
+        </p>
+      </div>
     </section>
+
+    <!-- Category Filter -->
+    <div class="border-b border-deep bg-surface">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="cat-filter-row py-3" id="cat-filter">
+          <button class="cat-filter-btn active" data-cat="all">Todos</button>
+          <button class="cat-filter-btn" data-cat="mantenimiento">
+            Mantenimiento
+          </button>
+          <button class="cat-filter-btn" data-cat="consejos">Consejos</button>
+          <button class="cat-filter-btn" data-cat="seguridad">Seguridad</button>
+          <button class="cat-filter-btn" data-cat="tecnologia">
+            Tecnología
+          </button>
+          <button class="cat-filter-btn" data-cat="estacional">
+            Estacional
+          </button>
+          <button class="cat-filter-btn" data-cat="electrico">Eléctrico</button>
+          <button class="cat-filter-btn" data-cat="vial">Seg. Vial</button>
+          <button class="cat-filter-btn" data-cat="detallado">Detallado</button>
+        </div>
+      </div>
+    </div>
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
       <!-- Featured Article -->
-      <div class="mb-12">
-        <p
-          class="text-xs copper-text uppercase tracking-[0.2em] font-semibold mb-4"
-        >
-          Artículo Destacado
-        </p>
+      <div class="mb-14" id="featured-section">
+        <div class="section-divider">
+          <span class="text-xs copper-text uppercase tracking-[0.3em] font-bold"
+            >Artículo Destacado</span
+          >
+        </div>
         <a
           href="blog-post-1.html"
-          class="article-card block bg-card rounded-2xl overflow-hidden"
+          class="featured-post-card block"
+          data-cat="mantenimiento"
         >
-          <div class="grid md:grid-cols-5 gap-0">
-            <!-- Visual panel -->
+          <div class="grid md:grid-cols-2">
             <div
-              class="md:col-span-2 bg-deep flex flex-col items-center justify-center min-h-52 p-10 gap-4"
+              class="featured-post-visual flex flex-col items-center justify-center p-10 gap-5 min-h-72"
             >
+              <span
+                class="cat-badge"
+                style="background: rgba(191, 142, 80, 0.15); color: #dbb87a"
+                >Mantenimiento</span
+              >
               <svg
-                width="64"
-                height="64"
+                width="88"
+                height="88"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="#bf8e50"
-                stroke-width="1.4"
+                stroke-width="1.1"
+                style="opacity: 0.85"
               >
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-              <span
-                class="text-xs copper-text uppercase tracking-widest font-semibold"
-                >Mantenimiento</span
-              >
+              <span class="featured-post-number">N.° 01</span>
             </div>
-            <!-- Content -->
-            <div class="md:col-span-3 p-8 flex flex-col justify-center">
-              <h2 class="text-2xl md:text-3xl font-bold text-dark leading-snug">
+            <div
+              class="flex flex-col justify-center p-8 md:p-10"
+              style="background: #3d3025"
+            >
+              <div class="flex items-center gap-2 mb-4">
+                <span
+                  class="block w-2 h-2 rounded-full"
+                  style="background: #bf8e50"
+                ></span>
+                <span
+                  class="text-xs uppercase tracking-[0.3em] font-bold"
+                  style="color: rgba(191, 142, 80, 0.75)"
+                  >Lectura Recomendada</span
+                >
+              </div>
+              <h2
+                class="text-2xl md:text-3xl font-extrabold leading-snug"
+                style="color: #f5f0eb"
+              >
                 Guía Completa de Mantenimiento Preventivo para tu Auto
               </h2>
-              <p class="mt-3 text-gray-400 leading-relaxed">
+              <p
+                class="mt-4 text-sm leading-relaxed"
+                style="color: rgba(255, 255, 255, 0.44)"
+              >
                 El mantenimiento preventivo es la clave para prolongar la vida
                 útil de tu vehículo y evitar costosas reparaciones. Nuestro
-                técnico jefe explica todo lo que necesitas saber.
+                técnico jefe explica todo.
               </p>
-              <div
-                class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-400"
-              >
-                <span class="font-semibold text-dark">Juan Pérez</span>
-                <span>·</span>
-                <span>Técnico Jefe</span>
-                <span>·</span>
-                <span>15 oct 2025</span>
-                <span>·</span>
-                <span>8 min lectura</span>
+              <div class="mt-6 flex items-center gap-3">
+                <div class="author-badge">JP</div>
+                <div>
+                  <span
+                    class="text-xs font-semibold"
+                    style="color: rgba(255, 255, 255, 0.85)"
+                    >Juan Pérez</span
+                  >
+                  <span
+                    class="text-xs mx-1"
+                    style="color: rgba(255, 255, 255, 0.25)"
+                    >·</span
+                  >
+                  <span class="text-xs" style="color: rgba(255, 255, 255, 0.4)"
+                    >15 oct 2025 · 8 min lectura</span
+                  >
+                </div>
               </div>
               <span
-                class="mt-5 inline-flex items-center gap-1 copper-text text-sm font-semibold"
-                >Leer artículo
+                class="mt-7 inline-flex items-center gap-2 text-sm font-bold"
+                style="color: #bf8e50"
+              >
+                Leer artículo
                 <svg
-                  width="14"
-                  height="14"
+                  width="15"
+                  height="15"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="2.5"
                   viewBox="0 0 24 24"
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -217,554 +265,484 @@
       </div>
 
       <!-- Article Grid -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Post 2 -->
+      <div class="section-divider">
+        <span class="text-xs copper-text uppercase tracking-[0.3em] font-bold"
+          >Todos los Artículos</span
+        >
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="article-grid">
         <a
           href="blog-post-2.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-consejos"
+          data-cat="consejos"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Consejos
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            5 Señales que tu Auto Necesita Atención Inmediata
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Muchos problemas graves comienzan con señales sutiles. Aprende a
-            identificarlas antes de que se conviertan en reparaciones costosas.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>María González</span><span>·</span><span>22 oct 2025</span
-            ><span>·</span><span>6 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(109, 154, 92, 0.13); color: #6d9a5c"
+                >Consejos</span
+              ><span class="read-time-pill">6 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              5 Señales que tu Auto Necesita Atención Inmediata
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Muchos problemas graves comienzan con señales sutiles. Aprende a
+              identificarlas antes de que se conviertan en reparaciones
+              costosas.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">MG</div>
+              <span class="text-xs text-gray-400"
+                >María González<span class="opacity-50 mx-1">·</span>22 oct
+                2025</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 3 -->
         <a
           href="blog-post-3.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-estacional"
+          data-cat="estacional"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Consejos Estacionales
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Cómo Preparar tu Auto para el Invierno
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Guía completa de Carlos Ramírez para proteger tu vehículo durante
-            los meses fríos y asegurar un rendimiento óptimo en condiciones
-            adversas.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Carlos Ramírez</span><span>·</span><span>5 jun 2025</span
-            ><span>·</span><span>10 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(123, 111, 176, 0.13); color: #7b6fb0"
+                >Estacional</span
+              ><span class="read-time-pill">10 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Cómo Preparar tu Auto para el Invierno
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Guía completa para proteger tu vehículo durante los meses fríos y
+              asegurar un rendimiento óptimo en condiciones adversas.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">CR</div>
+              <span class="text-xs text-gray-400"
+                >Carlos Ramírez<span class="opacity-50 mx-1">·</span>5 jun
+                2025</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 4 -->
         <a
           href="blog-post-4.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-seguridad"
+          data-cat="seguridad"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Seguridad
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Mantenimiento de Frenos: Todo lo que Necesitas Saber
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            El sistema de frenos es el componente de seguridad más importante de
-            tu vehículo. Aprende cuándo y cómo mantenerlos en óptimas
-            condiciones.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Carlos Ramírez</span><span>·</span><span>12 nov 2025</span
-            ><span>·</span><span>9 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(192, 88, 64, 0.13); color: #c05840"
+                >Seguridad</span
+              ><span class="read-time-pill">9 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Mantenimiento de Frenos: Todo lo que Necesitas Saber
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              El sistema de frenos es el componente de seguridad más importante
+              de tu vehículo. Aprende cuándo y cómo mantenerlos.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">CR</div>
+              <span class="text-xs text-gray-400"
+                >Carlos Ramírez<span class="opacity-50 mx-1">·</span>12 nov
+                2025</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 5 -->
         <a
           href="blog-post-5.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-tecnologia"
+          data-cat="tecnologia"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Tecnología
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            5 Innovaciones Tecnológicas que Transforman la Industria Automotriz
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Desde baterías de estado sólido hasta conducción autónoma nivel 4 y
-            mantenimiento predictivo con IA. El futuro del auto, hoy.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Ana Torres</span><span>·</span><span>18 nov 2025</span
-            ><span>·</span><span>12 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(77, 133, 175, 0.13); color: #4d85af"
+                >Tecnología</span
+              ><span class="read-time-pill">12 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              5 Innovaciones Tecnológicas que Transforman la Industria
+              Automotriz
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Desde baterías de estado sólido hasta conducción autónoma nivel 4
+              y mantenimiento predictivo con IA.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">AT</div>
+              <span class="text-xs text-gray-400"
+                >Ana Torres<span class="opacity-50 mx-1">·</span>18 nov
+                2025</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 6 -->
         <a
           href="blog-post-6.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-mantenimiento"
+          data-cat="mantenimiento"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Mantenimiento
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Cómo Saber Cuándo Cambiar tus Neumáticos
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Los neumáticos son el único punto de contacto entre tu auto y la
-            carretera. Aprende a identificar el momento exacto de cambiarlos.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Pedro Méndez</span><span>·</span><span>25 nov 2025</span
-            ><span>·</span><span>7 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(191, 142, 80, 0.13); color: #bf8e50"
+                >Mantenimiento</span
+              ><span class="read-time-pill">7 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Cómo Saber Cuándo Cambiar tus Neumáticos
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Los neumáticos son el único punto de contacto entre tu auto y la
+              carretera. Aprende a identificar el momento exacto de cambiarlos.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">PM</div>
+              <span class="text-xs text-gray-400"
+                >Pedro Méndez<span class="opacity-50 mx-1">·</span>25 nov
+                2025</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 7 -->
         <a
           href="blog-post-7.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-mantenimiento"
+          data-cat="mantenimiento"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Mantenimiento
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Los Beneficios de un Cambio de Aceite a Tiempo
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            El cambio de aceite es el servicio más importante para la salud de
-            tu motor. Descubre por qué y con qué frecuencia debes hacerlo.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Luis Fernández</span><span>·</span><span>30 nov 2025</span
-            ><span>·</span><span>6 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(191, 142, 80, 0.13); color: #bf8e50"
+                >Mantenimiento</span
+              ><span class="read-time-pill">6 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Los Beneficios de un Cambio de Aceite a Tiempo
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              El cambio de aceite es el servicio más importante para la salud de
+              tu motor. Descubre por qué y con qué frecuencia debes hacerlo.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">LF</div>
+              <span class="text-xs text-gray-400"
+                >Luis Fernández<span class="opacity-50 mx-1">·</span>30 nov
+                2025</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 8 -->
         <a
           href="blog-post-8.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-consejos"
+          data-cat="consejos"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Consejos
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Cómo Limpiar tu Auto como un Profesional
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Limpiar tu auto correctamente no solo mejora su apariencia, sino que
-            también protege la pintura y los interiores. Los secretos de los
-            expertos.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>María González</span><span>·</span><span>20 nov 2025</span
-            ><span>·</span><span>10 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(109, 154, 92, 0.13); color: #6d9a5c"
+                >Consejos</span
+              ><span class="read-time-pill">10 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Cómo Limpiar tu Auto como un Profesional
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Limpiar tu auto correctamente no solo mejora su apariencia, sino
+              que también protege la pintura y los interiores.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">MG</div>
+              <span class="text-xs text-gray-400"
+                >María González<span class="opacity-50 mx-1">·</span>20 nov
+                2025</span
+              >
+            </div>
+          </div>
         </a>
-        <!-- Post 9 -->
+
         <a
           href="blog-post-9.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-mantenimiento"
+          data-cat="mantenimiento"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Mantenimiento
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Mantención del Aire Acondicionado: Todo lo que Necesitas Saber
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            El AC es el sistema más olvidado — y el más usado en verano. Aprende
-            cuándo recargar el gas, cómo cambiar el filtro de cabina y los mitos
-            que cuestan caro.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Carlos Ramírez</span><span>·</span><span>5 ene 2026</span
-            ><span>·</span><span>7 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(191, 142, 80, 0.13); color: #bf8e50"
+                >Mantenimiento</span
+              ><span class="read-time-pill">7 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Mantención del Aire Acondicionado: Todo lo que Necesitas Saber
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              El AC es el sistema más olvidado — y el más usado en verano.
+              Aprende cuándo recargar el gas y cómo cambiar el filtro de cabina.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">CR</div>
+              <span class="text-xs text-gray-400"
+                >Carlos Ramírez<span class="opacity-50 mx-1">·</span>5 ene
+                2026</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 10 -->
         <a
           href="blog-post-10.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-vial"
+          data-cat="vial"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Seguridad Vial
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Checklist Pre-Viaje: 20 Puntos Antes de Salir a la Carretera
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Cada verano, miles de autos quedan varados por fallas prevenibles.
-            Una revisión de 30 minutos puede ahorrarte días de estrés en la Ruta
-            5.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Juan Pérez</span><span>·</span><span>15 ene 2026</span
-            ><span>·</span><span>9 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(192, 88, 64, 0.13); color: #c05840"
+                >Seg. Vial</span
+              ><span class="read-time-pill">9 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Checklist Pre-Viaje: 20 Puntos Antes de Salir a la Carretera
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Cada verano, miles de autos quedan varados por fallas prevenibles.
+              Una revisión de 30 minutos puede ahorrarte días de estrés.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">JP</div>
+              <span class="text-xs text-gray-400"
+                >Juan Pérez<span class="opacity-50 mx-1">·</span>15 ene
+                2026</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 11 -->
         <a
           href="blog-post-11.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-vial"
+          data-cat="vial"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Seguridad Vial
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Suspensión Dañada: 7 Señales que tu Auto Está Pidiendo Ayuda
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Un amortiguador defectuoso aumenta la distancia de frenado 20%.
-            Aprende el test casero que puedes hacer tú mismo y cuándo es urgente
-            ir al taller.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Carlos Ramírez</span><span>·</span><span>25 ene 2026</span
-            ><span>·</span><span>8 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(192, 88, 64, 0.13); color: #c05840"
+                >Seg. Vial</span
+              ><span class="read-time-pill">8 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Suspensión Dañada: 7 Señales que tu Auto Está Pidiendo Ayuda
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Un amortiguador defectuoso aumenta la distancia de frenado 20%.
+              Aprende el test casero que puedes hacer tú mismo.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">CR</div>
+              <span class="text-xs text-gray-400"
+                >Carlos Ramírez<span class="opacity-50 mx-1">·</span>25 ene
+                2026</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 12 -->
         <a
           href="blog-post-12.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-electrico"
+          data-cat="electrico"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Sistema Eléctrico
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Batería del Auto: Vida Útil, Señales de Falla y Cómo Actuar
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            La batería dura 3–5 años, pero el calor de Santiago puede reducirlo
-            un 30%. Aprende a medir el voltaje tú mismo y el orden correcto para
-            arrancar con cables.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Luis Fernández</span><span>·</span><span>3 feb 2026</span
-            ><span>·</span><span>6 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(196, 152, 32, 0.13); color: #c49820"
+                >Eléctrico</span
+              ><span class="read-time-pill">6 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Batería del Auto: Vida Útil, Señales de Falla y Cómo Actuar
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              La batería dura 3–5 años, pero el calor de Santiago puede
+              reducirlo un 30%. Aprende a medir el voltaje tú mismo.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">LF</div>
+              <span class="text-xs text-gray-400"
+                >Luis Fernández<span class="opacity-50 mx-1">·</span>3 feb
+                2026</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 13 -->
         <a
           href="blog-post-13.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-mantenimiento"
+          data-cat="mantenimiento"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Mantenimiento
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Cómo Elegir el Aceite Correcto: Guía Completa de Viscosidades
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            5W-30, 10W-40, sintético o mineral — el aceite equivocado puede
-            causar más daño que no cambiarlo. Todo lo que necesitas saber antes
-            de ir al taller.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>Luis Fernández</span><span>·</span><span>18 feb 2026</span
-            ><span>·</span><span>8 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(191, 142, 80, 0.13); color: #bf8e50"
+                >Mantenimiento</span
+              ><span class="read-time-pill">8 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Cómo Elegir el Aceite Correcto: Guía Completa de Viscosidades
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              5W-30, 10W-40, sintético o mineral — el aceite equivocado puede
+              causar más daño que no cambiarlo.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">LF</div>
+              <span class="text-xs text-gray-400"
+                >Luis Fernández<span class="opacity-50 mx-1">·</span>18 feb
+                2026</span
+              >
+            </div>
+          </div>
         </a>
 
-        <!-- Post 14 -->
         <a
           href="blog-post-14.html"
-          class="article-card block bg-card rounded-2xl p-6"
+          class="article-card-v2 cat-detallado"
+          data-cat="detallado"
         >
-          <span
-            class="inline-flex items-center text-xs copper-text uppercase tracking-widest font-semibold"
-          >
-            <span class="category-dot"></span>Consejos
-          </span>
-          <h3 class="mt-3 text-lg font-bold text-dark leading-snug">
-            Detallado Profesional: Qué Incluye y Por Qué Protege tu Inversión
-          </h3>
-          <p class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-3">
-            Un detallado completo puede aumentar el valor de reventa entre
-            $200.000 y $500.000 CLP. Te explicamos cada fase: descontaminación,
-            pulido, cerámica y más.
-          </p>
-          <div
-            class="mt-4 flex flex-wrap items-center gap-x-2 text-xs text-gray-400"
-          >
-            <span>María González</span><span>·</span><span>5 mar 2026</span
-            ><span>·</span><span>10 min</span>
-          </div>
-          <span
-            class="mt-4 inline-flex items-center gap-1 copper-text text-xs font-semibold"
-          >
-            Leer
-            <svg
-              width="12"
-              height="12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
+          <div class="p-6 flex flex-col flex-1">
+            <div class="flex items-center justify-between mb-3">
+              <span
+                class="cat-badge"
+                style="background: rgba(109, 154, 92, 0.13); color: #6d9a5c"
+                >Detallado</span
+              ><span class="read-time-pill">10 min</span>
+            </div>
+            <h3 class="text-base font-bold text-dark leading-snug">
+              Detallado Profesional: Qué Incluye y Por Qué Protege tu Inversión
+            </h3>
+            <p
+              class="mt-2 text-sm text-gray-400 leading-relaxed line-clamp-2 flex-1"
             >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </span>
+              Un detallado completo puede aumentar el valor de reventa entre
+              $200.000 y $500.000 CLP. Te explicamos cada fase.
+            </p>
+            <div class="mt-4 pt-4 border-t border-deep flex items-center gap-2">
+              <div class="author-badge">MG</div>
+              <span class="text-xs text-gray-400"
+                >María González<span class="opacity-50 mx-1">·</span>5 mar
+                2026</span
+              >
+            </div>
+          </div>
         </a>
       </div>
-      <!-- /grid -->
 
       <!-- CTA Banner -->
-      <div class="mt-16 bg-deep rounded-2xl p-10 text-center">
-        <h2 class="text-2xl font-bold text-dark">
+      <div class="mt-16 blog-cta-box p-10 md:p-14 text-center">
+        <p
+          class="text-xs uppercase tracking-[0.3em] font-bold mb-3"
+          style="color: rgba(191, 142, 80, 0.7)"
+        >
+          Pioneros Automotriz
+        </p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white">
           ¿Listo para darle a tu auto el cuidado que merece?
         </h2>
-        <p class="mt-3 text-gray-400 max-w-md mx-auto">
+        <p
+          class="mt-3 max-w-md mx-auto text-sm leading-relaxed"
+          style="color: rgba(255, 255, 255, 0.44)"
+        >
           Reserva una hora con nuestros técnicos certificados. Atención premium
           en Chicureo.
         </p>
         <a
           href="index.html#booking"
-          class="mt-6 inline-block copper-bg text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105"
+          class="mt-7 inline-block copper-bg text-white px-9 py-3 rounded-full text-sm font-bold hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105"
+          >Reservar Hora</a
         >
-          Reservar Hora
-        </a>
       </div>
     </main>
+
+    <script>
+      (function () {
+        var btns = document.querySelectorAll("#cat-filter .cat-filter-btn");
+        var cards = document.querySelectorAll("#article-grid [data-cat]");
+        var feat = document.getElementById("featured-section");
+        btns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            btns.forEach(function (b) {
+              b.classList.remove("active");
+            });
+            btn.classList.add("active");
+            var cat = btn.dataset.cat;
+            if (cat === "all") {
+              feat.style.display = "";
+              cards.forEach(function (c) {
+                c.style.display = "";
+              });
+            } else {
+              feat.style.display = cat === "mantenimiento" ? "" : "none";
+              cards.forEach(function (c) {
+                c.style.display = c.dataset.cat === cat ? "" : "none";
+              });
+            }
+          });
+        });
+      })();
+    </script>
 
     <!-- Footer -->
     <footer class="bg-card mt-8">
@@ -780,9 +758,7 @@
           <div
             class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400"
           >
-            <a
-              href="index.html"
-              class="hover:text-dark transition-colors"
+            <a href="index.html" class="hover:text-dark transition-colors"
               >Inicio</a
             >
             <a
@@ -790,9 +766,7 @@
               class="hover:text-dark transition-colors"
               >Servicios</a
             >
-            <a
-              href="index.html#about"
-              class="hover:text-dark transition-colors"
+            <a href="index.html#about" class="hover:text-dark transition-colors"
               >Quiénes somos</a
             >
             <a

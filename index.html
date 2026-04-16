@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <title>Pioneros Automotriz | Servicio Premium de Automóviles en Chicureo</title>
 
     <meta name="description" content="Pioneros es un servicio automotriz premium en Santiago, Chile. Ofrecemos revisión experta, mantenimiento, reparación de motores, y detallado para tu vehículo. Confianza, transparencia y excelencia en cada servicio.">
-    <meta name="keywords" content="Pioneros, Automotriz, taller mecánico, servicio automotriz, reparación de autos, mantenimiento de autos, Chicureo, Chamisero, Colina, Santiago, Chile, frenos, cambio de aceite, neumáticos, diagnóstico, detallado, mecánica automotriz, servicio premium, motor, suspensión, sistemas eléctricos, aire acondicionado, técnicos certificados, repuestos OEM, garantía de servicio, taller de confianza">
+    <meta name="keywords" content="taller mecánico Chicureo, servicio automotriz Colina, cambio de aceite Total Quartz, mantención premium, Pioneros Automotriz">
     <meta name="author" content="Pioneros Servicio Automotriz">
     
     <meta property="og:title" content="Pioneros | Servicio Automotriz Premium en Santiago">
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
 
     
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
@@ -149,45 +149,50 @@
 </div>
 <!--Navbar-->
     <nav id="main-nav" class="bg-nav backdrop-blur-sm w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
-            <div class="flex justify-start h-12 items-center">
-                <div class="flex-shrink-0 flex-grow flex items-center pt-1 pb-2">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
                     <div class="shield-logo">
-                        <img src="images/Logo_pioneros_inline.svg" alt="Pioneros Automotriz" class="h-12 w-auto object-contain" />
+                        <img src="images/Logo_pioneros_inline.svg" 
+                        alt="Pioneros Automotriz" class="h-12 w-auto object-contain" style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45))" />
                     </div>
                 </div>
-                <div class="flex items-center md:ml-12 lg:ml-24">
-                    <div class="hidden md:block">
-                        <div class="flex items-center space-x-8 lg:space-x-12">
-                            <a href="#" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Inicio</a>
-                            <a href="#services" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Servicios</a>
-                            <a href="#about" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Quiénes somos</a>
-                            <a href="#team" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">El equipo</a>
-                            <a href="#contact" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Contacto</a>
-                            <a href="blog.html" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Blog</a>
-                            <a href="#" onclick="openBookingModal();return false;" class="ml-4 copper-bg text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-110 hover:bg-transparent border-2 border-transparent hover:border-copper hover:text-copper hover:shadow-lg">Reservar Ahora</a>
-                        </div>
-                    </div>
-                </div>
-                <!--Navbar celular-->
                 <div class="mr-2 flex md:hidden">
                     <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-lg text-gray-400 hover:text-white focus:outline-none" title="Abrir menú de navegación">
                         <svg id="mobile-menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                     </button>
                 </div>
-            </div>
-            <div class="md:hidden hidden" id="mobile-menu">
-                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                    <a href="#" class="nav-link block px-2 py-2 text-2xl font-medium text-dark hover:text-copper-500">Inicio</a>
-                    <a href="#services" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">Servicios</a>
-                    <a href="#about" class="nav-link block px-2 py-1 text-2xl  font-medium text-dark hover:text-copper-500">Quiénes somos</a>
-                    <a href="#team" class="nav-link block px-2 py-1 text-2xl  font-medium text-dark hover:text-copper-500">El equipo</a>
-                    <a href="#contact" class="nav-link block px-2 py-1 text-2xl  font-medium text-dark hover:text-copper-500">Contacto</a>
-                    <a href="blog.html" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">Blog</a>
-                    <a href="#" onclick="openBookingModal();return false;" class="block w-full text-center copper-bg text-dark px-4 py-2 rounded-full text-2xl font-medium transition-all duration-300 transform hover:scale-110 hover:bg-transparent hover:border-copper hover:text-copper hover:shadow-lg">Reservar Ahora</a>
+                <div class="hidden md:block md:ml-12 lg:ml-24">
+                    <div class="flex items-center space-x-8 lg:space-x-12">
+                        <a href="#" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Inicio</a>
+                        <a href="#services" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Servicios</a>
+                        <a href="#about" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Quiénes somos</a>
+                        <a href="#team" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">El equipo</a>
+                        <a href="#contact" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Contacto</a>
+                        <a href="blog.html" class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500">Blog</a>
+                        <a href="#" onclick="openBookingModal();return false;" class="ml-4 copper-bg text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-110 hover:bg-transparent border-2 border-transparent hover:border-copper hover:text-copper hover:shadow-lg">Reservar Ahora</a>
+                    </div>
                 </div>
             </div>
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <div class="rounded-2xl border border-card bg-surface/90 p-4 shadow-xl">
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="shield-logo">
+                            <img src="images/Logo_pioneros_inline.svg" alt="Pioneros Automotriz" class="h-10 w-auto object-contain" style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.45))" />
+                        </div>
+                    </div>
+                    <div class="px-2 pt-2 pb-3 space-y-1 text-center">
+                        <a href="#" class="nav-link block px-2 py-2 text-2xl font-medium text-dark hover:text-copper-500">Inicio</a>
+                        <a href="#services" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">Servicios</a>
+                        <a href="#about" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">Quiénes somos</a>
+                        <a href="#team" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">El equipo</a>
+                        <a href="#contact" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">Contacto</a>
+                        <a href="blog.html" class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500">Blog</a>
+                        <a href="#" onclick="openBookingModal();return false;" class="block w-full text-center copper-bg text-white px-4 py-2 rounded-full text-2xl font-medium transition-all duration-300 transform hover:scale-110 hover:bg-transparent border-2 border-transparent hover:border-copper hover:text-copper hover:shadow-lg">Reservar Ahora</a>
+                    </div>
+                </div>
             </div>
+        </div>
     </nav>
 
     <div id="nav-spacer" class="hidden"></div>
@@ -201,20 +206,19 @@
             <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
                 <div class="mt-10 sm:mt-12 lg:mt-0" data-aos="fade-right">
                     <!-- Premium badge -->
-                                    <div class="mb-4 flex items-center">
-                        <img src="images/Totalenergy.svg" 
-                            alt="Total Energies Partner" 
-                            class="h-14 w-auto object-contain opacity-90 drop-shadow-md">
-                    </div>
-
-                    <div class="inline-flex items-center gap-2 border border-copper-400 text-copper-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 hero-badge">
-                        <span class="hero-badge-dot"></span>
-                        Official Partner &middot; Chicureo
+                    <div class="inline-flex flex-col items-center gap-5 mb-6">
+                        <img src="images/Totalenergy.svg"
+                            alt="Total Energies Partner"
+                            class="h-14 w-auto object-contain" style="opacity:0.92; filter: drop-shadow(0 3px 10px rgba(0,0,0,0.65))">
+                        <div class="inline-flex items-center gap-2 border border-copper-400 text-copper-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full hero-badge">
+                            <span class="hero-badge-dot"></span>
+                            Official Partner &middot; Chicureo
+                        </div>
                     </div>
 
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold hero-heading leading-tight relative z-10 py-2" 
                         style="filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.8)) !important;">
-                        El estándar de <span class="copper-text">servicios</span> que <br>tu auto <span class="copper-text">merece</span>
+                        El estándar de <span class="copper-text">servicios</span> que tu auto <span class="copper-text">merece</span>
                     </h1>
                     <p class="mt-5 text-lg hero-copy max-w-lg">
                         En <span class="copper-text">Pioneros</span>, tratamos cada vehículo con la precisión de un experto y el cuidado de un dueño. Descubre un servicio técnico de nivel superior en <span class="copper-text">Chicureo</span>.
@@ -247,16 +251,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Servicios</h2>
-                <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                     Nuestras Ofertas <span class="copper-text">Premium</span>
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-300 mx-auto">
+                </h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
                     Cuidado integral para tu vehículo con los más altos estándares
                 </p>
             </div>
 <!--Tarjetas-->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-6">
                         <div class="flex items-center">
                                                         <div class="copper-bg p-3 rounded-full">
@@ -264,7 +268,7 @@
                             </div>
                             <h3 class="ml-4 text-xl font-bold text-dark">Cambio de Aceite Total Quartz — 45mn</h3>
                         </div>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-4 text-gray-400">
                             Cambio rápido con Total Quartz para máxima protección del motor, limpieza avanzada y rendimiento confiable en solo 45 minutos.
                         </p>
                         <a href="https://totalenergies.cl/lubricantes-automotrices/quartz-aceite-de-motor" target="_blank" rel="noopener" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -274,7 +278,7 @@
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-6">
                         <div class="flex items-center">
                             <div class="copper-bg p-3 rounded-full">
@@ -282,7 +286,7 @@
                             </div>
                             <h3 class="ml-4 text-xl font-bold text-dark">Mantenciones Premium y Standard</h3>
                         </div>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-4 text-gray-400">
                             Mantenimiento completo con inspección detallada y servicios preventivos para mantener tu vehículo en tu mejor estado.
                         </p>
                         <a href="#" class="mt-6 inline-flex items-center copper-text text-sm font-medium hover:text-white transition-colors duration-300">
@@ -291,7 +295,7 @@
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="p-6">
                         <div class="flex items-center">
                             <div class="copper-bg p-3 rounded-full">
@@ -299,7 +303,7 @@
                             </div>
                             <h3 class="ml-4 text-xl font-bold text-dark">Revisión de Frenos</h3>
                         </div>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-4 text-gray-400">
                             Inspección y servicio completo de frenos para garantizar tu seguridad en la carretera.
                         </p>
                         <a href="#" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -308,7 +312,7 @@
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="p-6">
                         <div class="flex items-center">
                             <div class="copper-bg p-3 rounded-full">
@@ -316,7 +320,7 @@
                             </div>
                             <h3 class="ml-4 text-xl font-bold text-dark">Instalación Láminas de Seguridad</h3>
                         </div>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-4 text-gray-400">
                             Venta e instalación de láminas de seguridad para proteger tu vehículo y mejorar la privacidad.
                         </p>
                         <a href="#" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -325,7 +329,7 @@
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
                     <div class="p-6">
                         <div class="flex items-center">
                             <div class="copper-bg p-3 rounded-full">
@@ -333,7 +337,7 @@
                             </div>
                             <h3 class="ml-4 text-xl font-bold text-dark">Grabado de Patente</h3>
                         </div>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-4 text-gray-400">
                             Servicio de grabado de patente para cumplir con la nueva ley y brindar mayor seguridad y protección contra robos.
                         </p>
                         <a href="#" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -341,7 +345,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
                     <div class="p-6">
                         <div class="flex items-center">
                             <div class="copper-bg p-3 rounded-full">
@@ -349,7 +353,7 @@
                             </div>
                             <h3 class="ml-4 text-xl font-bold text-dark">Instalación G.P.S.</h3>
                         </div>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-4 text-gray-400">
                             Servicio de instalación de G.P.S. para mejorar la seguridad y el seguimiento de tu vehículo.
                         </p>
                         <a href="#" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -359,7 +363,7 @@
                 </div>
 
                 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="700">
                     <div class="p-6">
                         <div class="flex items-center">
                             <div class="copper-bg p-3 rounded-full">
@@ -367,7 +371,7 @@
                             </div>
                             <h3 class="ml-4 text-xl font-bold text-dark">Accesorios</h3>
                         </div>
-                        <p class="mt-4 text-gray-300">
+                        <p class="mt-4 text-gray-400">
                             Amplia gama de accesorios premium para personalizar y mejorar tu vehículo.
                         </p>
                         <a href="#" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -391,7 +395,7 @@
                     <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                         La Diferencia <span class="copper-text">Pioneros</span>
                     </h3>
-                    <p class="mt-6 text-lg text-gray-300">
+                    <p class="mt-6 text-lg text-gray-400">
                         En Pioneros, sabemos que tu vehículo es una parte fundamental de tu vida diaria. Por eso, desde 2025, hemos construido nuestra reputación sobre un pilar fundamental: ofrecerte tranquilidad a través de un servicio automotriz excepcional.                    </p>
                     <div class="mt-8">
                     <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
@@ -403,8 +407,8 @@
                                 <i data-feather="check" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h3 class="text-lg font-bold text-white">Experiencia que Genera Confianza</h4>
-                                <p class="mt-1 text-gray-300">
+                                <h4 class="text-lg font-bold text-dark">Experiencia que Genera Confianza</h4>
+                                <p class="mt-1 text-gray-400">
                                     No solo realizamos mantenciones, entendemos los autos. Nuestro equipo de técnicos certificados aporta décadas de experiencia combinada a cada trabajo y solucionando problemas con precisión.
                                 </p>
                             </div>
@@ -414,8 +418,8 @@
                                 <i data-feather="check" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Solo lo Mejor para tu Auto</h4>
-                                <p class="mt-1 text-gray-300">
+                                <h4 class="text-lg font-bold text-dark">Solo lo Mejor para tu Auto</h4>
+                                <p class="mt-1 text-gray-400">
                                     Utilizamos exclusivamente repuestos de calidad premium, porque creemos que tu vehículo merece lo mejor para un rendimiento óptimo y una mayor vida útil.
                                 </p>
                             </div>
@@ -425,9 +429,10 @@
                                 <i data-feather="check" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Garantía de Rapidez de Servicio de Cambio de Aceite</h4>
-                                <p class="mt-1 text-gray-300">
+                                <h4 class="text-lg font-bold text-dark">Garantía de Rapidez de Servicio de Cambio de Aceite</h4>
+                                <p class="mt-1 text-gray-400">
                                     Entendemos que tu tiempo es valioso. Por eso, ahora utilizamos Total Quartz en nuestros cambios de aceite para ofrecerte máxima protección en 45 minutos, sin sacrificar la calidad ni la atención al detalle.
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-start mt-6">
@@ -435,8 +440,8 @@
                                 <i data-feather="check" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Garantía de Satisfacción Total</h4>
-                                <p class="mt-1 text-gray-300">
+                                <h4 class="text-lg font-bold text-dark">Garantía de Satisfacción Total</h4>
+                                <p class="mt-1 text-gray-400">
                                     Tu paz mental es nuestra prioridad. Todas nuestras servicios están respaldados por una garantía de 6 meses, porque confiamos plenamente en la calidad de nuestro trabajo.
                                 </p>
                             </div>
@@ -452,19 +457,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Nuestro Equipo: El Corazón de Pioneros</h2>
-                <p class="mt-4 max-w-2xl text-xl text-gray-300 mx-auto">
+                <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
                     <em>"Desde que fundamos Pioneros, mi objetivo ha sido crear más que un simple taller: quería un lugar donde la confianza y la transparencia fueran tan importantes como la calidad del servicio. Sé que la clave está en nuestro equipo. Cada técnico no solo es un experto certificado, sino también un profesional que comparte mi compromiso de ofrecer un servicio honesto y un trato excepcional. Estamos aquí para cuidar tu vehículo como si fuera nuestro, garantizando tu tranquilidad en cada kilómetro."</em>
                 </p>
-                <p class="mt-4 text-gray-300 italic">
+                <p class="mt-4 text-gray-400 italic">
                     - Carlos Briones G., Fundador y Gerente General, Pioneros Automotriz
                 </p>
             </div>
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Conózcanos</h2>
-                <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                     Expertos que <span class="copper-text">cuidan</span> de tu Vehículo
-                </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-300 mx-auto">
+                </h3>
+                <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
                     En Pioneros, creemos que la excelencia comienza con las personas. Nuestro equipo de técnicos no solo está certificado y altamente capacitado, sino que comparte una pasión genuina por el cuidado automotriz. Con décadas de experiencia combinada, trabajamos juntos para asegurar que cada vehículo reciba el servicio preciso y la atención meticulosa que merece.
                 </p>
             </div>
@@ -472,8 +477,8 @@
                 <div class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6" data-aos="fade-up" data-aos-delay="100">
                     <img class="w-32 h-32 rounded-full mx-auto" src="https://static.photos/people/200x200/34" alt="Juan Pérez">
                     <h3 class="mt-4 text-xl font-bold text-dark">Juan Pérez</h3>
-                    <p class="mt-1 text-gray-300">Técnico Jefe</p>
-                    <p class="mt-4 text-gray-300">
+                    <p class="mt-1 text-gray-400">Técnico Jefe</p>
+                    <p class="mt-4 text-gray-400">
                         Con más de 15 años de experiencia, Juan es el jefe de taller. Aporta expertise y cercanía, siempre atento para nuestros clientes.
                     </p>
                 </div>
@@ -481,8 +486,8 @@
                 <div class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6" data-aos="fade-up" data-aos-delay="200">
                     <img class="w-32 h-32 rounded-full mx-auto" src="https://static.photos/people/200x200/56" alt="María González">
                     <h3 class="mt-4 text-xl font-bold text-dark">María González</h3>
-                    <p class="mt-1 text-gray-300">Especialista en Láminas de seguridad</p>
-                    <p class="mt-4 text-gray-300">
+                    <p class="mt-1 text-gray-400">Especialista en Láminas de seguridad</p>
+                    <p class="mt-4 text-gray-400">
                         María es experta en instalación de láminas de seguridad, asegurando que cada vehículo tenga la protección y privacidad que mereces.
                     </p>
                 </div>
@@ -490,32 +495,32 @@
                 <div class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6" data-aos="fade-up" data-aos-delay="300">
                     <img class="w-32 h-32 rounded-full mx-auto" src="https://static.photos/people/200x200/78" alt="Carlos Ramírez">
                     <h3 class="mt-4 text-xl font-bold text-dark">Carlos Ramírez</h3>
-                    <p class="mt-1 text-gray-300">Técnico de Frenos y Suspensión</p>
-                    <p class="mt-4 text-gray-300">
+                    <p class="mt-1 text-gray-400">Técnico de Frenos y Suspensión</p>
+                    <p class="mt-4 text-gray-400">
                         Carlos se especializa en sistemas de frenos y suspensión, garantizando que cada viaje sea seguro y cómodo. 
                     </p>
                 </div>
                 <div class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6" data-aos="fade-up" data-aos-delay="400">
                     <img class="w-32 h-32 rounded-full mx-auto" src="https://static.photos/people/200x200/90" alt="Ana Torres">
                     <h3 class="mt-4 text-xl font-bold text-dark">Ana Torres</h3>
-                    <p class="mt-1 text-gray-300">Especialista en G.P.S.</p>
-                    <p class="mt-4 text-gray-300">
+                    <p class="mt-1 text-gray-400">Especialista en G.P.S.</p>
+                    <p class="mt-4 text-gray-400">
                         Ana se especializa en sistemas de navegación y G.P.S., asegurando que cada vehículo esté equipado con la tecnología más avanzada para una mayor seguridad y tranquilidad.
                     </p>
                 </div>
                 <div class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6" data-aos="fade-up" data-aos-delay="600">
                     <img class="w-32 h-32 rounded-full mx-auto" src="https://static.photos/people/200x200/23" alt="Sofía Martínez">
                     <h3 class="mt-4 text-xl font-bold text-dark">Sofía Martínez</h3>
-                    <p class="mt-1 text-gray-300">Coordinadora de Servicio al Cliente</p>
-                    <p class="mt-4 text-gray-300">
+                    <p class="mt-1 text-gray-400">Coordinadora de Servicio al Cliente</p>
+                    <p class="mt-4 text-gray-400">
                         Sofía es la cara amable que recibe a nuestros clientes, asegurando que cada visita sea una experiencia positiva y sin complicaciones.
                     </p>
                 </div>
                  <div class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6" data-aos="fade-up" data-aos-delay="600">
                     <img class="w-32 h-32 rounded-full mx-auto" src="https://static.photos/people/200x200/67" alt="Luis Fernández">
                     <h3 class="mt-4 text-xl font-bold text-dark">Luis Fernández</h3>
-                    <p class="mt-1 text-gray-300">Técnico de Ventas Accesorios</p>
-                    <p class="mt-4 text-gray-300">
+                    <p class="mt-1 text-gray-400">Técnico de Ventas Accesorios</p>
+                    <p class="mt-4 text-gray-400">
                         Luis es nuestro experto en accesorios automotrices, ayudando a los clientes a personalizar sus vehículos con productos de alta calidad que mejoran tanto la estética como la funcionalidad.
                     </p>
                 </div>
@@ -527,7 +532,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Testimonios</h2>
-                <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                <p class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                     Lo que dicen nuestros Clientes
                 </p>
             </div>
@@ -536,16 +541,16 @@
                 <div class="bg-deep rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center">
                         <div class="copper-text text-3xl mr-2">"</div>
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-400 italic">
                             El equipo de Pioneros me ahorró miles al detectar un problema que mi concesionario pasó por alto. Su atención al detalle es inigualable.
                         </p>
                     </div>
                     <div class="mt-6 flex items-center">
                         <img class="h-12 w-12 rounded-full" src="https://static.photos/people/200x200/117" alt="">
                         <div class="ml-4">
-                            <h4 class="text-white font-bold">José P.</h4>
+                            <h4 class="text-dark font-bold">José P.</h4>
                             <p class="text-gray-400 text-sm">Dueño de un Ford Ranger</p>
-                            <p class="text-yellow-990 text-sm">★★★★★</p>
+                            <p class="text-copper-text text-lg">★★★★★</p>
                         </div>
                     </div>
                 </div>
@@ -553,16 +558,16 @@
                 <div class="bg-deep rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center">
                         <div class="copper-text text-3xl mr-2">"</div>
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-400 italic">
                             Toda mi familia lleva sus autos a Pioneros. Son honestos, profesionales y su trabajo es impecable siempre.
                         </p>
                     </div>
                     <div class="mt-6 flex items-center">
                         <img class="h-12 w-12 rounded-full" src="https://static.photos/office/200x200/112" alt="">
                         <div class="ml-4">
-                            <h4 class="text-white font-bold">Ignacia R.</h4>
+                            <h4 class="text-dark font-bold">Ignacia R.</h4>
                             <p class="text-gray-400 text-sm">Dueña de un Toyota Corolla Cross</p>
-                            <p class="text-yellow-990 text-sm">★★★★★</p>
+                            <p class="text-copper-text text-lg">★★★★★</p>
                         </div>
                     </div>
                 </div>
@@ -570,16 +575,16 @@
                 <div class="bg-deep rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-center">
                         <div class="copper-text text-3xl mr-2">"</div>
-                        <p class="text-gray-300 italic">
+                        <p class="text-gray-400 italic">
                             Su servicio de cambio de aceite en 45 minutos es real. Mi auto quedó tiki taca y pude volver a la carretera sin perder tiempo. ¡Recomiendo 100%!
                         </p>
                     </div>
                     <div class="mt-6 flex items-center">
                         <img class="h-12 w-12 rounded-full" src="https://static.photos/people/200x200/45" alt="Man happy customer">
                         <div class="ml-4">
-                            <h4 class="text-white font-bold">Óscar L.</h4>
+                            <h4 class="text-dark font-bold">Óscar L.</h4>
                             <p class="text-gray-400 text-sm">Dueño de un Mercedes S-Class</p>
-                            <p class="text-yellow-990 text-sm">★★★★★</p>
+                            <p class="text-copper-text text-lg">★★★★★</p>
                         </div>
                     </div>
                 </div>
@@ -591,10 +596,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Preguntas Frecuentes</h2>
-                <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                <p class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                     La Experiencia <span class="copper-text">Pioneros</span>
                 </p>
-                <p class="mt-4 max-w-2xl text-xl text-gray-300 mx-auto">
+                <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
                     Resolviendo tus <span class="copper-text">Dudas</span> y Afirmando tu <span class="copper-text">Confianza</span>.
                 </p>
             </div>
@@ -602,7 +607,7 @@
             <div class="space-y-4 max-w-4xl mx-auto">
                 <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                     <button 
-                        class="faq-toggle w-full flex justify-between items-center p-6 text-white text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
+                        class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
                         aria-expanded="false" 
                         aria-controls="faq-content-new-1"
                     >
@@ -610,7 +615,7 @@
                         <i data-feather="chevron-down" class="faq-icon transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-new-1" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="p-6 pt-2 text-gray-300">
+                        <p class="p-6 pt-2 text-gray-400">
                             La <span class="copper-text">confianza</span> es nuestro pilar. Cada servicio se realiza con tecnología de punta y, antes de cualquier reparación, te proporcionamos un <span class="copper-text">informe detallado con fotografías o videos</span> de los componentes que requieren atención. Nunca se realizan trabajos sin tu aprobación previa, y te explicamos claramente por qué se necesita cada servicio, ofreciendo alternativas (repuestos <span class="copper-text">Premium</span>) para que tú tomes la mejor decisión.
                         </p>
                     </div>
@@ -618,7 +623,7 @@
 
                 <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                     <button 
-                        class="faq-toggle w-full flex justify-between items-center p-6 text-white text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
+                        class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
                         aria-expanded="false" 
                         aria-controls="faq-content-new-2"
                     >
@@ -626,7 +631,7 @@
                         <i data-feather="chevron-down" class="faq-icon transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-new-2" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="p-6 pt-2 text-gray-300">
+                        <p class="p-6 pt-2 text-gray-400">
                             Al usar repuestos de marca <span class="copper-text">Premium</span>, garantizamos que la pieza cumple con las especificaciones exactas que el fabricante de tu vehículo diseñó. Esto se traduce en un <span class="copper-text">rendimiento óptimo</span>, una <span class="copper-text">mayor vida útil</span> de la reparación y previene fallas prematuras que los repuestos genéricos suelen causar. Es una inversión en la longevidad y seguridad de tu automóvil.
                         </p>
                     </div>
@@ -634,7 +639,7 @@
 
                 <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                     <button 
-                        class="faq-toggle w-full flex justify-between items-center p-6 text-white text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
+                        class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
                         aria-expanded="false" 
                         aria-controls="faq-content-2"
                     >
@@ -642,7 +647,7 @@
                         <i data-feather="chevron-down" class="faq-icon transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-2" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="p-6 pt-2 text-gray-300">
+                        <p class="p-6 pt-2 text-gray-400">
                             Sí, tu tranquilidad es nuestra prioridad. Todas nuestras reparaciones mecánicas y uso de repuestos están respaldados por una <span class="copper-text">garantía de 6 meses</span>. Esto asegura la calidad de nuestro trabajo y de los repuestos utilizados, dándote total confianza.
                         </p>
                     </div>
@@ -650,7 +655,7 @@
 
                 <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="400">
                     <button 
-                        class="faq-toggle w-full flex justify-between items-center p-6 text-white text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
+                        class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
                         aria-expanded="false" 
                         aria-controls="faq-content-1"
                     >
@@ -658,7 +663,7 @@
                         <i data-feather="chevron-down" class="faq-icon transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-1" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="p-6 pt-2 text-gray-300">
+                        <p class="p-6 pt-2 text-gray-400">
                             Atendemos una amplia gama de vehículos, desde modelos conocidos como el Toyota Corolla hasta vehículos <span class="copper-text">híbridos, eléctricos y de alta gama</span>. Nuestros <span class="copper-text">técnicos certificados</span> tienen experiencia con diversas marcas y modelos gracias a su formación continua. Si tiene un vehículo especializado, puede estar seguro de que recibirá el cuidado de experto que requiere.
                         </p>
                     </div>
@@ -666,7 +671,7 @@
 
                 <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="500">
                     <button 
-                        class="faq-toggle w-full flex justify-between items-center p-6 text-white text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
+                        class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
                         aria-expanded="false" 
                         aria-controls="faq-content-new-3"
                     >
@@ -674,7 +679,7 @@
                         <i data-feather="chevron-down" class="faq-icon transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-new-3" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="p-6 pt-2 text-gray-300">
+                        <p class="p-6 pt-2 text-gray-400">
                             Solo necesita <span class="copper-text">reservar una hora</span> (online o por teléfono). Para un servicio de <span class="copper-text">Mantenimiento Preventivo (Pauta)</span> o <span class="copper-text">Cambio de Aceite</span>, nuestro objetivo es entregarte tu vehículo el <span class="copper-text">mismo día</span>. Para reparaciones mayores o diagnósticos complejos, te mantendremos informado con actualizaciones periódicas sobre el tiempo estimado. Tu coordinadora de servicio te indicará todo lo que necesita al agendar.
                         </p>
                     </div>
@@ -682,7 +687,7 @@
 
                 <div class="bg-deep rounded-lg shadow-xl overflow-hidden" data-aos="fade-up" data-aos-delay="600">
                     <button 
-                        class="faq-toggle w-full flex justify-between items-center p-6 text-white text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
+                        class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
                         aria-expanded="false" 
                         aria-controls="faq-content-3"
                     >
@@ -690,7 +695,7 @@
                         <i data-feather="chevron-down" class="faq-icon transition-transform duration-300"></i>
                     </button>
                     <div id="faq-content-3" class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <p class="p-6 pt-2 text-gray-300">
+                        <p class="p-6 pt-2 text-gray-400">
                             Puede reservar una hora directamente haciendo clic en el botón <span class="copper-text">"Reservar una Hora"</span>, llamándonos al <span class="copper-text">+56 9 6543 0123</span>, o enviando un mensaje directo por WhatsApp. También puede completar el formulario de contacto con tu solicitud de cotización y te responderemos con la información de tu servicio a la brevedad.
                         </p>
                     </div>
@@ -704,7 +709,7 @@
             <h2 class="text-3xl font-extrabold text-dark sm:text-4xl" data-aos="fade-up">
                ¿Listo para vivir la Experiencia <span class="copper-text">Pioneros</span>?
             </h2>
-            <p class="mt-2 text-xl text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <p class="mt-2 text-xl text-gray-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                 Agenda tu servicio hoy y únete a nuestra familia de clientes satisfechos.
             </p>
             <div class="mt-8 flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:space-x-6 sm:justify-center" data-aos="fade-up" data-aos-delay="200">
@@ -722,10 +727,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Ubicación</h2>
-                <p class="mt-4 text-3xl font-extrabold text-white sm:text-4xl">
+                <p class="mt-4 text-3xl font-extrabold text-dark sm:text-4xl">
                     Cómo Llegar
                 </p>
-                <p class="mt-2 text-lg text-gray-300">  
+                <p class="mt-2 text-lg text-gray-400">  
                     Estamos ubicados en Av. Chicureo, Colina - Santiago, Región Metropolitana.
                 </p>
                 <a href="https://maps.app.goo.gl/jNfNdUakfvuCQq8D9" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 copper-text text-sm font-medium hover:text-white transition-colors duration-300">
@@ -758,7 +763,7 @@
                     <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                         Ponte en contacto
                     </h3>
-                    <p class="mt-6 text-lg text-gray-300">
+                    <p class="mt-6 text-lg text-gray-400">
                         ¿Tienes una pregunta o quieres agendar una hora? Nuestro equipo está listo para brindarte la mejor asistencia.
                     </p>
                     
@@ -768,8 +773,8 @@
                                 <i data-feather="map-pin" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Dirección</h4>
-                                <p class="mt-1 text-gray-300">Av. Chicureo, Chicureo<br>Colina - Santiago, Región Metropolitana</p>
+                                <h4 class="text-lg font-bold text-dark">Dirección</h4>
+                                <p class="mt-1 text-gray-400">Av. Chicureo, Chicureo<br>Colina - Santiago, Región Metropolitana</p>
                                 <a href="https://maps.app.goo.gl/jNfNdUakfvuCQq8D9" target="_blank" rel="noopener" class="mt-2 flex items-center copper-text text-sm font-medium hover:text-white transition-colors duration-300">
                                     Cómo llegar con Google Maps <i data-feather="map-pin" class="ml-1 w-4 h-4"></i>
                                 </a>
@@ -784,8 +789,8 @@
                                 <i data-feather="phone" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Teléfono</h4>
-                                <p class="mt-1 text-gray-300">+56 9 6543 0123</p>
+                                <h4 class="text-lg font-bold text-dark">Teléfono</h4>
+                                <p class="mt-1 text-gray-400">+56 9 6543 0123</p>
                             </div>
                         </div>
                         
@@ -794,8 +799,8 @@
                                 <i data-feather="mail" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Correo</h4>
-                                <p class="mt-1 text-gray-300">service@pioneros.com</p>
+                                <h4 class="text-lg font-bold text-dark">Correo</h4>
+                                <p class="mt-1 text-gray-400">service@pioneros.com</p>
                             </div>
                         </div>
                         
@@ -804,8 +809,8 @@
                                 <i data-feather="clock" class="text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Horarios</h4>
-                                <p class="mt-1 text-gray-300">Lun-Vie: 8:30 - 18:30 hrs<br>Sáb: 9:00 - 14:00 hrs<br>Dom: Cerrado</p>
+                                <h4 class="text-lg font-bold text-dark">Horarios</h4>
+                                <p class="mt-1 text-gray-400">Lun-Vie: 8:30 - 18:30 hrs<br>Sáb: 9:00 - 14:00 hrs<br>Dom: Cerrado</p>
                             </div>
                         </div>
                     </div>
@@ -852,32 +857,32 @@
                     <form class="space-y-6">
                         <div>
                             <label for="patente" class="block text-sm font-medium text-dark">Patente</label>
-                            <input type="text" id="patente" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="ABCD-12">
+                            <input type="text" id="patente" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="ABCD-12">
                         </div>
 
                         <div>
                             <label for="marca" class="block text-sm font-medium text-dark">Marca y Modelo</label>
-                            <input type="text" id="marca" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="Toyota Land Cruiser Prado">                        
+                            <input type="text" id="marca" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="Toyota Land Cruiser Prado">                        
                         </div>
 
                         <div>
                             <label for="nombre" class="block text-sm font-medium text-dark">Nombre y Apellido</label>
-                            <input type="text" id="nombre" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="Juan Pérez">                        
+                            <input type="text" id="nombre" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="Juan Pérez">                        
                         </div>
                         
                         <div>
                             <label for="email" class="block text-sm font-medium text-dark">Mail</label>
-                            <input type="email" id="email" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="juan.perez@example.com">
+                            <input type="email" id="email" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="juan.perez@example.com">
                         </div>
                         
                         <div>
                             <label for="phone" class="block text-sm font-medium text-dark">Teléfono</label>
-                            <input type="tel" id="phone" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="+56 9 6543 0123">
+                            <input type="tel" id="phone" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="+56 9 6543 0123">
                         </div>
                         
                         <div>
                             <label for="service" class="block text-sm font-medium text-dark">Servicio Requerido</label>
-                            <select id="service" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent">
+                            <select id="service" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent">
                                 <option>Seleccionar Servicio</option>
                                 <option>Cambio de Aceite y Filtros 45 Minutos</option>
                                 <option>Mantención Premium</option>
@@ -892,7 +897,7 @@
                         
                         <div>
                             <label for="message" class="block text-sm font-medium text-dark">Mensaje o Solicitud</label>
-                            <textarea id="message" rows="4" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="Describe brevemente el problema o solicitud..."></textarea>
+                            <textarea id="message" rows="4" class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent" placeholder="Describe brevemente el problema o solicitud..."></textarea>
                         </div>
                         
                         <div>
@@ -912,7 +917,7 @@
                 <div>
                     <div class="flex items-center justify-center">
                         <div class="shield-logo">
-                            <img src="images/Logo_pioneros.svg" alt="Pioneros Automotriz" class="block h-24 w-auto" />
+                            <img src="images/Logo_pioneros.svg" alt="Pioneros Automotriz" class="block h-24 w-auto" style="filter: drop-shadow(0 2px 10px rgba(0,0,0,0.4))" />
                         </div>
                     </div>
                     <p class="mt-4 text-gray-300 text-sm">
@@ -1141,3 +1146,4 @@
     <script src="booking.js"></script>
 </body>
 </html>
+

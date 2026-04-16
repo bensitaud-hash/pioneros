@@ -27,6 +27,7 @@ body {
   color: #ffffff !important;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   will-change: filter; /* This tells the browser to prepare for a shadow filter */
+  text-wrap: balance;
 }
 
 .hero-copy {
@@ -76,11 +77,15 @@ body {
   display: none;
 }
 
+.service-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
 .service-card:hover {
-  transform: translateY(-10px);
-  box-shadow:
-    0 20px 25px -5px rgb(0 0 0 / 10%),
-    0 10px 10px -5px rgb(0 0 0 / 4%);
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.18);
 }
 
 .sticky-nav {
@@ -316,10 +321,15 @@ h2[id] {
   display: block;
 }
 
-/* Mobile: uniform overlay since there's no left/right split */
+/* Mobile: top-to-bottom gradient keeps transparency while boosting legibility */
 @media (max-width: 1023px) {
   .hero-bg::after {
-    background: rgba(8, 14, 22, 0.65);
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 14, 22, 0.52) 0%,
+      rgba(8, 14, 22, 0.32) 50%,
+      rgba(8, 14, 22, 0.1) 100%
+    );
   }
 }
 
@@ -373,7 +383,7 @@ h2[id] {
 }
 
 .bg-nav {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .text-gray-300 {
@@ -431,6 +441,21 @@ h2[id] {
   color: #ffffff !important;
 }
 
+/* Fix: copper-bg text must stay white even when nested inside bg-surface/bg-card/bg-deep.
+   These rules need higher or equal specificity + later source order to beat the
+   .bg-surface h*.text-white { copper } block above. */
+.copper-bg h1.text-white,
+.copper-bg h2.text-white,
+.copper-bg h3.text-white,
+.copper-bg h4.text-white,
+.copper-bg h5.text-white,
+.copper-bg h6.text-white,
+.copper-bg p.text-white,
+.copper-bg span.text-white,
+.copper-bg li.text-white {
+  color: #ffffff !important;
+}
+
 /* Add this to your styles.css */
 ul li a.text-gray-300:hover {
   color: #bf8e50 !important;
@@ -455,11 +480,18 @@ ul li a.text-gray-300:hover {
   color: #1f1e1a;
   font-size: 0.875rem;
   outline: none;
-  transition: box-shadow 0.15s ease;
+  /* Two-layer shadow: tight core shadow + wider cast shadow */
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.14),
+    0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
 }
 
 .bk-input:focus {
-  box-shadow: 0 0 0 2px #bf8e50;
+  /* Core + cast shadows tinted copper on focus */
+  box-shadow:
+    0 1px 3px rgba(191, 142, 80, 0.3),
+    0 6px 12px rgba(191, 142, 80, 0.15);
 }
 
 /* Time slot buttons */
@@ -531,4 +563,297 @@ ul li a.text-gray-300:hover {
 /* Booking modal panel max-height */
 .bk-modal-panel {
   max-height: 92vh;
+}
+
+/* ============================================================
+   Blog — Editorial Redesign (HiConsumption-inspired)
+   ============================================================ */
+
+/* Dark editorial header for the blog listing page */
+.blog-page-hero {
+  background: linear-gradient(135deg, #2e2419 0%, #3d3025 60%, #2a2018 100%);
+  border-bottom: 1px solid rgba(191, 142, 80, 0.18);
+}
+
+/* Dark editorial header for individual blog post pages */
+.post-hero {
+  background: linear-gradient(
+    135deg,
+    #2e2419 0%,
+    #3d3025 60%,
+    #2a2018 100%
+  ) !important;
+  border-bottom: 1px solid rgba(191, 142, 80, 0.18);
+}
+
+.post-hero h1 {
+  color: #f5f0eb !important;
+}
+
+.post-hero .text-dark {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.post-hero .text-gray-400 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.post-hero .copper-text {
+  color: #dbb87a !important;
+}
+
+/* Featured post card */
+.featured-post-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.featured-post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.45);
+}
+
+.featured-post-visual {
+  background: linear-gradient(145deg, #2e2218 0%, #3d3025 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-post-visual::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(191, 142, 80, 0.1);
+  pointer-events: none;
+}
+
+.featured-post-visual::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(191, 142, 80, 0.07);
+  pointer-events: none;
+}
+
+.featured-post-number {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: rgba(191, 142, 80, 0.3);
+  text-transform: uppercase;
+}
+
+/* Article cards — new design */
+.article-card-v2 {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  border-top: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  background-color: #dad3ca;
+  text-decoration: none;
+}
+
+.article-card-v2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.18);
+}
+
+.article-card-v2:hover h3 {
+  color: #bf8e50 !important;
+}
+
+/* Category accent colours */
+.cat-mantenimiento {
+  border-top-color: #bf8e50;
+}
+.cat-consejos {
+  border-top-color: #6d9a5c;
+}
+.cat-estacional {
+  border-top-color: #7b6fb0;
+}
+.cat-seguridad {
+  border-top-color: #c05840;
+}
+.cat-tecnologia {
+  border-top-color: #4d85af;
+}
+.cat-vial {
+  border-top-color: #c05840;
+}
+.cat-electrico {
+  border-top-color: #c49820;
+}
+.cat-detallado {
+  border-top-color: #6d9a5c;
+}
+
+/* Category badge chip */
+.cat-badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* Read-time pill */
+.read-time-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #9e998f;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Author initials avatar */
+.author-badge {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  background: rgba(191, 142, 80, 0.15);
+  border: 1.5px solid rgba(191, 142, 80, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #bf8e50;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+/* Category filter strip */
+.cat-filter-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.cat-filter-row::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-filter-btn {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(191, 142, 80, 0.25);
+  color: #7d7871;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.cat-filter-btn:hover {
+  border-color: #bf8e50;
+  color: #bf8e50;
+}
+
+.cat-filter-btn.active {
+  background: #bf8e50;
+  color: #fff;
+  border-color: #bf8e50;
+}
+
+/* Section heading divider row */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(191, 142, 80, 0.18);
+}
+
+/* Dark CTA box */
+/* ============================================================
+   Contact form inputs — two-layer shadow (core + cast)
+   ============================================================ */
+#contact input,
+#contact select,
+#contact textarea {
+  /* Core shadow: tight, dark, close to element */
+  /* Cast shadow: wider, softer, ambient depth    */
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.13),
+    0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+#contact input:focus,
+#contact select:focus,
+#contact textarea:focus {
+  box-shadow:
+    0 1px 3px rgba(191, 142, 80, 0.28),
+    0 6px 12px rgba(191, 142, 80, 0.15);
+}
+
+.blog-cta-box {
+  background: linear-gradient(135deg, #2e2218 0%, #3d3025 100%);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-cta-box::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(191, 142, 80, 0.08);
+  pointer-events: none;
+}
+
+.blog-cta-box::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid rgba(191, 142, 80, 0.05);
+  pointer-events: none;
 }
