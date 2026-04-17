@@ -418,13 +418,13 @@ h2[id] {
   background: linear-gradient(to right, #f0ebe4 0%, #d3cbc1 100%);
 }
 
-/* Semi-transparent top bars and navbar  rgb(240 235 228 / 90%) rgb(218 211 202 / 85%)  */
+/* Semi-transparent top bars and navbar  rgb(240 235 228 / 90%)  */
 .bg-bar {
   background-color: rgb(218 211 202 / 85%) !important;
 }
-
+/* Semi-transparent top bars and navbar */
 .bg-nav {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .text-gray-300 {
