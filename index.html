@@ -357,7 +357,7 @@
               </div>
 
               <h1
-                class="text-4xl sm:text-5xl lg:text-6xl font-medium hero-heading leading-tight relative z-10 py-2"
+                class="text-4xl sm:text-5xl lg:text-6xl font-medium hero-heading relative z-10"
                 style="
                   filter: drop-shadow(
                     0px 4px 8px rgba(0, 0, 0, 0.8)
@@ -858,49 +858,34 @@
         class="team-gradient py-12 sm:py-16 lg:py-20 bg-surface"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-8" data-aos="fade-up">
+          <div class="mb-6" data-aos="fade-up">
             <h2
               class="text-base copper-text font-semibold tracking-wider uppercase"
             >
-              Nuestro Equipo: El Corazón de Pioneros
-            </h2>
-            <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
-              <em
-                >"Desde que fundamos Pioneros, mi objetivo ha sido crear más que
-                un simple taller: quería un lugar donde la confianza y la
-                transparencia fueran tan importantes como la calidad del
-                servicio. Sé que la clave está en nuestro equipo. Cada técnico
-                no solo es un experto certificado, sino también un profesional
-                que comparte mi compromiso de ofrecer un servicio honesto y un
-                trato excepcional. Estamos aquí para cuidar tu vehículo como si
-                fuera nuestro, garantizando tu tranquilidad en cada
-                kilómetro."</em
-              >
-            </p>
-            <p class="mt-4 text-gray-400 italic">
-              - Carlos Briones G., Fundador y Gerente General, Pioneros
-              Automotriz
-            </p>
-          </div>
-          <div class="text-center mb-10" data-aos="fade-up">
-            <h2
-              class="text-base copper-text font-semibold tracking-wider uppercase"
-            >
-              Conózcanos
+              Nuestro Equipo
             </h2>
             <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
               Expertos que <span class="copper-text">cuidan</span> de tu
               Vehículo
             </h3>
-            <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
-              En Pioneros, creemos que la excelencia comienza con las personas.
-              Nuestro equipo de técnicos no solo está certificado y altamente
-              capacitado, sino que comparte una pasión genuina por el cuidado
-              automotriz. Con décadas de experiencia combinada, trabajamos
-              juntos para asegurar que cada vehículo reciba el servicio preciso
-              y la atención meticulosa que merece.
-            </p>
           </div>
+          <!-- Founder pull-quote -->
+          <figure
+            class="mb-10 border-l-4 border-copper pl-6 max-w-3xl"
+            data-aos="fade-up"
+          >
+            <blockquote class="text-lg text-gray-400 italic leading-relaxed">
+              "Quería un lugar donde la confianza y la transparencia fueran tan
+              importantes como la calidad del servicio. Estamos aquí para cuidar
+              tu vehículo como si fuera nuestro."
+            </blockquote>
+            <figcaption class="mt-3 text-sm text-gray-400 not-italic">
+              — Carlos Briones G.,
+              <span class="text-dark font-medium"
+                >Fundador y Gerente General</span
+              >
+            </figcaption>
+          </figure>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div
               class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6"
@@ -980,7 +965,7 @@
             <div
               class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6"
               data-aos="fade-up"
-              data-aos-delay="600"
+              data-aos-delay="400"
             >
               <img
                 class="w-32 h-32 rounded-full mx-auto"
@@ -1000,7 +985,7 @@
             <div
               class="bg-card rounded-lg overflow-hidden shadow-lg text-center p-6"
               data-aos="fade-up"
-              data-aos-delay="600"
+              data-aos-delay="400"
             >
               <img
                 class="w-32 h-32 rounded-full mx-auto"
@@ -1297,7 +1282,7 @@
             <div
               class="bg-surface rounded-lg shadow-xl overflow-hidden"
               data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos-delay="400"
             >
               <button
                 class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
@@ -1340,7 +1325,7 @@
             <div
               class="bg-surface rounded-lg shadow-xl overflow-hidden"
               data-aos="fade-up"
-              data-aos-delay="600"
+              data-aos-delay="400"
             >
               <button
                 class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
@@ -1385,7 +1370,7 @@
             <div
               class="bg-surface rounded-lg shadow-xl overflow-hidden"
               data-aos="fade-up"
-              data-aos-delay="700"
+              data-aos-delay="400"
             >
               <button
                 class="faq-toggle w-full flex justify-between items-center p-6 text-dark text-lg font-semibold focus:outline-none hover:bg-card transition-colors duration-200"
@@ -1759,10 +1744,24 @@
                 <div>
                   <button
                     type="submit"
-                    class="w-full copper-bg text-white px-6 py-3 rounded-xl text-lg font-medium hover:bg-opacity-80 transition-all duration-200 hover:shadow-copper-500/30"
+                    disabled
+                    class="w-full copper-bg text-white px-6 py-3 rounded-xl text-lg font-medium opacity-60 cursor-not-allowed"
                   >
                     Enviar Mensaje
+                    <span class="text-sm font-normal opacity-80"
+                      >(Próximamente)</span
+                    >
                   </button>
+                  <p class="mt-2 text-center text-sm text-gray-400">
+                    Mientras tanto,
+                    <a
+                      href="https://wa.me/56965430123"
+                      target="_blank"
+                      rel="noopener"
+                      class="copper-text font-medium hover:underline"
+                      >contáctanos por WhatsApp</a
+                    >.
+                  </p>
                 </div>
               </form>
             </div>
@@ -1987,11 +1986,11 @@
               <input
                 type="email"
                 placeholder="Tu mail"
-                class="w-full bg-deep border border-card rounded-md py-2 px-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-1 focus:ring-copper-500"
+                class="w-full bg-deep border border-card rounded-full py-2 px-3 text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-1 focus:ring-copper-500"
               />
               <button
                 type="submit"
-                class="mt-2 w-full copper-bg text-white py-2 rounded-md text-sm font-medium hover:bg-opacity-80 transition-all duration-200 hover:shadow-copper-500/20"
+                class="mt-2 w-full copper-bg text-white py-2 rounded-full text-sm font-medium hover:bg-opacity-80 transition-all duration-200 hover:shadow-copper-500/20"
               >
                 Unirme ahora
               </button>

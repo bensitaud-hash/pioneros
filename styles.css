@@ -22,6 +22,17 @@ body {
   background-color: #bf8e50;
 }
 
+.border-copper {
+  border-color: #bf8e50;
+}
+
+/* Contact form — consistent rounded-xl on all inputs */
+#contact input,
+#contact select,
+#contact textarea {
+  border-radius: 0.75rem !important;
+}
+
 /* ── Display font pairing ──────────────────────────────────── */
 /* Zilla Slab for all major headings (h1, h3) and the          */
 /* large CTA section h2. Small uppercase eyebrow h2 labels     */
@@ -44,6 +55,7 @@ h3,
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   will-change: filter; /* This tells the browser to prepare for a shadow filter */
   text-wrap: balance;
+  line-height: 1 !important;
 }
 
 .hero-copy {
@@ -420,7 +432,7 @@ h2[id] {
 }
 
 .text-gray-400 {
-  color: #7d7871 !important;
+  color: #5a5650 !important;
 }
 
 .bg-card h1.text-white,
@@ -798,7 +810,7 @@ ul li a.text-gray-300:hover {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   border: 1.5px solid rgba(191, 142, 80, 0.25);
-  color: #7d7871;
+  color: #5a5650;
   background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
