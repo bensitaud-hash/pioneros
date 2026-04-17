@@ -22,6 +22,17 @@ body {
   background-color: #bf8e50;
 }
 
+/* ── Display font pairing ──────────────────────────────────── */
+/* Zilla Slab for all major headings (h1, h3) and the          */
+/* large CTA section h2. Small uppercase eyebrow h2 labels     */
+/* stay in Figtree.                                            */
+h1,
+h3,
+#hour h2 {
+  font-family: "Zilla Slab", serif;
+  letter-spacing: -0.01em;
+}
+
 .copper-bg .text-white,
 .copper-bg i,
 .copper-bg svg {
