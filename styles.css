@@ -113,6 +113,19 @@ body {
 
 .map-iframe {
   border: 0;
+  height: 280px;
+}
+
+@media (min-width: 640px) {
+  .map-iframe {
+    height: 360px;
+  }
+}
+
+@media (min-width: 768px) {
+  .map-iframe {
+    height: 450px;
+  }
 }
 
 /* --- Custom CSS for Infinite Scrolling Ticker (The Fix) --- */
@@ -861,4 +874,29 @@ ul li a.text-gray-300:hover {
   border-radius: 50%;
   border: 1px solid rgba(191, 142, 80, 0.05);
   pointer-events: none;
+}
+
+/* ============================================================
+   Responsive Adaptations — Mobile / Tablet / Desktop
+   ============================================================ */
+
+/* FAQ toggle: tighter padding on small screens */
+@media (max-width: 639px) {
+  .faq-toggle {
+    padding: 1rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* Section heading gap: scale down on mobile and tablet */
+@media (max-width: 639px) {
+  section .mb-16 {
+    margin-bottom: 2rem !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  section .mb-16 {
+    margin-bottom: 3rem !important;
+  }
 }

@@ -115,7 +115,7 @@
         <p class="scroll-ticker"> 🚗 Especial Inauguración: <span class="notif-bar-anim font-semibold underline">¡10% OFF</span> en todos nuestros servicios! Solo hasta el 10 de junio 2026 – ¡Reserva ahora y tráenos tu auto con total confianza!</p>
     </div>
 </div>
-<!--Barra whatsapp-->
+<!--Barra whatsapp
 <div id="notification-bar" class="relative bg-bar backdrop-blur-md w-full text-center py-2 z-[60]">
     <a href="https://wa.me/56965430123" 
         target="_blank" 
@@ -135,18 +135,22 @@
          +56 9 6543 0123
     </a>
 </div>
-<!--Barra pago y mensaje CTA-->
+-->
+<!--Barra pago y mensaje CTA
 <div id="header-ticker" class="bg-bar backdrop-blur-md font-bold w-full text-center py-2 z-50">
   <span>HASTA 6 CUOTAS SIN INTERÉS CON MERCADO PAGO | PIONEROS AUTOMOTRIZ.CL</span>
 
 
 
-  <!--href vacio importante revisar-->
+  href vacio importante revisar
 
 
 
   <span>DESCUBRE LO NUEVO EN ACCESORIOS PARA TU AUTO <a href="" target="_blank">aquí</a></span> 
 </div>
+
+-->
+
 <!--Navbar-->
     <nav id="main-nav" class="bg-nav backdrop-blur-sm w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
@@ -192,12 +196,13 @@
 
     <div id="nav-spacer" class="hidden"></div>
 
+<main id="main-content">
 <!--Hero Section-->
     <div id="hero-section" class="hero-bg pt-20">
         <!-- Copper accent line -->
         <div class="hero-accent-line" aria-hidden="true"></div>
 
-        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 w-full">
             <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
                 <div class="mt-10 sm:mt-12 lg:mt-0" data-aos="fade-right">
                     <!-- Premium badge -->
@@ -219,12 +224,12 @@
                         En <span class="copper-text">Pioneros</span>, tratamos cada vehículo con la precisión de un experto y el cuidado de un dueño. Descubre un servicio técnico de nivel superior en <span class="copper-text">Chicureo</span>.
                     </p>
                     <div class="mt-8 flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4 sm:items-start">
-                        <a href="#services" 
+                        <a href="#" onclick="openBookingModal();return false;"
                         class="bg-copper text-white border-2 border-transparent px-8 py-3 rounded-full text-sm font-medium inline-block text-center w-full sm:w-auto transition-all duration-300 transform hover:scale-110 hover:bg-transparent hover:border-copper hover:text-copper hover:shadow-lg">
-                            Nuestros Servicios
+                            Reservar Ahora
                         </a>
-                        <a href="#team" class="bg-transparent border-2 copper-border text-white px-8 py-3 rounded-full text-sm font-medium w-full sm:w-auto text-center hover:bg-white hover:text-copper transform hover:scale-110 transition-all duration-300 hover:shadow-copper-500/30">
-                            Nuestro Equipo
+                        <a href="#services" class="bg-transparent border-2 copper-border text-white px-8 py-3 rounded-full text-sm font-medium w-full sm:w-auto text-center hover:bg-white hover:text-copper transform hover:scale-110 transition-all duration-300 hover:shadow-copper-500/30">
+                            Nuestros Servicios
                         </a>
                     </div>
                 </div>
@@ -242,9 +247,9 @@
     </div>
     
 <!--Section Servicios-->
-    <section id="services" class="py-20 bg-surface">
+    <section id="services" class="py-12 sm:py-16 lg:py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-10 sm:mb-12 lg:mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Servicios</h2>
                 <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                     Nuestras Ofertas <span class="copper-text">Premium</span>
@@ -253,58 +258,79 @@
                     Cuidado integral para tu vehículo con los más altos estándares
                 </p>
             </div>
-<!--Tarjetas-->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                                                        <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="droplet" class="text-white"></i>
+
+            <!-- TIER 1: Featured row — Cambio de Aceite (wide) + Mantención Premium -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="50">
+
+                <!-- FEATURED: Cambio de Aceite — spans 2 cols on lg -->
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg sm:col-span-2 lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6 sm:p-8 h-full flex flex-col">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                                        <i data-feather="droplet" class="text-white w-4 h-4"></i>
+                                    </div>
+                                    <span class="text-xs font-bold tracking-widest uppercase copper-text">Servicio estrella · 45 min garantizados</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-dark leading-tight">Cambio de Aceite <span class="copper-text">Total Quartz</span></h3>
+                                <p class="mt-3 text-gray-400 max-w-prose">
+                                    Cambio rápido con aceite Total Quartz para máxima protección del motor, limpieza avanzada y rendimiento confiable. Tu auto listo en 45 minutos, garantizado.
+                                </p>
                             </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Cambio de Aceite Total Quartz — 45mn</h3>
+                            <!-- Total Energies partner badge — visible on sm+ -->
+                            <div class="hidden sm:flex flex-col items-end gap-1 flex-shrink-0 pt-1">
+                                <img src="images/Totalenergy.svg" alt="Total Energies Partner" class="h-8 w-auto" style="opacity:0.6; filter:drop-shadow(0 1px 4px rgba(0,0,0,0.3))">
+                                <span class="text-xs text-gray-400 whitespace-nowrap">Partner oficial</span>
+                            </div>
                         </div>
-                        <p class="mt-4 text-gray-400">
-                            Cambio rápido con Total Quartz para máxima protección del motor, limpieza avanzada y rendimiento confiable en solo 45 minutos.
-                        </p>
-                        <div class="mt-6 flex items-center gap-4">
-                            <a href="#" onclick="openBookingModal('Cambio de Aceite y Filtros (45 min)');return false;" class="inline-flex items-center copper-text text-sm font-medium">
+                        <div class="mt-6 flex items-center gap-4 flex-wrap">
+                            <a href="#" onclick="openBookingModal('Cambio de Aceite Total Quartz — 45 min');return false;" class="inline-flex items-center copper-text text-sm font-medium">
                                 Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
                             </a>
-                            <a href="https://evp-api-totalenergies-dam-prod-cdn.wedia-group.com/api/media/play.html?PlayerUid=y60338b14d0a1d&MediaUid=0d03a451-3aa8-484c-a455-49aaa23a43d1" target="_blank" rel="noopener" class="inline-flex items-center text-gray-400 hover:text-white text-sm transition-colors duration-200">
+                            <a href="https://evp-api-totalenergies-dam-prod-cdn.wedia-group.com/api/media/play.html?PlayerUid=y60338b14d0a1d&MediaUid=0d03a451-3aa8-484c-a455-49aaa23a43d1" target="_blank" rel="noopener" class="inline-flex items-center text-gray-400 hover:text-dark text-sm transition-colors duration-200">
                                 <i data-feather="file-text" class="mr-1 w-4 h-4"></i> Ficha técnica Total Quartz
                             </a>
                         </div>
-                            
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="award" class="text-white"></i>
-                            </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Mantención Premium</h3>
+                <!-- Mantención Premium — with badge -->
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg relative" data-aos="fade-up" data-aos-delay="150">
+                    <div class="absolute top-4 right-4">
+                        <span class="text-xs font-bold tracking-widest uppercase copper-bg text-white px-2.5 py-1 rounded-full">Premium</span>
+                    </div>
+                    <div class="p-6 h-full flex flex-col">
+                        <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
+                            <i data-feather="award" class="text-white w-4 h-4"></i>
                         </div>
-                        <p class="mt-4 text-gray-400">
-                            Servicio completo con diagnóstico computarizado, repuestos de primera línea y atención personalizada. El cuidado más completo para tu vehículo.
+                        <h3 class="text-xl font-bold text-dark">Mantención Premium</h3>
+                        <p class="mt-3 text-gray-400 flex-1">
+                            Diagnóstico computarizado, repuestos de primera línea y atención personalizada. El cuidado más completo para tu vehículo.
                         </p>
                         <a href="#" onclick="openBookingModal('Mantención Premium');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
                             Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="250">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="settings" class="text-white"></i>
-                            </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Mantención Standard</h3>
+            <!-- Category divider: Mantenciones y Seguridad -->
+            <div class="flex items-center gap-3 mt-10 mb-6" data-aos="fade-up">
+                <span class="text-xs font-bold tracking-widest uppercase text-gray-400 whitespace-nowrap">Mantenciones y Seguridad</span>
+                <div class="flex-1 h-px bg-card"></div>
+            </div>
+
+            <!-- TIER 2: Mantención Standard · Frenos · Grabado de Patente -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
+                            <i data-feather="settings" class="text-white w-4 h-4"></i>
                         </div>
-                        <p class="mt-4 text-gray-400">
-                            Mantenimiento preventivo con los servicios esenciales para mantener tu vehículo en óptimas condiciones. Calidad garantizada al mejor precio.
+                        <h3 class="text-xl font-bold text-dark">Mantención Standard</h3>
+                        <p class="mt-3 text-gray-400 flex-1">
+                            Servicios esenciales para mantener tu vehículo en óptimas condiciones. Calidad garantizada al mejor precio.
                         </p>
                         <a href="#" onclick="openBookingModal('Mantención Standard');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
                             Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
@@ -312,15 +338,13 @@
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="shield" class="text-white"></i>
-                            </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Servicio de Frenos</h3>
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
+                            <i data-feather="shield" class="text-white w-4 h-4"></i>
                         </div>
-                        <p class="mt-4 text-gray-400">
+                        <h3 class="text-xl font-bold text-dark">Servicio de Frenos</h3>
+                        <p class="mt-3 text-gray-400 flex-1">
                             Inspección, ajuste y reemplazo de pastillas, discos y líquido de frenos. Máxima seguridad y frenado preciso en cada kilómetro.
                         </p>
                         <a href="#" onclick="openBookingModal('Servicio de Frenos');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -329,15 +353,37 @@
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="eye-off" class="text-white"></i>
-                            </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Instalación Láminas de Seguridad</h3>
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
+                            <i data-feather="star" class="text-white w-4 h-4"></i>
                         </div>
-                        <p class="mt-4 text-gray-400">
+                        <h3 class="text-xl font-bold text-dark">Grabado de Patente</h3>
+                        <p class="mt-3 text-gray-400 flex-1">
+                            Grabado de patente para cumplir con la nueva ley y mayor protección contra robos.
+                        </p>
+                        <a href="#" onclick="openBookingModal('Grabado de Patente');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
+                            Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category divider: Instalaciones y Accesorios -->
+            <div class="flex items-center gap-3 mt-10 mb-6" data-aos="fade-up">
+                <span class="text-xs font-bold tracking-widest uppercase text-gray-400 whitespace-nowrap">Instalaciones y Accesorios</span>
+                <div class="flex-1 h-px bg-card"></div>
+            </div>
+
+            <!-- TIER 3: Láminas · GPS · Accesorios -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
+                            <i data-feather="eye-off" class="text-white w-4 h-4"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark">Láminas de Seguridad</h3>
+                        <p class="mt-3 text-gray-400 flex-1">
                             Venta e instalación de láminas de seguridad para proteger tu vehículo y mejorar la privacidad.
                         </p>
                         <a href="#" onclick="openBookingModal('Instalación Láminas de Seguridad');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -346,32 +392,14 @@
                     </div>
                 </div>
 
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="star" class="text-white"></i>
-                            </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Grabado de Patente</h3>
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
+                            <i data-feather="map-pin" class="text-white w-4 h-4"></i>
                         </div>
-                        <p class="mt-4 text-gray-400">
-                            Servicio de grabado de patente para cumplir con la nueva ley y brindar mayor seguridad y protección contra robos.
-                        </p>
-                        <a href="#" onclick="openBookingModal('Grabado de Patente');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
-                            Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="map-pin" class="text-white"></i>
-                            </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Instalación G.P.S.</h3>
-                        </div>
-                        <p class="mt-4 text-gray-400">
-                            Servicio de instalación de G.P.S. para mejorar la seguridad y el seguimiento de tu vehículo.
+                        <h3 class="text-xl font-bold text-dark">Instalación G.P.S.</h3>
+                        <p class="mt-3 text-gray-400 flex-1">
+                            Instalación de GPS para mayor seguridad y seguimiento de tu vehículo.
                         </p>
                         <a href="#" onclick="openBookingModal('Instalación G.P.S.');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
                             Reservar <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
@@ -379,16 +407,13 @@
                     </div>
                 </div>
 
-                
-                <div class="service-card bg-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="700">
-                    <div class="p-6">
-                        <div class="flex items-center">
-                            <div class="copper-bg p-3 rounded-full">
-                                <i data-feather="package" class="text-white"></i>
-                            </div>
-                            <h3 class="ml-4 text-xl font-bold text-dark">Accesorios</h3>
+                <div class="service-card bg-card rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
+                            <i data-feather="package" class="text-white w-4 h-4"></i>
                         </div>
-                        <p class="mt-4 text-gray-400">
+                        <h3 class="text-xl font-bold text-dark">Accesorios</h3>
+                        <p class="mt-3 text-gray-400 flex-1">
                             Amplia gama de accesorios premium para personalizar y mejorar tu vehículo.
                         </p>
                         <a href="#" onclick="openBookingModal('Accesorios');return false;" class="mt-6 inline-flex items-center copper-text text-sm font-medium">
@@ -397,11 +422,12 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
 <!--Section Nosotros-->
-    <section id="about" class="py-20 bg-surface">
+    <section id="about" class="py-12 sm:py-16 lg:py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="mb-12 lg:mb-0" data-aos="fade-right">
@@ -470,7 +496,7 @@
     </section>
 
 <!--Section Equipo-->
-    <section id="team" class="team-gradient py-20 bg-surface">
+    <section id="team" class="team-gradient py-12 sm:py-16 lg:py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Nuestro Equipo: El Corazón de Pioneros</h2>
@@ -545,9 +571,9 @@
     </section>
 
 <!--Section Testimonios-->
-    <section class="py-20 bg-surface">
+    <section class="py-12 sm:py-16 lg:py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Testimonios</h2>
                 <p class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
                     Lo que dicen nuestros Clientes
@@ -608,7 +634,7 @@
         </div>
     </section>
 <!--Section Faqs-->
-    <section id="faq" class="py-20 bg-surface">
+    <section id="faq" class="py-12 sm:py-16 lg:py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Preguntas Frecuentes</h2>
@@ -739,7 +765,7 @@
         </div>
     </section>
     <!--Section Reserva-->
-    <section id="hour" class="py-20 hour-gradient">
+    <section id="hour" class="py-12 sm:py-16 lg:py-20 hour-gradient">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-extrabold text-dark sm:text-4xl" data-aos="fade-up">
                ¿Listo para vivir la Experiencia <span class="copper-text">Pioneros</span>?
@@ -758,9 +784,9 @@
             </div>
     </section>
 <!--Section Location-->
-    <section id="location" class="location-gradient py-20 bg-surface">
+    <section id="location" class="location-gradient py-12 sm:py-16 lg:py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="mb-16" data-aos="fade-up">
                 <h2 class="text-base copper-text font-semibold tracking-wider uppercase">Ubicación</h2>
                 <p class="mt-4 text-3xl font-extrabold text-dark sm:text-4xl">
                     Cómo Llegar
@@ -780,7 +806,6 @@
             <div class="rounded-lg overflow-hidden shadow-xl" data-aos="fade-up">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d817.5323565350183!2d-70.68575403429776!3d-33.2855608491941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662b98d2541e093%3A0xd570c341ff2c7d1b!2sPioneros%20Automotriz!5e1!3m2!1ses-419!2scl!4v1759806796289!5m2!1ses-419!2scl" 
                 width="100%" 
-                height="450" 
                 class="map-iframe"
                 title="Mapa de ubicación de Pioneros Automotriz"
                 allowfullscreen="" 
@@ -790,7 +815,7 @@
         </div>
     </section>
 <!--Section Contacto-->
-    <section id="contact" class="py-20 bg-surface">
+    <section id="contact" class="py-12 sm:py-16 lg:py-20 bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-12">
                 <div class="mb-12 lg:mb-0" data-aos="fade-right">
@@ -851,27 +876,28 @@
                     </div>
                 </div>
   <!-- Lateral emergency buttons -->
-<div class="fixed bottom-0 right-0 z-[200] flex w-full flex-row gap-0 md:bottom-72 md:h-36 md:w-auto md:flex-col">
-  <div class="conjunto flex h-full w-full flex-row md:w-12 md:flex-col">
+<div class="fixed bottom-4 right-4 z-[100] flex flex-col gap-2 md:bottom-72 md:right-0 md:gap-0">
+  <div class="flex flex-col gap-2 md:gap-0 md:w-12">
     <!-- Phone button -->
     <a
       id="btn-telefono"
       href="tel:+56965430123"
-            title="Llamar por teléfono"
-            aria-label="Llamar por teléfono"
-      class="flex h-12 w-full items-center justify-center bg-deep transition-all duration-300 hover:brightness-110"
+      title="Llamar por teléfono"
+      aria-label="Llamar por teléfono"
+      class="flex h-12 w-12 items-center justify-center rounded-full shadow-lg bg-deep transition-all duration-300 hover:brightness-110 md:rounded-none md:shadow-none"
     >
-      <i data-feather="phone" class="text-white w-6 h-6 transition-transform duration-300 hover:scale-110"></i>
+      <i data-feather="phone" class="text-white w-5 h-5"></i>
     </a>
 
-    <!-- QR button -->
+    <!-- QR button 
     <button
       type="button"
       title="Abrir código QR"
-      class="flex h-12 w-full items-center justify-center bg-deep transition-all duration-300 hover:brightness-110"
+      class="flex h-12 w-12 items-center justify-center rounded-full shadow-lg bg-deep transition-all duration-300 hover:brightness-110 md:rounded-none md:shadow-none"
     >
-      <i data-feather="grid" class="text-white w-6 h-6 transition-transform duration-300 hover:scale-110"></i>
+      <i data-feather="grid" class="text-white w-5 h-5"></i>
     </button>
+-->
 
     <!-- WhatsApp button -->
     <a
@@ -879,11 +905,11 @@
       href="https://wa.me/56965430123"
       target="_blank"
       rel="noopener"
-            title="Contactar por WhatsApp"
-            aria-label="Contactar por WhatsApp"
-      class="flex h-12 w-full items-center justify-center bg-[#25D366] transition-all duration-300 hover:brightness-110"
+      title="Contactar por WhatsApp"
+      aria-label="Contactar por WhatsApp"
+      class="flex h-12 w-12 items-center justify-center rounded-full shadow-lg bg-[#25D366] transition-all duration-300 hover:brightness-110 md:rounded-none md:shadow-none"
     >
-      <i data-feather="message-circle" class="text-white w-6 h-6 transition-transform duration-300 hover:scale-110"></i>
+      <i data-feather="message-circle" class="text-white w-5 h-5"></i>
     </a>
   </div>
 </div>
@@ -945,10 +971,11 @@
             </div>
         </div>
     </section>
+</main>
 <!--Footer-->
     <footer class="bg-surface">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center justify-center">
                         <div class="shield-logo">
@@ -980,7 +1007,7 @@
                 <div>
                     <h3 class="text-dark font-bold text-lg">Servicios</h3>
                     <ul class="mt-4 space-y-2">
-                        <li><a href="#" onclick="openBookingModal('Cambio de Aceite y Filtros (45 min)');return false;" class="text-gray-300 hover:text-white text-sm">Cambio de Aceite y Filtros (45 min)</a></li>
+                        <li><a href="#" onclick="openBookingModal('Cambio de Aceite Total Quartz — 45 min');return false;" class="text-gray-300 hover:text-white text-sm">Cambio de Aceite Total Quartz — 45 min</a></li>
                         <li><a href="#" onclick="openBookingModal('Mantención Premium');return false;" class="text-gray-300 hover:text-white text-sm">Mantención Premium</a></li>
                         <li><a href="#" onclick="openBookingModal('Mantención Standard');return false;" class="text-gray-300 hover:text-white text-sm">Mantención Standard</a></li>
                         <li><a href="#" onclick="openBookingModal('Instalación G.P.S.');return false;" class="text-gray-300 hover:text-white text-sm">Instalación G.P.S.</a></li>
@@ -1071,7 +1098,7 @@
             <label for="bk-service" class="block text-sm font-medium text-dark mb-1">Servicio <span class="copper-text">*</span></label>
             <select id="bk-service" class="bk-input w-full">
               <option value="">Seleccionar servicio...</option>
-              <option>Cambio de Aceite y Filtros (45 min)</option>
+              <option>Cambio de Aceite Total Quartz — 45 min</option>
               <option>Mantención Premium</option>
               <option>Mantención Standard</option>
               <option>Instalación G.P.S.</option>

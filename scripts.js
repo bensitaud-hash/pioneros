@@ -110,3 +110,93 @@ document.querySelectorAll(".faq-toggle").forEach((button) => {
         }
     });
 });
+
+// ============================================================
+// Keyboard shortcuts
+// R → open booking modal
+// Escape → close booking modal
+// ? → toggle shortcuts hint
+// ============================================================
+(function initKeyboardShortcuts() {
+    // Build the hint overlay once
+    const hint = document.createElement("div");
+    hint.id = "kb-hint";
+    hint.setAttribute("role", "dialog");
+    hint.setAttribute("aria-label", "Atajos de teclado");
+    hint.style.cssText = [
+        "position:fixed",
+        "bottom:1.25rem",
+        "left:50%",
+        "transform:translateX(-50%) translateY(1rem)",
+        "background:#1f1e1a",
+        "color:#f7f4ef",
+        "border:1px solid rgba(191,142,80,0.35)",
+        "border-radius:0.75rem",
+        "padding:1rem 1.5rem",
+        "font-family:Figtree,sans-serif",
+        "font-size:0.8125rem",
+        "line-height:1.6",
+        "box-shadow:0 8px 32px rgba(0,0,0,0.35)",
+        "z-index:9999",
+        "opacity:0",
+        "pointer-events:none",
+        "transition:opacity 0.2s ease,transform 0.2s ease",
+    ].join(";");
+    hint.innerHTML = [
+        "<strong style='color:#bf8e50;display:block;margin-bottom:0.5rem'>Atajos de teclado</strong>",
+        "<kbd style='background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 6px'>R</kbd> &nbsp;Reservar una hora",
+        "<br>",
+        "<kbd style='background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 6px'>Esc</kbd> Cerrar",
+        "<br>",
+        "<kbd style='background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 6px'>?</kbd> &nbsp;Mostrar esta ayuda",
+    ].join("");
+    document.body.appendChild(hint);
+
+    let hintVisible = false;
+    let hintTimer = null;
+
+    function showHint(autohide) {
+        hintVisible = true;
+        hint.style.opacity = "1";
+        hint.style.transform = "translateX(-50%) translateY(0)";
+        hint.style.pointerEvents = "auto";
+        clearTimeout(hintTimer);
+        if (autohide) {
+            hintTimer = setTimeout(hideHint, 3500);
+        }
+    }
+
+    function hideHint() {
+        hintVisible = false;
+        hint.style.opacity = "0";
+        hint.style.transform = "translateX(-50%) translateY(1rem)";
+        hint.style.pointerEvents = "none";
+    }
+
+    document.addEventListener("keydown", function (e) {
+        // Ignore shortcuts when typing inside an input, textarea or select
+        const tag = document.activeElement && document.activeElement.tagName;
+        if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+
+        const modal = document.getElementById("booking-modal");
+        const modalOpen = modal && !modal.classList.contains("hidden");
+
+        if (e.key === "Escape") {
+            if (modalOpen) {
+                if (typeof closeBookingModal === "function") closeBookingModal();
+            }
+            if (hintVisible) hideHint();
+            return;
+        }
+
+        if (e.key === "?") {
+            hintVisible ? hideHint() : showHint(false);
+            return;
+        }
+
+        if ((e.key === "r" || e.key === "R") && !modalOpen && !e.metaKey && !e.ctrlKey) {
+            if (typeof openBookingModal === "function") openBookingModal();
+            return;
+        }
+    });
+})();
