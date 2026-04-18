@@ -465,6 +465,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Date input: reject Sundays inline
     const dateInput = document.getElementById("bk-date");
     if (dateInput) {
+        // Prevent past date selection
+        const today = new Date().toISOString().split("T")[0];
+        dateInput.min = today;
         dateInput.addEventListener("change", () => {
             if (!dateInput.value) return;
             const day = new Date(`${dateInput.value}T12:00:00`).getDay();

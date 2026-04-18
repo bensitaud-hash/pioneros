@@ -167,6 +167,46 @@ h3,
   animation: scroll-ticker 25s linear infinite;
 }
 
+/* Highlighted span inside the promo ticker */
+@keyframes notif-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
+  50% {
+    text-shadow:
+      0 0 18px rgba(255, 255, 255, 1),
+      0 0 32px rgba(255, 255, 255, 0.5);
+    opacity: 0.88;
+  }
+}
+
+.notif-bar-anim {
+  letter-spacing: 0.02em;
+  animation: notif-glow 2.2s ease-in-out infinite;
+}
+
+/* ── Reduced motion ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg::before {
+    animation: none;
+  }
+  .hero-badge-dot {
+    animation: none;
+  }
+  .hero-scroll-hint {
+    animation: none;
+  }
+  .scroll-ticker-animation {
+    animation: none;
+  }
+  [data-aos] {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
 /* Existing CSS for Fading Header Ticker (Kept for compatibility) */
 #header-ticker {
   position: relative;
@@ -497,10 +537,21 @@ h2[id] {
   color: #ffffff !important;
 }
 
-/* Add this to your styles.css */
+/* Footer nav link hover */
 ul li a.text-gray-300:hover {
   color: #bf8e50 !important;
   transition: color 0.3s ease;
+}
+
+/* Footer social icon links — needs !important to beat .text-gray-400 override */
+.social-icon-link {
+  color: #5a5650;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.social-icon-link:hover {
+  color: #ffffff !important;
 }
 
 /* Only apply fill override to SVGs that explicitly use fill (e.g. WhatsApp), not stroke-based feather icons */
