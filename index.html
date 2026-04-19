@@ -139,7 +139,21 @@
         class="scroll-ticker flex whitespace-nowrap items-center scroll-ticker-animation"
       >
         <p class="scroll-ticker">
-          🚗 Especial Inauguración:
+          <svg
+            class="inline-block w-3.5 h-3.5 mr-1 -mt-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          Especial Inauguración:
           <span class="notif-bar-anim font-semibold underline">¡10% OFF</span>
           en todos nuestros servicios! Solo hasta el 10 de junio 2026 – ¡Reserva
           ahora y tráenos tu auto con total confianza!
@@ -150,7 +164,21 @@
         aria-hidden="true"
       >
         <p class="scroll-ticker">
-          🚗 Especial Inauguración:
+          <svg
+            class="inline-block w-3.5 h-3.5 mr-1 -mt-0.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+          Especial Inauguración:
           <span class="notif-bar-anim font-semibold underline">¡10% OFF</span>
           en todos nuestros servicios! Solo hasta el 10 de junio 2026 – ¡Reserva
           ahora y tráenos tu auto con total confianza!
@@ -380,7 +408,7 @@
                     openBookingModal();
                     return false;
                   "
-                  class="bg-copper text-white border-2 border-transparent px-8 py-3 rounded-full text-sm font-medium inline-block text-center w-full sm:w-auto transition-all duration-300 transform hover:scale-105 hover:bg-transparent hover:border-copper hover:text-copper hover:shadow-lg"
+                  class="bg-copper text-white border-2 border-transparent px-8 py-3 rounded-full text-sm font-medium inline-block text-center w-full sm:w-auto transition-all duration-300 transform hover:scale-105 hover:bg-white hover:border-copper hover:text-copper hover:shadow-lg"
                 >
                   Reservar Ahora
                 </a>
@@ -629,7 +657,7 @@
             >
               <div class="p-6 flex flex-col h-full">
                 <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="star" class="text-white w-4 h-4"></i>
+                  <i data-feather="tag" class="text-white w-4 h-4"></i>
                 </div>
                 <h3 class="text-xl font-bold text-dark">Grabado de Patente</h3>
                 <p class="mt-3 text-gray-400 flex-1">
@@ -837,7 +865,7 @@
                       Garantía de Satisfacción Total
                     </h4>
                     <p class="mt-1 text-gray-400">
-                      Tu paz mental es nuestra prioridad. Todas nuestras
+                      Tu paz mental es nuestra prioridad. Todos nuestros
                       servicios están respaldados por una garantía de 6 meses,
                       porque confiamos plenamente en la calidad de nuestro
                       trabajo.
@@ -868,14 +896,26 @@
             </h3>
           </div>
           <!-- Founder pull-quote -->
-          <figure
-            class="mb-10 border-l-4 border-copper pl-6 max-w-3xl"
-            data-aos="fade-up"
-          >
-            <blockquote class="text-lg text-gray-400 italic leading-relaxed">
-              "Queríamos un lugar donde la confianza y la transparencia fueran
+          <figure class="mb-10 max-w-3xl" data-aos="fade-up">
+            <blockquote
+              class="text-2xl text-gray-400 italic leading-relaxed font-light"
+              style="quotes: none"
+            >
+              <span
+                class="copper-text"
+                style="
+                  font-family: &quot;Zilla Slab&quot;, serif;
+                  font-size: 3rem;
+                  line-height: 0;
+                  vertical-align: -0.6rem;
+                  margin-right: 0.15rem;
+                  opacity: 0.35;
+                "
+                aria-hidden="true"
+                >“</span
+              >Queríamos un lugar donde la confianza y la transparencia fueran
               tan importantes como la calidad del servicio. Estamos aquí para
-              cuidar tu vehículo como si fuera nuestro."
+              cuidar tu vehículo como si fuera nuestro.”
             </blockquote>
             <figcaption class="mt-3 text-sm text-gray-400 not-italic">
               — Fundadores,
@@ -1619,7 +1659,30 @@
             </div>
 
             <div data-aos="fade-left">
-              <form class="space-y-6">
+              <!-- Coming-soon notice -->
+              <div
+                class="mb-6 flex items-start gap-3 rounded-xl border border-copper/30 bg-copper/10 px-4 py-3"
+              >
+                <i
+                  data-feather="info"
+                  class="copper-text w-4 h-4 flex-shrink-0 mt-0.5"
+                ></i>
+                <p class="text-sm text-gray-400">
+                  El formulario estará disponible próximamente.
+                  <a
+                    href="https://wa.me/56965430123"
+                    target="_blank"
+                    rel="noopener"
+                    class="copper-text font-medium hover:underline"
+                    >Contáctanos ahora por WhatsApp</a
+                  >
+                  y te respondemos de inmediato.
+                </p>
+              </div>
+              <form
+                class="space-y-6 opacity-60 pointer-events-none select-none"
+                aria-hidden="true"
+              >
                 <div>
                   <label
                     for="patente"
@@ -1749,7 +1812,7 @@
       </section>
     </main>
     <!--Footer-->
-    <footer class="bg-surface">
+    <footer class="footer-dark">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -1759,7 +1822,9 @@
                   src="images/Logo_pioneros.svg"
                   alt="Pioneros Automotriz"
                   class="block h-24 w-auto"
-                  style="filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.4))"
+                  style="
+                    filter: drop-shadow(0 2px 12px rgba(191, 142, 80, 0.35));
+                  "
                 />
               </div>
             </div>

@@ -245,8 +245,9 @@ h3,
   font-weight: 400;
 }
 
-h2[id] {
-  scroll-margin-top: 120px;
+section[id],
+[id] {
+  scroll-margin-top: 90px;
 }
 
 @keyframes ticker-fade {
@@ -541,6 +542,57 @@ h2[id] {
 ul li a.text-gray-300:hover {
   color: #bf8e50 !important;
   transition: color 0.3s ease;
+}
+
+/* ============================================================
+   Footer — Dark editorial endpoint
+   ============================================================ */
+.footer-dark {
+  background-color: #231a10;
+  border-top: 1px solid rgba(191, 142, 80, 0.18);
+}
+
+/* Override all color utilities inside dark footer */
+.footer-dark .text-dark {
+  color: #f0ebe4 !important;
+}
+
+.footer-dark .text-gray-300 {
+  color: rgba(240, 235, 228, 0.55) !important;
+}
+
+.footer-dark .text-gray-400 {
+  color: rgba(240, 235, 228, 0.38) !important;
+}
+
+.footer-dark ul li a.text-gray-300:hover {
+  color: #bf8e50 !important;
+}
+
+.footer-dark .border-card {
+  border-color: rgba(191, 142, 80, 0.18) !important;
+}
+
+.footer-dark .bg-deep {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.footer-dark .border-card {
+  border-color: rgba(191, 142, 80, 0.18) !important;
+}
+
+.footer-dark a.text-gray-300:hover {
+  color: #bf8e50 !important;
+}
+
+/* Social icons in dark footer */
+.footer-dark .social-icon-link {
+  color: rgba(240, 235, 228, 0.45);
+}
+
+.footer-dark .social-icon-link:hover {
+  color: #bf8e50 !important;
 }
 
 /* Footer social icon links — needs !important to beat .text-gray-400 override */
