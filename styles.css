@@ -95,6 +95,14 @@ h3,
   width: 100%;
 }
 
+/* Active section indicator (scrollspy) */
+.nav-active {
+  color: #bf8e50 !important;
+}
+.nav-active::after {
+  width: 100% !important;
+}
+
 #mobile-menu-button i {
   transition: transform 0.3s ease;
 }

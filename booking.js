@@ -138,6 +138,12 @@ function resetBooking() {
         const el = document.getElementById(id);
         if (el) el.value = "";
     });
+    // Always restore submit button — may be stuck "Enviando..." from a prior session
+    const submitBtn = document.getElementById("bk-submit-btn");
+    if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Confirmar Reserva";
+    }
     showStep(1);
 }
 
@@ -295,6 +301,13 @@ function goToStep3() {
         return;
     }
     clearError("bk-error-2");
+    // Populate review summary in step 3
+    const reviewService = document.getElementById("bk-review-service");
+    const reviewDate = document.getElementById("bk-review-date");
+    const reviewTime = document.getElementById("bk-review-time");
+    if (reviewService) reviewService.textContent = bookingState.service || "—";
+    if (reviewDate) reviewDate.textContent = bookingState.date ? formatDate(bookingState.date) : "—";
+    if (reviewTime) reviewTime.textContent = bookingState.timeSlot ? bookingState.timeSlot + " hrs" : "—";
     showStep(3);
 }
 
@@ -424,7 +437,7 @@ function buildConfirmationStep() {
     setText("bk-confirm-vehicle", `${bookingState.patente} — ${bookingState.vehicle}`);
 
     const msg = encodeURIComponent(
-        `¡Hola Pioneros! Acabo de hacer una reserva:\n` +
+        `¡Hola Pioneros Automotriz! Acabo de hacer una reserva:\n` +
             `• Servicio: ${bookingState.service}\n` +
             `• Fecha: ${formatDate(bookingState.date)} a las ${bookingState.timeSlot} hrs\n` +
             `• Vehículo: ${bookingState.patente} — ${bookingState.vehicle}\n` +

@@ -64,8 +64,6 @@
                 800: "#714825",
                 900: "#5e3b20",
               },
-              /* Alias used by hover:text-copper-text */
-              "copper-text": "#bf8e50",
             },
             fontFamily: {
               sans: ["Figtree", "sans-serif"],
@@ -192,7 +190,7 @@
         rel="noopener noreferrer"
             title="Contactar por WhatsApp"
             aria-label="Contactar por WhatsApp"
-        class="text-white text-sm font-medium hover:text-copper-text transition-colors duration-300 flex items-center justify-center">
+        class="text-white text-sm font-medium hover:text-copper transition-colors duration-300 flex items-center justify-center">
         <svg 
             class="w-4 h-4 flex-shrink-0 whatsapp-svg-reset" 
             role="img" 
@@ -212,7 +210,7 @@
 
   href vacio importante revisar
 
-  <span>DESCUBRE LO NUEVO EN ACCESORIOS PARA TU AUTO <a href="" target="_blank">aquí</a></span> 
+  <span>DESCUBRE LO NUEVO EN ACCESORIOS PARA TU AUTO <a href="#" target="_blank">aquí</a></span> 
 </div>
 
 -->
@@ -260,32 +258,32 @@
             <div class="flex items-center space-x-8 lg:space-x-12">
               <a
                 href="#"
-                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500"
+                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper"
                 >Inicio</a
               >
               <a
                 href="#services"
-                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500"
+                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper"
                 >Servicios</a
               >
               <a
                 href="#about"
-                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500"
+                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper"
                 >Quiénes somos</a
               >
               <a
                 href="#team"
-                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500"
+                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper"
                 >El equipo</a
               >
               <a
                 href="#contact"
-                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500"
+                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper"
                 >Contacto</a
               >
               <a
                 href="blog.html"
-                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper-500"
+                class="nav-link px-1 py-2 text-sm font-medium text-dark hover:text-copper"
                 >Blog</a
               >
               <a
@@ -307,32 +305,32 @@
             <div class="px-2 pt-2 pb-3 space-y-1 text-center">
               <a
                 href="#"
-                class="nav-link block px-2 py-2 text-2xl font-medium text-dark hover:text-copper-500"
+                class="nav-link block px-2 py-2 text-2xl font-medium text-dark hover:text-copper"
                 >Inicio</a
               >
               <a
                 href="#services"
-                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500"
+                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper"
                 >Servicios</a
               >
               <a
                 href="#about"
-                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500"
+                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper"
                 >Quiénes somos</a
               >
               <a
                 href="#team"
-                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500"
+                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper"
                 >El equipo</a
               >
               <a
                 href="#contact"
-                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500"
+                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper"
                 >Contacto</a
               >
               <a
                 href="blog.html"
-                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper-500"
+                class="nav-link block px-2 py-1 text-2xl font-medium text-dark hover:text-copper"
                 >Blog</a
               >
               <a
@@ -1682,7 +1680,13 @@
               <form
                 class="space-y-6 opacity-60 pointer-events-none select-none"
                 aria-hidden="true"
+                novalidate
               >
+                <p class="text-xs text-gray-400">
+                  Campos marcados con
+                  <span class="copper-text font-semibold">*</span> son
+                  obligatorios.
+                </p>
                 <div>
                   <label
                     for="patente"
@@ -1692,9 +1696,16 @@
                   <input
                     type="text"
                     id="patente"
+                    name="patente"
+                    autocomplete="off"
+                    pattern="^[A-Za-z]{4}[0-9]{2}$|^[A-Za-z]{2}[0-9]{4}$"
                     class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent"
                     placeholder="ABCD-12"
                   />
+                  <p class="mt-1 text-xs text-gray-400">
+                    Formato nuevo: BBBB–12. Formato antiguo: AB–1234. También
+                    aceptamos patentes extranjeras.
+                  </p>
                 </div>
 
                 <div>
@@ -1704,20 +1715,30 @@
                   <input
                     type="text"
                     id="marca"
+                    name="marca"
+                    autocomplete="off"
                     class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent"
                     placeholder="Toyota Land Cruiser Prado"
                   />
+                  <p class="mt-1 text-xs text-gray-400">
+                    Marca, modelo y año si lo conoces. Ej: Hyundai Tucson 2021.
+                  </p>
                 </div>
 
                 <div>
                   <label
                     for="nombre"
                     class="block text-sm font-medium text-dark"
-                    >Nombre y Apellido</label
+                    >Nombre y Apellido
+                    <span class="copper-text" aria-hidden="true">*</span></label
                   >
                   <input
                     type="text"
                     id="nombre"
+                    name="nombre"
+                    required
+                    minlength="2"
+                    autocomplete="name"
                     class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent"
                     placeholder="Juan Pérez"
                   />
@@ -1725,11 +1746,15 @@
 
                 <div>
                   <label for="email" class="block text-sm font-medium text-dark"
-                    >Mail</label
+                    >Mail
+                    <span class="copper-text" aria-hidden="true">*</span></label
                   >
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
                     class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent"
                     placeholder="juan.perez@example.com"
                   />
@@ -1737,27 +1762,38 @@
 
                 <div>
                   <label for="phone" class="block text-sm font-medium text-dark"
-                    >Teléfono</label
+                    >Teléfono
+                    <span class="copper-text" aria-hidden="true">*</span></label
                   >
                   <input
                     type="tel"
                     id="phone"
+                    name="phone"
+                    required
+                    minlength="8"
+                    autocomplete="tel"
                     class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent"
                     placeholder="+56 9 6543 0123"
                   />
+                  <p class="mt-1 text-xs text-gray-400">
+                    Incluye código de país. Ej: +56 9 XXXX XXXX.
+                  </p>
                 </div>
 
                 <div>
                   <label
                     for="service"
                     class="block text-sm font-medium text-dark"
-                    >Servicio Requerido</label
+                    >Servicio Requerido
+                    <span class="copper-text" aria-hidden="true">*</span></label
                   >
                   <select
                     id="service"
+                    name="service"
+                    required
                     class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent"
                   >
-                    <option>Seleccionar Servicio</option>
+                    <option value="">Seleccionar Servicio</option>
                     <option>Cambio de Aceite y Filtros 45 Minutos</option>
                     <option>Mantención Premium</option>
                     <option>Mantención Standard</option>
@@ -1781,19 +1817,34 @@
                     class="mt-1 block w-full bg-deep border border-deep rounded-md py-3 px-4 text-dark placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-copper-500 focus:border-transparent"
                     placeholder="Describe brevemente el problema o solicitud..."
                   ></textarea>
+                  <p class="mt-1 text-xs text-gray-400">
+                    Cuéntanos el motivo de tu consulta. Mientras más detalles,
+                    mejor podremos orientarte.
+                  </p>
                 </div>
 
                 <div>
-                  <button
-                    type="submit"
-                    disabled
-                    class="w-full copper-bg text-white px-6 py-3 rounded-xl text-lg font-medium opacity-60 cursor-not-allowed"
-                  >
-                    Enviar Mensaje
-                    <span class="text-sm font-normal opacity-80"
-                      >(Próximamente)</span
+                  <div class="flex gap-3">
+                    <button
+                      type="reset"
+                      class="flex-shrink-0 border border-card text-gray-400 px-4 py-3 rounded-xl text-sm font-medium hover:border-copper hover:text-dark transition-colors duration-200 opacity-60 cursor-not-allowed"
+                      disabled
+                      title="Limpiar formulario"
+                      aria-label="Limpiar formulario"
                     >
-                  </button>
+                      Limpiar
+                    </button>
+                    <button
+                      type="submit"
+                      disabled
+                      class="flex-1 copper-bg text-white px-6 py-3 rounded-xl text-lg font-medium opacity-60 cursor-not-allowed"
+                    >
+                      Enviar Mensaje
+                      <span class="text-sm font-normal opacity-80"
+                        >(Próximamente)</span
+                      >
+                    </button>
+                  </div>
                   <p class="mt-2 text-center text-sm text-gray-400">
                     Mientras tanto,
                     <a
@@ -2180,6 +2231,13 @@
             >
               Ver horarios disponibles &rarr;
             </button>
+            <button
+              type="button"
+              onclick="closeBookingModal()"
+              class="mt-3 w-full text-sm text-gray-400 hover:text-dark transition-colors duration-200 py-1"
+            >
+              Cancelar
+            </button>
           </div>
 
           <!-- STEP 2: Time slot -->
@@ -2224,6 +2282,13 @@
               class="mt-6 w-full copper-bg text-white py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-200"
             >
               Siguiente &rarr; Tus datos
+            </button>
+            <button
+              type="button"
+              onclick="closeBookingModal()"
+              class="mt-3 w-full text-sm text-gray-400 hover:text-dark transition-colors duration-200 py-1"
+            >
+              Cancelar
             </button>
           </div>
 
@@ -2337,14 +2402,48 @@
               id="bk-error-3"
               class="hidden mt-3 text-sm text-red-600 font-medium"
             ></p>
+            <!-- Booking review summary -->
+            <div
+              class="mt-5 rounded-xl bg-deep p-4 space-y-2 text-sm"
+              id="bk-review-summary"
+            >
+              <p
+                class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3"
+              >
+                Resumen de tu reserva
+              </p>
+              <div class="flex justify-between gap-2">
+                <span class="text-gray-400 flex-shrink-0">Servicio</span>
+                <span
+                  class="font-medium text-dark text-right"
+                  id="bk-review-service"
+                  >—</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Fecha</span>
+                <span class="font-medium text-dark" id="bk-review-date">—</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Horario</span>
+                <span class="font-medium text-dark" id="bk-review-time">—</span>
+              </div>
+            </div>
             <button
               id="bk-submit-btn"
               onclick="submitBooking()"
-              class="mt-6 w-full copper-bg text-white py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-200"
+              class="mt-5 w-full copper-bg text-white py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-200"
             >
               Confirmar Reserva
             </button>
-            <p class="mt-3 text-xs text-gray-400 text-center">
+            <button
+              type="button"
+              onclick="closeBookingModal()"
+              class="mt-3 w-full text-sm text-gray-400 hover:text-dark transition-colors duration-200 py-1"
+            >
+              Cancelar
+            </button>
+            <p class="mt-2 text-xs text-gray-400 text-center">
               Al confirmar, Pioneros Automotriz procesará tus datos para
               coordinar tu servicio.
             </p>

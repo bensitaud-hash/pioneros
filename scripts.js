@@ -81,6 +81,43 @@ if (contactForm && rutInput) {
     });
 }
 
+// ============================================================
+// Scrollspy — highlight active nav link based on current section
+// ============================================================
+(function initScrollspy() {
+    // Map section id → desktop nav href
+    const sectionIds = ["hero-section", "services", "about", "team", "contact"];
+    const navLinks = document.querySelectorAll(".hidden.md\\:block .nav-link[href]");
+
+    const setActive = (id) => {
+        navLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            const matchesSection = href === "#" + id || (id === "hero-section" && href === "#");
+            link.classList.toggle("nav-active", matchesSection);
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActive(entry.target.id);
+                }
+            });
+        },
+        {
+            // Trigger when section occupies the upper-middle portion of the viewport
+            rootMargin: "-20% 0px -60% 0px",
+            threshold: 0,
+        }
+    );
+
+    sectionIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+})();
+
 // FAQ Collapsible Logic
 document.querySelectorAll(".faq-toggle").forEach((button) => {
     button.addEventListener("click", () => {
