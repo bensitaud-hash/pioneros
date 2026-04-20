@@ -98,7 +98,19 @@
   </url>
   <url>
     <loc>https://www.pioneros.cl/blog/post-14/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pioneros.cl/blog/post-15.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pioneros.cl/blog/post-16.html</loc>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
