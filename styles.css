@@ -159,20 +159,18 @@ h3,
   }
 }
 
-/* --- Custom CSS for Infinite Scrolling Ticker (The Fix) --- */
+/* --- Custom CSS for Infinite Scrolling Ticker --- */
 @keyframes scroll-ticker {
   from {
     transform: translateX(0);
   }
-
-  /* Moves the content left by 50% of its total width to create the loop */
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
 .scroll-ticker-animation {
-  animation: scroll-ticker 25s linear infinite;
+  animation: scroll-ticker 28s linear infinite;
 }
 
 /* Highlighted span inside the promo ticker */
@@ -926,8 +924,8 @@ ul li a.text-gray-300:hover {
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 .cat-filter-btn:hover {
@@ -1160,6 +1158,7 @@ ul li a.text-gray-300:hover {
   font-family: "Zilla Slab", serif;
   color: rgba(191, 142, 80, 0.1);
   pointer-events: none;
+  -webkit-user-select: none;
   user-select: none;
 }
 
