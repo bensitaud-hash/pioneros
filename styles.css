@@ -441,6 +441,22 @@ section[id],
   background-color: #d3cbc1 !important;
 }
 
+/* Article callout boxes — data callouts & expert advice panels */
+.article-callout {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(191, 142, 80, 0.08);
+  border: 1px solid rgba(191, 142, 80, 0.22);
+}
+
+.article-callout h3:first-child {
+  margin-top: 0;
+}
+
+.article-callout p:last-child {
+  margin-bottom: 0;
+}
+
 /* Borders */
 .border-card {
   border-color: #dad3ca !important;
