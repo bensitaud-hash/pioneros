@@ -1046,16 +1046,6 @@ ul li a.text-gray-300:hover {
   transition: outline-color 0.25s ease;
 }
 
-.team-ordinal {
-  font-size: 0.55rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  color: rgba(191, 142, 80, 0.45);
-  font-family: "Zilla Slab", serif;
-  display: block;
-  margin-bottom: 0.1rem;
-}
-
 .team-role {
   font-size: 0.6rem;
   font-weight: 800;
