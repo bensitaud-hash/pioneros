@@ -939,6 +939,87 @@ ul li a.text-gray-300:hover {
   border-color: #bf8e50;
 }
 
+/* Per-category button colors */
+.cat-filter-btn[data-cat="mantenimiento"] {
+  color: #bf8e50 !important;
+  border-color: rgba(191, 142, 80, 0.4) !important;
+}
+.cat-filter-btn[data-cat="mantenimiento"].active {
+  background: #bf8e50 !important;
+  color: #fff !important;
+  border-color: #bf8e50 !important;
+}
+
+.cat-filter-btn[data-cat="consejos"] {
+  color: #6d9a5c !important;
+  border-color: rgba(109, 154, 92, 0.4) !important;
+}
+.cat-filter-btn[data-cat="consejos"].active {
+  background: #6d9a5c !important;
+  color: #fff !important;
+  border-color: #6d9a5c !important;
+}
+
+.cat-filter-btn[data-cat="seguridad"] {
+  color: #c05840 !important;
+  border-color: rgba(192, 88, 64, 0.4) !important;
+}
+.cat-filter-btn[data-cat="seguridad"].active {
+  background: #c05840 !important;
+  color: #fff !important;
+  border-color: #c05840 !important;
+}
+
+.cat-filter-btn[data-cat="tecnologia"] {
+  color: #4d85af !important;
+  border-color: rgba(77, 133, 175, 0.4) !important;
+}
+.cat-filter-btn[data-cat="tecnologia"].active {
+  background: #4d85af !important;
+  color: #fff !important;
+  border-color: #4d85af !important;
+}
+
+.cat-filter-btn[data-cat="estacional"] {
+  color: #7b6fb0 !important;
+  border-color: rgba(123, 111, 176, 0.4) !important;
+}
+.cat-filter-btn[data-cat="estacional"].active {
+  background: #7b6fb0 !important;
+  color: #fff !important;
+  border-color: #7b6fb0 !important;
+}
+
+.cat-filter-btn[data-cat="electrico"] {
+  color: #c49820 !important;
+  border-color: rgba(196, 152, 32, 0.4) !important;
+}
+.cat-filter-btn[data-cat="electrico"].active {
+  background: #c49820 !important;
+  color: #fff !important;
+  border-color: #c49820 !important;
+}
+
+.cat-filter-btn[data-cat="vial"] {
+  color: #c05840 !important;
+  border-color: rgba(192, 88, 64, 0.4) !important;
+}
+.cat-filter-btn[data-cat="vial"].active {
+  background: #c05840 !important;
+  color: #fff !important;
+  border-color: #c05840 !important;
+}
+
+.cat-filter-btn[data-cat="detallado"] {
+  color: #6d9a5c !important;
+  border-color: rgba(109, 154, 92, 0.4) !important;
+}
+.cat-filter-btn[data-cat="detallado"].active {
+  background: #6d9a5c !important;
+  color: #fff !important;
+  border-color: #6d9a5c !important;
+}
+
 /* Section heading divider row */
 .section-divider {
   display: flex;
