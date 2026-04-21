@@ -844,6 +844,13 @@ ul li a.text-gray-300:hover {
   color: #bf8e50 !important;
 }
 
+/* Wide editor's pick card — horizontal layout on large screens */
+@media (min-width: 1024px) {
+  .article-card-wide {
+    flex-direction: row;
+  }
+}
+
 /* Category accent colours */
 .cat-mantenimiento {
   border-top-color: #bf8e50;
