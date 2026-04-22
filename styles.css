@@ -480,6 +480,11 @@ section[id],
   color: #1f1e1a !important;
 }
 
+/* Tailwind hover color override for text-dark elements */
+.hover\:text-copper:hover {
+  color: #bf8e50 !important;
+}
+
 /* FAQ hover */
 .faq-hover:hover {
   background-color: #dad3ca !important;
@@ -1298,10 +1303,13 @@ ul li a.text-gray-300:hover {
 }
 
 .testi-stars {
+  display: inline-block;
   color: #bf8e50;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-  margin-top: 2px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  margin-top: 0.2rem;
 }
 
 /* ============================================================
