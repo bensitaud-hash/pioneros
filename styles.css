@@ -70,6 +70,29 @@ h3,
   filter: none;
 }
 
+/* Navbar / top bar styles */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 10%),
+    0 2px 4px -1px rgb(0 0 0 / 6%);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Semi-transparent top bars - for notifications */
+.bg-bar {
+  background-color: rgb(218 211 202 / 85%) !important;
+}
+
+/* Semi-transparent top bars and navbar */
+.bg-nav {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
 .nav-link {
   position: relative;
   display: inline-block;
@@ -131,18 +154,6 @@ h3,
 .service-card:hover {
   transform: translateY(-5px) !important;
   box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.18);
-}
-
-.sticky-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  box-shadow:
-    0 4px 6px -1px rgb(0 0 0 / 10%),
-    0 2px 4px -1px rgb(0 0 0 / 6%);
-  transition: all 0.3s ease-in-out;
 }
 
 .whatsapp-svg-reset {
@@ -493,15 +504,6 @@ section[id],
 /* Hour/CTA section gradient */
 .hour-gradient {
   background: linear-gradient(to right, #f0ebe4 0%, #d3cbc1 100%);
-}
-
-/* Semi-transparent top bars and navbar  rgb(240 235 228 / 90%)  */
-.bg-bar {
-  background-color: rgb(218 211 202 / 85%) !important;
-}
-/* Semi-transparent top bars and navbar */
-.bg-nav {
-  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .text-gray-300 {
