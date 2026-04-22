@@ -113,6 +113,15 @@ h3,
   display: none;
 }
 
+.section-eyebrow-muted {
+  opacity: 0.78;
+  letter-spacing: 0.18em;
+}
+
+.service-card-highlight {
+  border: 1px solid rgba(191, 142, 80, 0.18);
+}
+
 .service-card {
   transition:
     transform 0.25s ease,

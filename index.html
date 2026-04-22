@@ -400,7 +400,7 @@
                 <span class="copper-text">Chicureo</span>.
               </p>
               <div
-                class="mt-8 flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4 sm:items-start"
+                class="mt-8 flex flex-row flex-wrap gap-3 items-start"
               >
                 <a
                   href="#"
@@ -408,13 +408,13 @@
                     openBookingModal();
                     return false;
                   "
-                  class="bg-copper text-white border-2 border-transparent px-8 py-3 rounded-full text-sm font-medium inline-block text-center w-full sm:w-auto transition-all duration-300 transform hover:scale-105 hover:bg-white hover:border-copper hover:text-copper hover:shadow-lg"
+                  class="bg-copper text-white border-2 border-transparent px-8 py-3 rounded-full text-sm font-medium inline-block text-center transition-all duration-300 transform hover:scale-105 hover:bg-white hover:border-copper hover:text-copper hover:shadow-lg"
                 >
                   Reservar Ahora
                 </a>
                 <a
                   href="#services"
-                  class="bg-transparent border-2 copper-border text-white px-8 py-3 rounded-full text-sm font-medium w-full sm:w-auto text-center hover:bg-white hover:text-copper transition-all duration-300 hover:shadow-lg hover:brightness-110"
+                  class="bg-transparent border-2 copper-border text-white px-8 py-3 rounded-full text-sm font-medium text-center hover:bg-white hover:text-copper transition-all duration-300 hover:shadow-lg hover:brightness-110"
                 >
                   Nuestros Servicios
                 </a>
@@ -527,7 +527,7 @@
                       );
                       return false;
                     "
-                    class="inline-flex items-center copper-text text-sm font-medium"
+                    class="service-cta inline-flex items-center copper-text text-sm font-medium"
                   >
                     Reservar
                     <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
@@ -558,8 +558,11 @@
                 >
               </div>
               <div class="p-6 h-full flex flex-col">
-                <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="award" class="text-white w-4 h-4"></i>
+                <div class="flex items-center gap-3 mb-4 pr-16">
+                  <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                    <i data-feather="award" class="text-white w-4 h-4"></i>
+                  </div>
+                  <span class="text-xs font-bold tracking-widest uppercase copper-text">Revisión profunda cada 15.000 km</span>
                 </div>
                 <h3 class="text-xl font-bold text-dark">Mantención Premium</h3>
                 <p class="mt-3 text-gray-400 flex-1">
@@ -573,7 +576,7 @@
                     openBookingModal('Mantención Premium');
                     return false;
                   "
-                  class="mt-6 inline-flex items-center copper-text text-sm font-medium"
+                  class="service-cta mt-6 inline-flex items-center copper-text text-sm font-medium"
                 >
                   Reservar
                   <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
@@ -599,8 +602,11 @@
               data-aos-delay="100"
             >
               <div class="p-6 flex flex-col h-full">
-                <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="settings" class="text-white w-4 h-4"></i>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                    <i data-feather="settings" class="text-white w-4 h-4"></i>
+                  </div>
+                  <span class="text-xs font-bold tracking-widest uppercase copper-text">Revisión esencial cada 5.000–10.000 km</span>
                 </div>
                 <h3 class="text-xl font-bold text-dark">Mantención Standard</h3>
                 <p class="mt-3 text-gray-400 flex-1">
@@ -613,7 +619,7 @@
                     openBookingModal('Mantención Standard');
                     return false;
                   "
-                  class="mt-6 inline-flex items-center copper-text text-sm font-medium"
+                  class="service-cta mt-6 inline-flex items-center copper-text text-sm font-medium"
                 >
                   Reservar
                   <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
@@ -622,16 +628,19 @@
             </div>
 
             <div
-              class="service-card bg-card rounded-xl overflow-hidden shadow-lg"
+              class="service-card bg-deep rounded-xl overflow-hidden shadow-lg service-card-highlight"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <div class="p-6 flex flex-col h-full">
-                <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="shield" class="text-white w-4 h-4"></i>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                    <i data-feather="shield" class="text-white w-4 h-4"></i>
+                  </div>
+                  <span class="text-xs font-bold tracking-widest uppercase copper-text">Si notas chirrido o pedal esponjoso</span>
                 </div>
                 <h3 class="text-xl font-bold text-dark">Servicio de Frenos</h3>
-                <p class="mt-3 text-gray-400 flex-1">
+                <p class="mt-3 text-dark flex-1">
                   Inspección, ajuste y reemplazo de pastillas, discos y líquido
                   de frenos. Máxima seguridad y frenado preciso en cada
                   kilómetro.
@@ -642,7 +651,7 @@
                     openBookingModal('Servicio de Frenos');
                     return false;
                   "
-                  class="mt-6 inline-flex items-center copper-text text-sm font-medium"
+                  class="service-cta mt-6 inline-flex items-center copper-text text-sm font-medium"
                 >
                   Reservar
                   <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
@@ -656,8 +665,11 @@
               data-aos-delay="300"
             >
               <div class="p-6 flex flex-col h-full">
-                <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="tag" class="text-white w-4 h-4"></i>
+                <div class="flex items-center gap-3 mb-4">
+                  <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                    <i data-feather="tag" class="text-white w-4 h-4"></i>
+                  </div>
+                  <span class="text-xs font-bold tracking-widest uppercase copper-text">Obligatorio por ley desde 2024</span>
                 </div>
                 <h3 class="text-xl font-bold text-dark">Grabado de Patente</h3>
                 <p class="mt-3 text-gray-400 flex-1">
@@ -670,7 +682,7 @@
                     openBookingModal('Grabado de Patente');
                     return false;
                   "
-                  class="mt-6 inline-flex items-center copper-text text-sm font-medium"
+                  class="service-cta mt-6 inline-flex items-center copper-text text-sm font-medium"
                 >
                   Reservar
                   <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
@@ -688,35 +700,70 @@
             <div class="flex-1 h-px bg-card"></div>
           </div>
 
-          <!-- TIER 3: Láminas · GPS · Accesorios -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <!-- TIER 3: Láminas · GPS · Accesorios — horizontal menu rows -->
+          <div class="flex flex-col gap-4">
+
             <div
               class="service-card bg-card rounded-xl overflow-hidden shadow-lg"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="p-6 flex flex-col h-full">
-                <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="eye-off" class="text-white w-4 h-4"></i>
+              <div class="p-6 flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-4">
+                <div class="flex items-center gap-3 sm:w-56 sm:flex-shrink-0">
+                  <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                    <i data-feather="eye-off" class="text-white w-4 h-4"></i>
+                  </div>
+                  <span class="text-xs font-bold tracking-widest uppercase copper-text leading-tight">Seguridad · privacidad · protección UV</span>
                 </div>
-                <h3 class="text-xl font-bold text-dark">
-                  Láminas de Seguridad
-                </h3>
-                <p class="mt-3 text-gray-400 flex-1">
-                  Venta e instalación de láminas de seguridad para proteger tu
-                  vehículo y mejorar la privacidad.
-                </p>
-                <a
-                  href="#"
-                  onclick="
-                    openBookingModal('Instalación Láminas de Seguridad');
-                    return false;
-                  "
-                  class="mt-6 inline-flex items-center copper-text text-sm font-medium"
-                >
-                  Reservar
-                  <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-                </a>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-xl font-bold text-dark">Láminas de Seguridad</h3>
+                  <p class="mt-1 text-gray-400 text-sm leading-relaxed">
+                    Venta e instalación de láminas de seguridad para proteger tu
+                    vehículo y mejorar la privacidad.
+                  </p>
+                </div>
+                <div class="sm:flex-shrink-0">
+                  <a
+                    href="#"
+                    onclick="openBookingModal('Instalación Láminas de Seguridad'); return false;"
+                    class="service-cta inline-flex items-center copper-text text-sm font-medium"
+                  >
+                    Reservar
+                    <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="service-card bg-deep rounded-xl overflow-hidden shadow-lg service-card-highlight"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="p-6 flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-4">
+                <div class="flex items-center gap-3 sm:w-56 sm:flex-shrink-0">
+                  <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                    <i data-feather="map-pin" class="text-white w-4 h-4"></i>
+                  </div>
+                  <span class="text-xs font-bold tracking-widest uppercase copper-text leading-tight">25.000 autos robados al año en Chile</span>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-xl font-bold text-dark">Instalación G.P.S.</h3>
+                  <p class="mt-1 text-dark text-sm leading-relaxed">
+                    Instalación de GPS para mayor seguridad y seguimiento de tu
+                    vehículo en tiempo real.
+                  </p>
+                </div>
+                <div class="sm:flex-shrink-0">
+                  <a
+                    href="#"
+                    onclick="openBookingModal('Instalación G.P.S.'); return false;"
+                    class="service-cta inline-flex items-center copper-text text-sm font-medium"
+                  >
+                    Reservar
+                    <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -725,56 +772,33 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="p-6 flex flex-col h-full">
-                <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="map-pin" class="text-white w-4 h-4"></i>
+              <div class="p-6 flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-4">
+                <div class="flex items-center gap-3 sm:w-56 sm:flex-shrink-0">
+                  <div class="copper-bg p-2.5 rounded-full flex-shrink-0">
+                    <i data-feather="package" class="text-white w-4 h-4"></i>
+                  </div>
+                  <span class="text-xs font-bold tracking-widest uppercase copper-text leading-tight">Personalización · estética · confort</span>
                 </div>
-                <h3 class="text-xl font-bold text-dark">Instalación G.P.S.</h3>
-                <p class="mt-3 text-gray-400 flex-1">
-                  Instalación de GPS para mayor seguridad y seguimiento de tu
-                  vehículo.
-                </p>
-                <a
-                  href="#"
-                  onclick="
-                    openBookingModal('Instalación G.P.S.');
-                    return false;
-                  "
-                  class="mt-6 inline-flex items-center copper-text text-sm font-medium"
-                >
-                  Reservar
-                  <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-                </a>
+                <div class="flex-1 min-w-0">
+                  <h3 class="text-xl font-bold text-dark">Accesorios</h3>
+                  <p class="mt-1 text-gray-400 text-sm leading-relaxed">
+                    Amplia gama de accesorios premium para personalizar y mejorar
+                    tu vehículo.
+                  </p>
+                </div>
+                <div class="sm:flex-shrink-0">
+                  <a
+                    href="#"
+                    onclick="openBookingModal('Accesorios'); return false;"
+                    class="service-cta inline-flex items-center copper-text text-sm font-medium"
+                  >
+                    Descubre los accesorios
+                    <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div
-              class="service-card bg-card rounded-xl overflow-hidden shadow-lg"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="p-6 flex flex-col h-full">
-                <div class="copper-bg p-2.5 rounded-full w-fit mb-4">
-                  <i data-feather="package" class="text-white w-4 h-4"></i>
-                </div>
-                <h3 class="text-xl font-bold text-dark">Accesorios</h3>
-                <p class="mt-3 text-gray-400 flex-1">
-                  Amplia gama de accesorios premium para personalizar y mejorar
-                  tu vehículo.
-                </p>
-                <a
-                  href="#"
-                  onclick="
-                    openBookingModal('Accesorios');
-                    return false;
-                  "
-                  class="mt-6 inline-flex items-center copper-text text-sm font-medium"
-                >
-                  Descubre los accesorios
-                  <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -792,7 +816,7 @@
             </div>
             <div data-aos="fade-left">
               <h2
-                class="text-base copper-text font-semibold tracking-wider uppercase"
+                class="text-base copper-text font-semibold tracking-wider uppercase section-eyebrow-muted"
               >
                 Nosotros
               </h2>
@@ -886,7 +910,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mb-6" data-aos="fade-right">
             <h2
-              class="text-base copper-text font-semibold tracking-wider uppercase"
+              class="text-base copper-text font-semibold tracking-wider uppercase section-eyebrow-muted"
             >
               Nuestro Equipo
             </h2>
@@ -1063,7 +1087,7 @@
                   <p class="text-xs" style="color: rgba(245, 240, 235, 0.45)">
                     Ford Ranger
                   </p>
-                  <p class="testi-stars">★★★★★</p>
+                  <p class="testi-stars">?????</p>
                 </div>
               </div>
             </div>
@@ -1093,7 +1117,7 @@
                   <p class="text-xs" style="color: rgba(245, 240, 235, 0.45)">
                     Toyota Corolla Cross
                   </p>
-                  <p class="testi-stars">★★★★⯪</p>
+                  <p class="testi-stars">?????</p>
                 </div>
               </div>
             </div>
@@ -1121,7 +1145,7 @@
                   <p class="text-xs" style="color: rgba(245, 240, 235, 0.45)">
                     Mercedes S-Class
                   </p>
-                  <p class="testi-stars">★★★★★</p>
+                  <p class="testi-stars">?????</p>
                 </div>
               </div>
             </div>
@@ -1474,7 +1498,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="mb-16" data-aos="fade-up">
             <h2
-              class="text-base copper-text font-semibold tracking-wider uppercase"
+              class="text-base copper-text font-semibold tracking-wider uppercase section-eyebrow-muted"
             >
               Ubicación
             </h2>
@@ -1523,7 +1547,7 @@
           <div class="lg:grid lg:grid-cols-2 lg:gap-12">
             <div class="mb-12 lg:mb-0" data-aos="fade-right">
               <h2
-                class="text-base copper-text font-semibold tracking-wider uppercase"
+                class="text-base copper-text font-semibold tracking-wider uppercase section-eyebrow-muted"
               >
                 Contactarnos
               </h2>
