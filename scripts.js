@@ -60,8 +60,8 @@ function updateAboutParallax() {
     const totalTravel = window.innerHeight + rect.height;
     const scrolled = window.innerHeight - rect.top;
     const progress = scrolled / totalTravel; // 0 → 1 as section scrolls through
-    const shift = (progress - 0.5) * 300; // ±150px at extremes
-    aboutParallaxImg.style.transform = `translateY(${shift}px) scale(1.28)`;
+    const shift = (progress - 0.5) * 280; // ±140px at extremes
+    aboutParallaxImg.style.transform = `translateY(${shift}px) scale(1.10)`;
 }
 
 window.addEventListener("scroll", () => {
