@@ -1,16 +1,24 @@
 // Hero background uses CSS Ken Burns animation — no JS required
 
-// Initialize AOS animations
-AOS.init({
-    duration: 800,
-    easing: "ease-in-out",
-    once: true,
-});
+// Initialize AOS animations when the library is available
+if (typeof AOS !== "undefined") {
+    AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+    });
+} else {
+    console.warn("AOS library not loaded before scripts.js. Ensure scripts.js is deferred after AOS.");
+}
 
 // Initialize Feather Icons, ONLY on elements with the 'data-feather' attribute
-feather.replace({
-    targetAttr: "data-feather",
-});
+if (typeof feather !== "undefined") {
+    feather.replace({
+        targetAttr: "data-feather",
+    });
+} else {
+    console.warn("Feather Icons library not loaded before scripts.js.");
+}
 
 // Mobile menu toggle
 const mobileMenuButton = document.getElementById("mobile-menu-button");
@@ -18,10 +26,12 @@ const mobileMenu = document.getElementById("mobile-menu");
 const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 
 mobileMenuButton.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    const iconElement = document.getElementById("mobile-menu-icon");
+    const isHidden = mobileMenu.classList.toggle("hidden");
+    mobileMenu.setAttribute("aria-hidden", String(isHidden));
+    mobileMenuButton.setAttribute("aria-expanded", String(!isHidden));
 
-    if (mobileMenu.classList.contains("hidden")) {
+    const iconElement = document.getElementById("mobile-menu-icon");
+    if (isHidden) {
         iconElement.setAttribute("data-feather", "menu");
     } else {
         iconElement.setAttribute("data-feather", "x");

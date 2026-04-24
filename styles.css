@@ -119,6 +119,22 @@ body {
   }
 }
 
+.mobile-action-tray {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.96);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(31, 30, 26, 0.08);
+  box-shadow: 0 -14px 32px rgba(0, 0, 0, 0.09);
+  padding: 0.75rem 0 calc(0.75rem + env(safe-area-inset-bottom));
+}
+
+.mobile-action-tray a {
+  touch-action: manipulation;
+}
+
 /* ── Display font pairing ──────────────────────────────────── */
 /* Zilla Slab for all major headings (h1, h3) and the          */
 /* large CTA section h2. Small uppercase eyebrow h2 labels     */
@@ -166,7 +182,9 @@ h3,
   box-shadow:
     0 4px 6px -1px rgb(0 0 0 / 10%),
     0 2px 4px -1px rgb(0 0 0 / 6%);
-  transition: all 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 /* Semi-transparent top bars - for notifications */
@@ -1047,7 +1065,9 @@ ul li a.text-gray-300:hover {
   color: #5a5650;
   background: transparent;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
   white-space: nowrap;
   -webkit-appearance: none;
   appearance: none;
