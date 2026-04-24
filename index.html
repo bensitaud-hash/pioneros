@@ -884,99 +884,130 @@
       </section>
 
       <!--Section Nosotros-->
-      <section id="about" class="py-12 sm:py-16 lg:py-20 bg-surface">
+      <section id="about" class="about-section">
+        <!-- Top strip: full-bleed image with copper overlay + eyebrow -->
+        <div
+          class="about-image-panel"
+          data-aos="fade-in"
+          data-aos-duration="900"
+        >
+          <img
+            src="images/Thumbup.webp"
+            alt="Clientes satisfechos en Pioneros Automotriz"
+            class="about-image-bg"
+            loading="lazy"
+          />
+          <div class="about-image-overlay"></div>
+          <div class="about-image-label">
+            <span class="about-eyebrow">Quiénes Somos</span>
+            <p class="about-image-caption">
+              Tu taller de confianza, con estándar premium.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content grid -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
-            <div class="mb-12 lg:mb-0" data-aos="fade-right">
-              <img
-                src="images/Thumbup.webp"
-                alt="Clientes satisfechos"
-                class="rounded-lg shadow-xl"
-              />
-            </div>
-            <div data-aos="fade-left">
-              <h2
-                class="text-base copper-text font-semibold tracking-wider uppercase section-eyebrow-muted"
-              >
-                Nosotros
+          <div class="about-grid">
+            <!-- Left: headline + intro -->
+            <div class="about-intro" data-aos="fade-right" data-aos-delay="80">
+              <div class="about-accent-bar"></div>
+              <h2 class="about-headline">
+                La Diferencia<br />
+                <span class="copper-text">Pioneros</span>
               </h2>
-              <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
-                La Diferencia <span class="copper-text">Pioneros</span>
-              </h3>
-              <p class="mt-6 text-lg text-gray-400">
+              <p class="about-body">
                 En Pioneros, sabemos que tu vehículo es una parte fundamental de
-                tu vida diaria. Por eso, desde 2025, hemos construido nuestra
-                reputación sobre un pilar fundamental: ofrecerte tranquilidad a
-                través de un servicio automotriz excepcional.
+                tu vida diaria. Desde 2025, construimos nuestra reputación sobre
+                un pilar fundamental: ofrecerte tranquilidad a través de un
+                servicio automotriz excepcional.
               </p>
-              <div class="mt-8">
-                <h3 class="mt-2 text-3xl font-extrabold text-dark sm:text-4xl">
-                  ¿Qué nos hace diferentes?
-                </h3>
-                <div class="flex items-start mt-8">
-                  <div class="copper-bg p-2 rounded-full flex-shrink-0">
-                    <i data-feather="check" class="text-white"></i>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="text-lg font-bold text-dark">
-                      Experiencia que Genera Confianza
-                    </h4>
-                    <p class="mt-1 text-gray-400">
-                      No solo realizamos mantenciones, entendemos los autos.
-                      Nuestro equipo de técnicos certificados aporta décadas de
-                      experiencia combinada a cada trabajo y solucionando
-                      problemas con precisión.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start mt-6">
-                  <div class="copper-bg p-2 rounded-full flex-shrink-0">
-                    <i data-feather="check" class="text-white"></i>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="text-lg font-bold text-dark">
-                      Solo lo Mejor para tu Auto
-                    </h4>
-                    <p class="mt-1 text-gray-400">
-                      Utilizamos exclusivamente repuestos de calidad premium,
-                      porque creemos que tu vehículo merece lo mejor para un
-                      rendimiento óptimo y una mayor vida útil.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start mt-6">
-                  <div class="copper-bg p-2 rounded-full flex-shrink-0">
-                    <i data-feather="check" class="text-white"></i>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="text-lg font-bold text-dark">
-                      Garantía de Rapidez de Servicio de Cambio de Aceite
-                    </h4>
-                    <p class="mt-1 text-gray-400">
-                      Entendemos que tu tiempo es valioso. Por eso, ahora
-                      utilizamos Total Quartz en nuestros cambios de aceite para
-                      ofrecerte máxima protección en 45 minutos, sin sacrificar
-                      la calidad ni la atención al detalle.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-start mt-6">
-                  <div class="copper-bg p-2 rounded-full flex-shrink-0">
-                    <i data-feather="check" class="text-white"></i>
-                  </div>
-                  <div class="ml-4">
-                    <h4 class="text-lg font-bold text-dark">
-                      Garantía de Satisfacción Total
-                    </h4>
-                    <p class="mt-1 text-gray-400">
-                      Tu paz mental es nuestra prioridad. Todos nuestros
-                      servicios están respaldados por una garantía de 6 meses,
-                      porque confiamos plenamente en la calidad de nuestro
-                      trabajo.
-                    </p>
-                  </div>
+              <a href="#contact" class="about-cta-link">
+                Hablar con el equipo
+                <span aria-hidden="true">&#8594;</span>
+              </a>
+            </div>
+
+            <!-- Right: differentiator cards -->
+            <div class="about-cards" data-aos="fade-left" data-aos-delay="160">
+              <div class="about-card">
+                <span class="about-card-num">01</span>
+                <div>
+                  <h4 class="about-card-title">
+                    Experiencia que genera confianza
+                  </h4>
+                  <p class="about-card-text">
+                    Técnicos certificados con décadas de experiencia combinada.
+                    Diagnosticamos con precisión, no con suposiciones.
+                  </p>
                 </div>
               </div>
+              <div class="about-card">
+                <span class="about-card-num">02</span>
+                <div>
+                  <h4 class="about-card-title">Solo lo mejor para tu auto</h4>
+                  <p class="about-card-text">
+                    Repuestos de primera línea, sin excepciones. Porque el
+                    rendimiento de tu vehículo depende de la calidad de cada
+                    componente.
+                  </p>
+                </div>
+              </div>
+              <div class="about-card">
+                <span class="about-card-num">03</span>
+                <div>
+                  <h4 class="about-card-title">
+                    Cambio de aceite en 45 minutos
+                  </h4>
+                  <p class="about-card-text">
+                    Total Quartz, máxima protección, tiempo garantizado. Tu
+                    agenda es tan valiosa como tu motor.
+                  </p>
+                </div>
+              </div>
+              <div class="about-card">
+                <span class="about-card-num">04</span>
+                <div>
+                  <h4 class="about-card-title">
+                    Garantía de satisfacción total
+                  </h4>
+                  <p class="about-card-text">
+                    6 meses de garantía en todos nuestros servicios. Si no estás
+                    satisfecho, lo solucionamos, sin excusas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats strip -->
+          <div class="about-stats" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-stat">
+              <span class="about-stat-num"
+                >45<span class="about-stat-unit">min</span></span
+              >
+              <span class="about-stat-label">Cambio de aceite garantizado</span>
+            </div>
+            <div class="about-stat-divider"></div>
+            <div class="about-stat">
+              <span class="about-stat-num"
+                >6<span class="about-stat-unit">meses</span></span
+              >
+              <span class="about-stat-label">Garantía en cada servicio</span>
+            </div>
+            <div class="about-stat-divider"></div>
+            <div class="about-stat">
+              <span class="about-stat-num"
+                >100<span class="about-stat-unit">%</span></span
+              >
+              <span class="about-stat-label"
+                >Repuestos premium certificados</span
+              >
+            </div>
+            <div class="about-stat-divider"></div>
+            <div class="about-stat">
+              <span class="about-stat-num">2025</span>
+              <span class="about-stat-label">Fundado en Chicureo</span>
             </div>
           </div>
         </div>
@@ -1607,8 +1638,9 @@
               Cómo Llegar
             </h3>
             <p class="mt-2 text-lg text-gray-400">
-              Estamos ubicados en Av. Chicureo S/N Parcela 11, Colina - Santiago, Región
-              Metropolitana (justo al lado de Las Terrazas de Chicureo).
+              Estamos ubicados en Av. Chicureo S/N Parcela 11, Colina -
+              Santiago, Región Metropolitana (justo al lado de Las Terrazas de
+              Chicureo).
             </p>
             <a
               href="https://maps.app.goo.gl/jNfNdUakfvuCQq8D9"
@@ -1666,8 +1698,8 @@
                       Dirección
                     </p>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                      Av. Chicureo S/N Parcela 11, Chicureo<br />Colina - Santiago, Región
-                      Metropolitana
+                      Av. Chicureo S/N Parcela 11, Chicureo<br />Colina -
+                      Santiago, Región Metropolitana
                     </p>
                     <a
                       href="https://maps.app.goo.gl/jNfNdUakfvuCQq8D9"

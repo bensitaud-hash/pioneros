@@ -1420,6 +1420,269 @@ ul li a.text-gray-300:hover {
   margin-top: 0.2rem;
 }
 
+/* =============================================================
+   About / Nosotros Section
+   ============================================================= */
+
+.about-section {
+  background-color: #f0ebe4;
+  overflow: hidden;
+}
+
+/* Full-bleed image panel */
+.about-image-panel {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .about-image-panel {
+    height: 480px;
+  }
+}
+
+.about-image-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: translateY(0) scale(1.12);
+  will-change: transform;
+}
+
+.about-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 12, 8, 0.18) 0%,
+    rgba(15, 12, 8, 0.55) 60%,
+    rgba(15, 12, 8, 0.82) 100%
+  );
+}
+
+.about-image-label {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .about-image-label {
+    padding: 2.5rem 2rem;
+  }
+}
+
+.about-eyebrow {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #bf8e50;
+  border: 1px solid rgba(191, 142, 80, 0.45);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.about-image-caption {
+  font-family: "Zilla Slab", serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  max-width: 540px;
+  margin: 0;
+}
+
+/* Content grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 4rem 0 3rem;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+    padding: 5rem 0 3rem;
+  }
+}
+
+/* Intro column */
+.about-accent-bar {
+  width: 40px;
+  height: 3px;
+  background: #bf8e50;
+  margin-bottom: 1.5rem;
+}
+
+.about-headline {
+  font-family: "Zilla Slab", serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #1f1e1a;
+  margin-bottom: 1.5rem;
+}
+
+.about-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #6b6560;
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.about-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1f1e1a;
+  border-bottom: 1.5px solid #bf8e50;
+  padding-bottom: 2px;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.about-cta-link:hover {
+  color: #bf8e50;
+}
+
+/* Cards column */
+.about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0 1.25rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(31, 30, 26, 0.1);
+  align-items: start;
+  transition: background 0.2s;
+}
+
+.about-card:first-child {
+  border-top: 1px solid rgba(31, 30, 26, 0.1);
+}
+
+.about-card:hover {
+  background: rgba(191, 142, 80, 0.04);
+}
+
+.about-card-num {
+  font-family: "Zilla Slab", serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #bf8e50;
+  letter-spacing: 0.06em;
+  padding-top: 0.2rem;
+  line-height: 1;
+}
+
+.about-card-title {
+  font-size: 0.975rem;
+  font-weight: 700;
+  color: #1f1e1a;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.about-card-text {
+  font-size: 0.875rem;
+  color: #6b6560;
+  line-height: 1.65;
+}
+
+/* Stats strip */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(31, 30, 26, 0.12);
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .about-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.about-stat {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-right: 1px solid rgba(31, 30, 26, 0.1);
+  border-bottom: 1px solid rgba(31, 30, 26, 0.1);
+}
+
+.about-stat:nth-child(2n) {
+  border-right: none;
+}
+
+@media (min-width: 768px) {
+  .about-stat {
+    border-bottom: none;
+    border-right: 1px solid rgba(31, 30, 26, 0.1);
+  }
+  .about-stat:last-child {
+    border-right: none;
+  }
+}
+
+.about-stat-divider {
+  display: none;
+}
+
+.about-stat-num {
+  font-family: "Zilla Slab", serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #1f1e1a;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.about-stat-unit {
+  font-family: "Figtree", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #bf8e50;
+  margin-left: 0.2rem;
+  letter-spacing: 0;
+}
+
+.about-stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8a837a;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
 /* ============================================================
    Responsive Adaptations — Mobile / Tablet / Desktop
    ============================================================ */

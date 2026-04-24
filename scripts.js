@@ -48,7 +48,24 @@ const mainNav = document.getElementById("main-nav");
 const navSpacer = document.getElementById("nav-spacer");
 const initialNavTop = mainNav.offsetTop;
 
+// Parallax for about section hero image
+const aboutParallaxImg = document.querySelector(".about-image-bg");
+const aboutPanel = document.querySelector(".about-image-panel");
+
+function updateAboutParallax() {
+    if (!aboutParallaxImg || !aboutPanel) return;
+    const rect = aboutPanel.getBoundingClientRect();
+    if (rect.bottom < -200 || rect.top > window.innerHeight + 200) return;
+    // progress: 0 when panel top hits bottom of viewport, 1 when panel bottom hits top
+    const totalTravel = window.innerHeight + rect.height;
+    const scrolled = window.innerHeight - rect.top;
+    const progress = scrolled / totalTravel; // 0 → 1 as section scrolls through
+    const shift = (progress - 0.5) * 300; // ±150px at extremes
+    aboutParallaxImg.style.transform = `translateY(${shift}px) scale(1.28)`;
+}
+
 window.addEventListener("scroll", () => {
+    updateAboutParallax();
     if (window.scrollY > initialNavTop) {
         mainNav.classList.add("sticky-nav", "shadow-lg");
         navSpacer.classList.remove("hidden");
@@ -59,6 +76,8 @@ window.addEventListener("scroll", () => {
         navSpacer.style.height = "0";
     }
 });
+
+updateAboutParallax();
 
 function validateRut(rut) {
     if (typeof rut !== "string") return false;
