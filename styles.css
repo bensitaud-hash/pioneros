@@ -7,14 +7,14 @@
                      Use on DARK surfaces only: hero overlay, icon
                      circle backgrounds, footer, dark hero badges.
                      Meets 3:1 large-text contrast on dark bg.
-   --copper-body     Darkened copper (#8a5f2a) for LIGHT surfaces.
+   --copper-body     Darkened copper (#A36627) for LIGHT surfaces.
                      Meets 4.5:1 body-text contrast on all site
                      light backgrounds (#f7f4ef, #f0ebe4, #e9e2db,
                      #dad3ca). Use for labels, links, CTAs on light.
    ──────────────────────────────────────────────────────────── */
 :root {
   --copper-display: #bf8e50;
-  --copper-body: #8a5f2a;
+  --copper-body: #a36627;
 }
 
 /* Base Styles */
@@ -30,12 +30,12 @@ body {
 }
 
 .copper-text {
-  color: #8a5f2a; /* fallback for static analyzers */
+  color: #a36627; /* fallback for static analyzers */
   color: var(--copper-body);
 }
 
 .copper-bg {
-  background-color: #8a5f2a; /* fallback for static analyzers */
+  background-color: #a36627; /* fallback for static analyzers */
   background-color: var(--copper-body);
 }
 
@@ -50,7 +50,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8a5f2a; /* fallback for static analyzers */
+  color: #a36627; /* fallback for static analyzers */
   color: var(--copper-body);
   margin-bottom: 0.625rem;
 }
@@ -233,7 +233,7 @@ h3,
 }
 
 .nav-link:hover {
-  color: #8a5f2a; /* fallback for static analyzers */
+  color: #a36627; /* fallback for static analyzers */
   color: var(--copper-body) !important;
 }
 
@@ -243,7 +243,7 @@ h3,
 
 /* Active section indicator (scrollspy) */
 .nav-active {
-  color: #8a5f2a; /* fallback for static analyzers */
+  color: #a36627; /* fallback for static analyzers */
   color: var(--copper-body) !important;
 }
 .nav-active::after {
@@ -623,7 +623,7 @@ section[id],
 
 /* Tailwind hover color override for text-dark elements */
 .hover\:text-copper:hover {
-  color: #8a5f2a; /* fallback for static analyzers */
+  color: #a36627; /* fallback for static analyzers */
   color: var(--copper-body) !important;
 }
 
@@ -680,7 +680,7 @@ section[id],
 .location-gradient h5.text-white,
 .location-gradient h6.text-white,
 .location-gradient p.text-white {
-  color: #8a5f2a; /* fallback for static analyzers */
+  color: #a36627; /* fallback for static analyzers */
   color: var(
     --copper-body
   ) !important; /* Darkened copper — passes contrast on all light surfaces */
@@ -812,7 +812,7 @@ ul li a.text-gray-300:hover {
 
 /* Time slot buttons */
 .bk-slot-btn {
-  border: 2px solid #8a5f2a;
+  border: 2px solid #a36627;
   border: 2px solid var(--copper-body);
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -828,13 +828,13 @@ ul li a.text-gray-300:hover {
 }
 
 .bk-slot-btn:hover {
-  background-color: #8a5f2a; /* fallback for static analyzers */
+  background-color: #a36627; /* fallback for static analyzers */
   background-color: var(--copper-body);
   color: #fff;
 }
 
 .bk-slot-btn.bk-slot-selected {
-  background-color: #8a5f2a; /* fallback for static analyzers */
+  background-color: #a36627; /* fallback for static analyzers */
   background-color: var(--copper-body);
   color: #fff;
 }
@@ -860,7 +860,7 @@ ul li a.text-gray-300:hover {
 }
 
 .bk-progress-active {
-  background-color: #8a5f2a; /* fallback for static analyzers */
+  background-color: #a36627; /* fallback for static analyzers */
   background-color: var(--copper-body);
   color: #fff;
 }
@@ -1311,7 +1311,7 @@ ul li a.text-gray-300:hover {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #8a5f2a; /* fallback for static analyzers */
+  color: #a36627; /* fallback for static analyzers */
   color: var(--copper-body);
   margin-bottom: 0.2rem;
 }
@@ -1549,6 +1549,11 @@ ul li a.text-gray-300:hover {
   letter-spacing: -0.01em;
   max-width: 540px;
   margin: 0;
+}
+
+/* About image caption: bright copper on dark overlay */
+.about-image-panel .copper-text {
+  color: var(--copper-display) !important;
 }
 
 /* Content grid */
