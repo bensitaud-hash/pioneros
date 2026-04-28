@@ -10,7 +10,7 @@
 
     <meta
       name="description"
-      content="Pioneros es un servicio automotriz premium en Santiago, Chile. Ofrecemos revisión experta, mantenimiento, reparación de motores, y detallado para tu vehículo. Confianza, transparencia y excelencia en cada servicio."
+      content="Pioneros Automotriz es el taller mecánico premium de Chicureo, Santiago. Cambio de aceite Total Quartz en 45 minutos garantizados. Mantenciones, frenos, láminas de seguridad, GPS y accesorios. Partner oficial Total Energies. Garantía 6 meses. Reserva online."
     />
     <meta
       name="keywords"
@@ -28,9 +28,9 @@
     />
     <meta
       property="og:image"
-      content="https://www.pioneros.cl/images/og-image.jpg"
+      content="https://www.pionerosautomotriz.cl/images/og-image.jpg"
     />
-    <meta property="og:url" content="https://www.pioneros.cl" />
+    <meta property="og:url" content="https://www.pionerosautomotriz.cl" />
     <meta property="og:type" content="website" />
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
@@ -52,17 +52,17 @@
           extend: {
             colors: {
               copper: {
-                DEFAULT: "#bf8e50",
+                DEFAULT: "#8a5f2a",
                 50: "#faf5ef",
                 100: "#f5ead9",
                 200: "#ead4b0",
                 300: "#dbb87a",
-                400: "#ce9d52",
-                500: "#bf8e50",
-                600: "#a67438",
-                700: "#8a5b2c",
-                800: "#714825",
-                900: "#5e3b20",
+                400: "#bf8e50",
+                500: "#8a5f2a",
+                600: "#7a5124",
+                700: "#6a431d",
+                800: "#5a3716",
+                900: "#4a2b10",
               },
             },
             fontFamily: {
@@ -85,49 +85,274 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "AutoRepair",
-        "name": "Pioneros Automotriz",
-        "description": "Servicio automotriz premium en Chicureo, Santiago. Mantenciones, cambio de aceite, frenos, láminas de seguridad, GPS y más.",
-        "url": "https://www.pioneros.cl",
-        "telephone": "+56965430123",
-        "email": "service@pioneros.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Av. Chicureo",
-          "addressLocality": "Chicureo",
-          "addressRegion": "Región Metropolitana",
-          "addressCountry": "CL"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": -33.285508,
-          "longitude": -70.685209
-        },
-        "openingHoursSpecification": [
+        "@graph": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
+            "@type": ["AutoRepair", "LocalBusiness"],
+            "@id": "https://www.pionerosautomotriz.cl/#business",
+            "name": "Pioneros Automotriz",
+            "description": "Pioneros Automotriz es un taller mecánico premium en Chicureo, Colina, Santiago de Chile. Partner oficial de Total Energies. Ofrecemos cambio de aceite Total Quartz en 45 minutos garantizados, mantenciones, frenos, grabado de patente, láminas de seguridad, GPS y accesorios. Garantía de 6 meses en todos los servicios. Atendemos autos de combustión, híbridos y eléctricos.",
+            "url": "https://www.pionerosautomotriz.cl",
+            "telephone": "+56965430123",
+            "email": "service@pioneros.com",
+            "foundingDate": "2025",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Av. Chicureo S/N Parcela 11",
+              "addressLocality": "Chicureo",
+              "addressRegion": "Región Metropolitana",
+              "addressCountry": "CL"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -33.285508,
+              "longitude": -70.685209
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:30",
+                "closes": "18:30"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "14:00"
+              }
             ],
-            "opens": "08:30",
-            "closes": "18:30"
+            "image": "https://www.pionerosautomotriz.cl/images/og-image.jpg",
+            "logo": "https://www.pionerosautomotriz.cl/images/Logo_pioneros_inline.svg",
+            "priceRange": "$$",
+            "currenciesAccepted": "CLP",
+            "paymentAccepted": "Efectivo, Tarjeta de Crédito, Mercado Pago",
+            "areaServed": [
+              { "@type": "City", "name": "Chicureo" },
+              { "@type": "City", "name": "Colina" },
+              { "@type": "City", "name": "Chamisero" },
+              { "@type": "City", "name": "Lo Barnechea" },
+              { "@type": "City", "name": "Huechuraba" },
+              { "@type": "City", "name": "Santiago" }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "3",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "José P." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "El equipo de Pioneros me ahorró miles al detectar un problema que mi concesionario pasó por alto. Su atención al detalle es inigualable.",
+                "itemReviewed": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Ignacia R." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Toda mi familia lleva sus autos a Pioneros. Son honestos, profesionales y su trabajo es impecable siempre. Lo mejor en Chicureo.",
+                "itemReviewed": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Óscar L." },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Su servicio de cambio de aceite en 45 minutos es real. Mi auto quedó perfecto y pude volver a la carretera sin perder tiempo. Recomiendo 100%.",
+                "itemReviewed": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servicios Automotrices Pioneros",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cambio de Aceite Total Quartz",
+                    "description": "Cambio de aceite con lubricante Total Energies Quartz en 45 minutos garantizados. Fórmulas sintéticas y semi-sintéticas de alto rendimiento para máxima protección del motor y reducción de desgaste.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mantención Premium",
+                    "description": "Diagnóstico computarizado, repuestos de primera línea y atención personalizada. Revisión profunda recomendada cada 15.000 km.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mantención Standard",
+                    "description": "Servicios esenciales de mantención recomendados cada 5.000 a 10.000 km. Calidad garantizada al mejor precio.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Servicio de Frenos",
+                    "description": "Inspección, ajuste y reemplazo de pastillas, discos y líquido de frenos. Máxima seguridad y frenado preciso en cada kilómetro.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Grabado de Patente",
+                    "description": "Grabado de patente vehicular en vidrios y carrocería. Obligatorio por ley en Chile desde 2024. Mayor protección contra robo.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Instalación de Láminas de Seguridad",
+                    "description": "Venta e instalación de láminas de seguridad para protección UV, privacidad y mayor seguridad del vehículo.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Instalación de GPS Vehicular",
+                    "description": "Instalación de sistema GPS para rastreo en tiempo real. Protección ante robos en Chile, donde se registran más de 25.000 robos de autos al año.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Accesorios Automotrices",
+                    "description": "Amplia gama de accesorios premium para personalización, estética y confort del vehículo.",
+                    "provider": { "@id": "https://www.pionerosautomotriz.cl/#business" }
+                  }
+                }
+              ]
+            }
           },
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "14:00"
+            "@type": "Organization",
+            "@id": "https://www.pionerosautomotriz.cl/#organization",
+            "name": "Pioneros Automotriz",
+            "url": "https://www.pionerosautomotriz.cl",
+            "logo": "https://www.pionerosautomotriz.cl/images/Logo_pioneros_inline.svg",
+            "description": "Taller mecánico premium en Chicureo, Santiago, Chile. Partner oficial de Total Energies. Especialistas en mantención preventiva, cambio de aceite, frenos, láminas de seguridad, GPS y accesorios para todo tipo de vehículos incluyendo eléctricos e híbridos.",
+            "foundingDate": "2025",
+            "foundingLocation": {
+              "@type": "Place",
+              "name": "Chicureo, Colina, Santiago, Chile"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+56965430123",
+              "contactType": "customer service",
+              "email": "service@pioneros.com",
+              "availableLanguage": "Spanish",
+              "areaServed": "CL"
+            },
+            "sameAs": [
+              "https://maps.app.goo.gl/jNfNdUakfvuCQq8D9",
+              "https://www.instagram.com/pionerosautomotriz",
+              "https://www.facebook.com/pionerosautomotriz"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.pionerosautomotriz.cl/#website",
+            "url": "https://www.pionerosautomotriz.cl",
+            "name": "Pioneros Automotriz",
+            "description": "Sitio oficial de Pioneros Automotriz, taller mecánico premium en Chicureo, Santiago de Chile.",
+            "publisher": { "@id": "https://www.pionerosautomotriz.cl/#organization" },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.pionerosautomotriz.cl/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.pionerosautomotriz.cl/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cómo garantizan la transparencia en el servicio y envían la cotización?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La confianza es el pilar de Pioneros Automotriz. Antes de cualquier reparación, proporcionamos un informe detallado con fotografías o videos de los componentes que requieren atención. Nunca se realizan trabajos sin aprobación previa del cliente. Explicamos claramente por qué se necesita cada servicio y ofrecemos alternativas con repuestos Premium para que el cliente tome la mejor decisión."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Por qué utilizar repuestos Premium es mejor para mi vehículo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Los repuestos Premium cumplen con las especificaciones exactas del fabricante del vehículo, garantizando rendimiento óptimo y mayor vida útil de la reparación. Previenen fallas prematuras que los repuestos genéricos suelen causar, protegiendo la longevidad y seguridad del automóvil a largo plazo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuál es la garantía que ofrecen en sus reparaciones y servicios?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pioneros Automotriz ofrece una garantía de 6 meses en todas las reparaciones mecánicas y repuestos utilizados. Si el cliente no está satisfecho, el equipo resuelve el problema sin excusas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué tipo de vehículos atiende Pioneros Automotriz en Chicureo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pioneros Automotriz atiende toda clase de vehículos: autos de combustión, híbridos, eléctricos y de alta gama de todas las marcas. Los técnicos certificados del taller tienen experiencia con diversas marcas y modelos gracias a formación técnica continua."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuánto tiempo tarda el cambio de aceite y las mantenciones en Pioneros?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El cambio de aceite con aceite Total Energies Quartz tarda 45 minutos garantizados. Para mantenciones, el objetivo es entregar el vehículo el mismo día. Las reparaciones mayores incluyen actualizaciones periódicas sobre el tiempo estimado."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué aceite utilizan en el cambio de aceite?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pioneros Automotriz trabaja exclusivamente con aceite Total Energies Quartz, líder mundial en lubricantes de alto rendimiento. Ofrece fórmulas sintéticas y semi-sintéticas que protegen el motor en condiciones extremas, reducen el desgaste y prolongan la vida útil del vehículo. Es el aceite recomendado por fabricantes de autos de alta gama."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo puedo reservar una hora de servicio o pedir una cotización en Pioneros Automotriz?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Se puede reservar online en www.pionerosautomotriz.cl usando el botón 'Reservar una Hora', llamando al +56 9 6543 0123, o enviando un mensaje por WhatsApp al mismo número. También se puede completar el formulario de contacto del sitio web para solicitar una cotización."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Dónde está ubicado Pioneros Automotriz?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pioneros Automotriz está ubicado en Av. Chicureo S/N Parcela 11, Chicureo, Colina, Santiago, Región Metropolitana, Chile — al lado de Las Terrazas de Chicureo. Horario de atención: Lunes a Viernes 8:30 a 18:30 hrs, Sábados 9:00 a 14:00 hrs, Domingos cerrado."
+                }
+              }
+            ]
           }
-        ],
-        "image": "https://www.pioneros.cl/images/og-image.jpg",
-        "priceRange": "$$",
-        "currenciesAccepted": "CLP",
-        "paymentAccepted": "Efectivo, Tarjeta de Crédito, Mercado Pago",
-        "areaServed": ["Chicureo", "Colina", "Chamisero", "Santiago"]
+        ]
       }
     </script>
   </head>
@@ -501,6 +726,10 @@
             </h3>
             <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
               Cuidado integral para tu vehículo con los más altos estándares
+            </p>
+            <!-- GEO summary — readable by AI crawlers that don't execute JS -->
+            <p class="sr-only">
+              Pioneros Automotriz ofrece en Chicureo, Santiago: cambio de aceite Total Quartz en 45 minutos garantizados, mantención premium cada 15.000 km, mantención standard cada 5.000–10.000 km, servicio de frenos (pastillas, discos y líquido de frenos), grabado de patente obligatorio por ley desde 2024, instalación de láminas de seguridad, instalación de GPS vehicular, y accesorios automotrices. Todos los servicios incluyen garantía de 6 meses y repuestos 100% premium certificados.
             </p>
           </div>
 
@@ -934,9 +1163,9 @@
               <div class="about-card">
                 <span class="about-card-num">01</span>
                 <div>
-                  <h4 class="about-card-title">
+                  <h3 class="about-card-title">
                     Experiencia que genera confianza
-                  </h4>
+                  </h3>
                   <p class="about-card-text">
                     Técnicos certificados con décadas de experiencia combinada.
                     Diagnosticamos con precisión, no con suposiciones.
@@ -946,7 +1175,7 @@
               <div class="about-card">
                 <span class="about-card-num">02</span>
                 <div>
-                  <h4 class="about-card-title">Solo lo mejor para tu auto</h4>
+                  <h3 class="about-card-title">Solo lo mejor para tu auto</h3>
                   <p class="about-card-text">
                     Repuestos de primera línea, sin excepciones. Porque el
                     rendimiento de tu vehículo depende de la calidad de cada
@@ -957,9 +1186,9 @@
               <div class="about-card">
                 <span class="about-card-num">03</span>
                 <div>
-                  <h4 class="about-card-title">
+                  <h3 class="about-card-title">
                     Cambio de aceite en 45 minutos
-                  </h4>
+                  </h3>
                   <p class="about-card-text">
                     Total Quartz, máxima protección, tiempo garantizado. Tu
                     agenda es tan valiosa como tu motor.
@@ -969,9 +1198,9 @@
               <div class="about-card">
                 <span class="about-card-num">04</span>
                 <div>
-                  <h4 class="about-card-title">
+                  <h3 class="about-card-title">
                     Garantía de satisfacción total
-                  </h4>
+                  </h3>
                   <p class="about-card-text">
                     6 meses de garantía en todos nuestros servicios. Si no estás
                     satisfecho, lo solucionamos, sin excusas.

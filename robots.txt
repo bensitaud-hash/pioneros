@@ -1,5 +1,30 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://www.pioneros.cl/sitemap.xml
+# AI Search Crawlers — explicitly permitted for GEO (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://www.pionerosautomotriz.cl/sitemap.xml
