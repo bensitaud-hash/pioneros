@@ -1338,12 +1338,11 @@ ul li a.text-gray-300:hover {
 .testimonials-dark {
   background: linear-gradient(
     135deg,
-    #6b6864 0%,
-    #65625d 20%,
-    #5e5b57 45%,
-    #55524f 65%,
-    #5e5b57 85%,
-    #6b6864 100%
+    #1b2c4c 0%,
+    #2a304e 25%,
+    #69576d 55%,
+    #2a304e 80%,
+    #1b2c4c 100%
   );
   position: relative;
   overflow: hidden;
@@ -1357,7 +1356,7 @@ ul li a.text-gray-300:hover {
   width: 480px;
   height: 480px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(105, 87, 109, 0.25);
   pointer-events: none;
 }
 
@@ -1371,7 +1370,7 @@ ul li a.text-gray-300:hover {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(191, 142, 80, 0.12) 0%,
+    rgba(191, 142, 80, 0.14) 0%,
     transparent 65%
   );
   pointer-events: none;

@@ -46,7 +46,7 @@ mobileMenuButton.addEventListener("click", () => {
 // Sticky Navigation Bar on Scroll
 const mainNav = document.getElementById("main-nav");
 const navSpacer = document.getElementById("nav-spacer");
-const initialNavTop = mainNav.offsetTop;
+let initialNavTop = mainNav.offsetTop;
 
 // Parallax for about section hero image
 const aboutParallaxImg = document.querySelector(".about-image-bg");
@@ -66,6 +66,10 @@ function updateAboutParallax() {
 
 window.addEventListener("scroll", () => {
     updateAboutParallax();
+    // Re-read nav position while not sticky so closing the promo bar doesn't stale the threshold
+    if (!mainNav.classList.contains("sticky-nav")) {
+        initialNavTop = mainNav.offsetTop;
+    }
     if (window.scrollY > initialNavTop) {
         mainNav.classList.add("sticky-nav", "shadow-lg");
         navSpacer.classList.remove("hidden");
