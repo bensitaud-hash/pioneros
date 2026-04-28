@@ -429,6 +429,12 @@ section[id],
 }
 
 /* ─── Hero Section ───────────────────────────────────────────────── */
+
+/* Hero sits on a dark image overlay — use display copper (#bf8e50) */
+#hero-section .copper-text {
+  color: var(--copper-display) !important;
+}
+
 .hero-bg {
   position: relative;
   min-height: 100vh;
