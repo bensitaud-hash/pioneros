@@ -507,6 +507,38 @@ document.querySelectorAll(".faq-toggle").forEach((button) => {
     window._cmdPalette = {open, close, isOpen};
 })();
 
+// Floating Action Button (FAB) logic
+document.addEventListener("DOMContentLoaded", () => {
+    const fabMain = document.getElementById("fab-main");
+    const fabOptions = document.getElementById("fab-options");
+    const iconCalendar = document.getElementById("fab-icon-calendar");
+    const iconClose = document.getElementById("fab-icon-close");
+
+    if (fabMain) {
+        fabMain.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isOpen = fabOptions.classList.toggle("active");
+            // Toggle icons
+            if (isOpen) {
+                iconCalendar.classList.add("hidden");
+                iconClose.classList.remove("hidden");
+            } else {
+                iconCalendar.classList.remove("hidden");
+                iconClose.classList.add("hidden");
+            }
+        });
+    }
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+        if (fabOptions && !fabMain.contains(e.target) && !fabOptions.contains(e.target)) {
+            fabOptions.classList.remove("active");
+            iconCalendar.classList.remove("hidden");
+            iconClose.classList.add("hidden");
+        }
+    });
+});
+
 // ============================================================
 // Keyboard shortcuts
 // R → open booking modal

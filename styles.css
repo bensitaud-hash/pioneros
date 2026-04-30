@@ -1760,3 +1760,99 @@ ul li a.text-gray-300:hover {
     margin-bottom: 3rem !important;
   }
 }
+
+/* ============================================================
+   Responsive Adaptations — Mobile fab / floating action button
+   ============================================================ */
+.fab-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fab-options {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: flex-end;
+}
+
+.fab-options.active {
+  display: flex;
+  animation: fabReveal 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fab-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fab-label {
+  background: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.fab-sub {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: 1.5px solid #bf8e50;
+  color: #bf8e50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.fab-sub:hover {
+  background: #fdf8f3;
+  transform: scale(1.05);
+}
+
+.fab-main {
+  width: 64px;
+  height: 64px;
+  background: #bf8e50;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(191, 142, 80, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.fab-main:active {
+  transform: scale(0.92);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fabReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
