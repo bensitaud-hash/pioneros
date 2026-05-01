@@ -559,14 +559,14 @@ section[id],
   display: block;
 }
 
-/* Mobile: top-to-bottom gradient keeps transparency while boosting legibility */
+/* Mobile: strong bottom darkness for text, fading out toward top */
 @media (max-width: 1023px) {
   .hero-bg::after {
     background: linear-gradient(
       to bottom,
-      rgba(8, 14, 22, 0.52) 0%,
-      rgba(8, 14, 22, 0.32) 50%,
-      rgba(8, 14, 22, 0.1) 100%
+      rgba(8, 14, 22, 0.01) 0%,
+      rgba(8, 14, 22, 0.50) 50%,
+      rgba(8, 14, 22, 0.82) 100%
     );
   }
 }
@@ -1854,5 +1854,11 @@ ul li a.text-gray-300:hover {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+/* Keyboard shortcut badge — desktop only */
+@media (max-width: 1023px) {
+  #kb-badge {
+    display: none !important;
   }
 }

@@ -548,6 +548,7 @@ document.addEventListener("DOMContentLoaded", () => {
 (function initKeyboardShortcuts() {
     // Passive affordance badge — bottom-left corner, desktop only
     const badge = document.createElement("button");
+    badge.id = "kb-badge";
     badge.type = "button";
     badge.title = "Atajos de teclado (?)";
     badge.setAttribute("aria-label", "Mostrar atajos de teclado");
@@ -573,10 +574,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "transition:background 0.2s ease",
         "line-height:1",
     ].join(";");
-    // Only show on non-touch devices
-    if (window.matchMedia("(hover:hover) and (pointer:fine)").matches) {
-        badge.style.display = "flex";
-    }
+    // CSS hides it on screens < 1024px (see styles.css #kb-badge rule)
+    badge.style.display = "flex";
     badge.addEventListener("click", () => {
         hintVisible ? hideHint() : showHint(false);
     });
