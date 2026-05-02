@@ -565,7 +565,7 @@ section[id],
     background: linear-gradient(
       to bottom,
       rgba(8, 14, 22, 0.01) 0%,
-      rgba(8, 14, 22, 0.50) 50%,
+      rgba(8, 14, 22, 0.5) 50%,
       rgba(8, 14, 22, 0.82) 100%
     );
   }
@@ -1861,4 +1861,31 @@ ul li a.text-gray-300:hover {
   #kb-badge {
     display: none !important;
   }
+}
+
+/* ── Skip navigation link ────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.75rem 1.5rem;
+  background: #a36627;
+  color: #fff;
+  font-family: Figtree, sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  z-index: 99999;
+  border-radius: 0 0 0.5rem 0;
+  transition: top 0.15s ease;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── FAQ toggle — visible focus ring for keyboard users ─────── */
+.faq-toggle:focus-visible {
+  outline: 2px solid #a36627 !important;
+  outline-offset: -3px;
+  border-radius: 0.5rem;
 }
