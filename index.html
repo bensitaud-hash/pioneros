@@ -35,6 +35,14 @@
 
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
 
+    <!-- LCP preload: hero background image discovered immediately from HTML -->
+    <link
+      rel="preload"
+      href="images/Hero_car.webp"
+      as="image"
+      fetchpriority="high"
+    />
+
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Figtree:wght@300;400;500;600;700&display=swap"
@@ -2176,7 +2184,7 @@
               class="mt-2 inline-flex items-center gap-2 copper-text text-sm font-medium hover:text-white transition-colors duration-300"
             >
               Cómo llegar con Waze
-              <img src="images/Waze.svg" alt="Waze" class="w-4 h-4" />
+              <img src="images/Waze.svg" alt="App Waze" class="w-4 h-4" />
             </a>
           </div>
           <div class="rounded-lg overflow-hidden shadow-xl" data-aos="fade-up">
@@ -2237,7 +2245,7 @@
                       Waze
                       <img
                         src="images/Waze.svg"
-                        alt="Waze"
+                        alt="App Waze"
                         class="ml-1 w-3.5 h-3.5 inline-block"
                       />
                     </a>
