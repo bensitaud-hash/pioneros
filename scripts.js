@@ -511,7 +511,7 @@ document.querySelectorAll(".faq-toggle").forEach((button) => {
 document.addEventListener("DOMContentLoaded", () => {
     const fabMain = document.getElementById("fab-main");
     const fabOptions = document.getElementById("fab-options");
-    const iconCalendar = document.getElementById("fab-icon-calendar");
+    const iconCalendar = document.getElementById("fab-icon-car");
     const iconClose = document.getElementById("fab-icon-close");
 
     if (fabMain) {
