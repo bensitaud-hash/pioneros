@@ -34,6 +34,33 @@ body {
   color: var(--copper-body);
 }
 
+/* Service card CTAs */
+.service-cta {
+  position: relative;
+  align-self: flex-start;
+  gap: 0.25rem;
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
+}
+.service-cta::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--copper-body);
+  transition: width 0.25s ease;
+}
+.service-cta:hover {
+  color: var(--copper-display);
+  gap: 0.5rem;
+}
+.service-cta:hover::after {
+  width: 100%;
+}
+
 .copper-bg {
   background-color: #a36627; /* fallback for static analyzers */
   background-color: var(--copper-body);
