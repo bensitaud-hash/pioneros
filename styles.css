@@ -457,6 +457,11 @@ section[id],
 
 /* ─── Hero Section ───────────────────────────────────────────────── */
 
+/* Hero 'Mostrar Servicios' link — text shifts to display copper on hover, underline stays white */
+.hero-services-link:hover {
+  color: #bf8e50 !important;
+}
+
 /* Hero sits on a dark image overlay — use display copper (#bf8e50) */
 #hero-section .copper-text {
   color: var(--copper-display) !important;

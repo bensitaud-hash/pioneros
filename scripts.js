@@ -526,6 +526,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 iconCalendar.classList.remove("hidden");
                 iconClose.classList.add("hidden");
             }
+            // Update accessible state
+            fabMain.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            fabMain.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Reservar hora");
         });
     }
 
@@ -535,6 +538,8 @@ document.addEventListener("DOMContentLoaded", () => {
             fabOptions.classList.remove("active");
             iconCalendar.classList.remove("hidden");
             iconClose.classList.add("hidden");
+            fabMain.setAttribute("aria-expanded", "false");
+            fabMain.setAttribute("aria-label", "Reservar hora");
         }
     });
 });
