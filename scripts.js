@@ -542,6 +542,38 @@ document.addEventListener("DOMContentLoaded", () => {
             fabMain.setAttribute("aria-label", "Reservar hora");
         }
     });
+
+    // Show FAB only after the hero section has scrolled out of view.
+    // This eliminates the redundant CTA duplication while the primary
+    // "RESERVAR AHORA" button is still visible in the hero.
+    const heroSection = document.getElementById("hero-section");
+    const fabContainer = document.querySelector(".fab-container");
+
+    if (heroSection && fabContainer) {
+        const heroObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Hero back in view — hide FAB and collapse options panel
+                        fabContainer.classList.remove("fab-visible");
+                        fabOptions.classList.remove("active");
+                        iconCalendar.classList.remove("hidden");
+                        iconClose.classList.add("hidden");
+                        if (fabMain) {
+                            fabMain.setAttribute("aria-expanded", "false");
+                            fabMain.setAttribute("aria-label", "Reservar hora");
+                        }
+                    } else {
+                        // Hero out of view — reveal FAB
+                        fabContainer.classList.add("fab-visible");
+                    }
+                });
+            },
+            // Trigger as soon as 10% of the hero leaves the viewport
+            {threshold: 0.1}
+        );
+        heroObserver.observe(heroSection);
+    }
 });
 
 // ============================================================
